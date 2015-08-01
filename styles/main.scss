@@ -1,0 +1,627 @@
+/*******************
+      IMPORTS
+*******************/
+@import 'bourbon/bourbon';
+$visual-grid: false;
+@import 'neat/neat';
+
+
+/********************
+    Global Sizes
+*********************/
+$banner-width: 100%;
+$banner-height: 100%;
+
+$tablet: new-breakpoint(min-width 501px max-width 840px 2);
+$mobile: new-breakpoint(max-width 500px 12);
+
+/********************
+      Colors
+*********************/
+$lighter-blue: #80C5C5;
+$darker-blue: #50A4A4;
+$gray-blue: #F1F9FB;
+$light-gray: #F2F2F2;
+
+$primary-color: $lighter-blue;
+$primary-accent-color: $darker-blue;
+$secondary-color: $gray-blue;
+$secondary-accent-color: $light-gray;
+
+/********************
+       Fonts
+*********************/
+$body-font: 'Open Sans', serif;
+
+
+/********************
+        Base
+*********************/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $body-font;
+
+}
+
+/************************
+        GENERAL
+************************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body a {
+  text-decoration: none;
+}
+
+.header-bar {
+  background-color: $primary-color;
+  height: 66px;
+  width: $banner-width;
+}
+
+.logo {
+  @include span-columns(1);
+  width: 65px;
+  margin-left: 0px;
+  padding: 3px;
+  background-color: $primary-accent-color;
+
+}
+
+.dob-date,
+.dob-container,
+.age-container,
+.age-number,
+.gender {
+  color: white;
+  vertical-align: top;
+  margin-top: 18px;
+  font-size: 1.5em
+}
+
+.dob-date,
+.age-number {
+  font-size: 1em;
+}
+
+
+.patient-name {
+  color: white;
+  font-size: 2.5em;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 7px;
+  width: 21%;
+  @include span-columns(3);
+}
+
+.dob-container {
+  @include span-columns(2);
+}
+
+.age-container {
+  @include span-columns(1);
+}
+
+.gender {
+  @include span-columns(1);
+}
+
+
+/*************************************
+            Chronic Box
+**************************************/
+
+.chronic-box {
+  @include outer-container;
+  @include span-columns(4.475);
+  @include shift(.6);
+  height: 274px;
+  border: 2px solid #ccc;
+  margin-top: 48px;
+}
+
+.title-box {
+    border-bottom: solid 2px #ccc;
+    height: 42px;
+    background-color: $secondary-color;
+    padding: -11px;
+    margin-top: -6px;
+}
+
+.title-box > p {
+    font-size: 1.6em;
+    margin-left: 12px;
+    margin-top: 6px;
+    padding-top: 3px;
+    display: block;
+    background-color: $secondary-color;
+
+}
+
+.timer-name {
+  text-align: center;
+}
+
+#controls {
+  text-align: center;
+}
+
+.fa-plus-circle {
+  font-size: 1.2em;
+  display: inline-block;
+  float: right;
+  padding: 5px;
+}
+
+.title-words {
+  padding: 18px;
+  font-size: 1.4em;
+  text-style: bold;
+  font-weight: 500;
+}
+
+
+
+
+
+
+/***********************
+     Conditions List
+************************/
+
+.tag-wrapper {
+  text-align: center;
+  border-radius: 5px;
+}
+.tag {
+  display: inline-block;
+  position: relative;
+  margin: 5px 10px 5px 0px;
+}
+.tag input {
+  opacity: 0;
+  position: absolute;
+  z-index: 300;
+  cursor: pointer;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.tag input:hover + label {
+  background: gray;
+}
+.tag label {
+  padding: 7px 34px 6px 18px;
+  position: relative;
+  z-index: 200;
+  color: white;
+  display: block;
+  border-radius: 16px;
+  background: $primary-color;
+  -webkit-transition: all 0.08s ease-in;
+          transition: all 0.08s ease-in;
+}
+.tag .fa {
+  position: absolute;
+  z-index: 250;
+  right: 11px;
+  top: 9px;
+  color: white;
+  line-height: 0.95;
+}
+
+@-webkit-keyframes flick {
+  60% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes flick {
+  60% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/***********************
+    Enrollment Items
+************************/
+
+.status,
+.CCM {
+  color: $primary-accent-color;
+  font-weight: 700;
+}
+
+.enrollment-title,
+.status-title,
+.months-title,
+.follow-up-title {
+  width: 50%;
+  display: inline;
+  font-size: 1.2em;
+}
+
+.enrollment-title,
+.follow-up-title {
+  float: right;
+}
+
+.status-container {
+    padding: 10px;
+    margin-left: 12px;
+}
+
+.status-enrollment-container {
+    padding: 12px;
+    margin-left: 10px;
+}
+
+/***********************
+       Timer Box
+************************/
+
+.timer-box {
+  @include span-columns(6.16);
+  @include shift(.07);
+  height: 274px;
+  border: 2px solid #ccc;
+  // @include outer-container;
+  margin-top: 48px;
+
+}
+
+#time {
+  @include span-columns(2);
+  border: 2px solid #ccc;
+  width: 141px;
+  height: 53px;
+}
+.icons{
+  @include span-columns(4);
+  display: inline-block;
+  text-align: center;
+  padding: 3px;
+}
+.icons>.fa {
+  color: $primary-accent-color;
+  font-size: 2.5em;
+  display: inline-block;
+  padding: 10px;
+}
+
+.fa-angle-double-left {
+  padding: 0px;
+}
+
+i.fa.fa-align-justify {
+    padding-left: 0;
+}
+i.fa.fa-angle-double-left {
+    padding-right: 0;
+}
+
+.column-1,
+.column-2,
+.column-3 {
+  @include span-columns(2 of 6);
+  text-align: center;
+}
+
+#hours,
+#minutes,
+#seconds {
+  font-size: 2.5em;
+  font-weight: 200;
+}
+div#time {
+    text-align: center;
+    margin: 19px;
+    margin-left: 36px;
+}
+
+.timer-colon {
+    font-size: 2em;
+    display: inline;
+    padding: 2px;
+    position: relative;
+    bottom: 4px;
+}
+
+#start_pause_resume,
+#reset {
+  height: 70px;
+  width: 70px;
+  border: 2px solid #ccc;
+  border-radius: 100%;
+  color: $primary-accent-color;
+  background-color: white;
+  font-size: 1em;
+}
+
+#total-minutes,
+#total-seconds {
+      font-size: 3.1em;
+      font-weight: 200;
+}
+.total-time-amount {
+    text-align: center;
+    margin-left: -6px;
+    margin-top: 69px;
+}
+
+.total-timer-colon {
+    font-size: 2em;
+    display: inline;
+    padding: 2px;
+    position: relative;
+    bottom: 4px;
+}
+
+
+
+
+
+
+/**********************
+      DatePicker
+***********************/
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    outline: none;
+}
+
+#datepicker {
+background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Calendar_font_awesome.svg/20px-Calendar_font_awesome.svg.png") no-repeat;
+background-position-x: 4px;
+background-position-y: 4px;
+}
+
+#ui-datepicker-div {
+    background-color: $primary-color;
+    border-radius: 15px;
+}
+
+.ui-datepicker-title {
+    color: white;
+}
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+    text-align: center;
+}
+td {
+  color: white;
+  a.ui-state-default {
+    color: white;
+}
+}
+
+th>span {
+  color: $primary-accent-color;
+}
+
+input {
+  text-indent: 55px;
+  font-size: 1.2em;
+  color: $primary-accent-color;
+  font-weight: 300;
+
+}
+
+table.ui-datepicker-calendar {
+    padding: 15px;
+}
+
+#ui-datepicker-div {
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index:-999;
+    color: transparent;
+}
+.datepicker-paragraph {
+  margin-top: 3px;
+}
+
+input#datepicker {
+    border: 0;
+    border: 1px solid #ccc;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+
+/************************
+    Selects
+************************/
+
+// .dropdown {
+//   height: 35px;
+//   width: 220px;
+//   font-size: 1.5em;
+//   line-height: 35px;
+// }
+.dropdown {
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-line-height: 1em;
+  $base-background-color: white !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
+  $dropdown-color: $base-font-color;
+  $dropdown-description-color: lighten($dropdown-color, 40%);
+  $dropdown-border: 1px solid silver;
+  $dropdown-background: $base-background-color;
+  $dropdown-background-hover: darken($dropdown-background, 3%);
+  $dropdown-inner-border: 1px solid silver;
+  $dropdown-height: 40px;
+  $dropdown-padding: 1em;
+  $dropdown-distance-from-menu: 50px;
+  $dropdown-arrow-top-distance: 0;
+
+
+  line-height: $base-line-height;
+
+  .dropdown-container {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+  }
+
+  .dropdown-description {
+    background: $dropdown-background;
+    border-bottom-left-radius: $base-border-radius;
+    border-bottom: $dropdown-border;
+    border-left: $dropdown-border;
+    border-top-left-radius: $base-border-radius;
+    border-top: $dropdown-border;
+    color: $dropdown-description-color;
+    float: left;
+    font-size: 0.7em;
+    line-height: $dropdown-height;
+    margin: 0;
+    padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
+
+    @include media($large-screen) {
+      font-size: .85em;
+    }
+  }
+
+  .dropdown-button {
+    background: $dropdown-background;
+    border-bottom-right-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+    border-top: $dropdown-border;
+    border-right: $dropdown-border;
+    border-bottom: $dropdown-border;
+    cursor: pointer;
+    float: right;
+    font-size: 0.8em;
+    line-height: $dropdown-height;
+    margin: 0;
+    padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+    position: relative;
+
+    @include media($large-screen) {
+      font-size: .8em;
+      padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+    }
+  }
+
+  .dropdown-button:hover {
+    background-color: $dropdown-background-hover;
+  }
+
+  .dropdown-button:after {
+    color: $base-font-color;
+    content: "\25BE";
+    display: block;
+    position: absolute;
+    right: $dropdown-padding;
+    top: $dropdown-arrow-top-distance;
+  }
+
+  .dropdown-menu {
+    @include transition (all 0.2s ease-in-out);
+    background: $dropdown-background;
+    border-radius: $base-border-radius;
+    border: $dropdown-border;
+    box-shadow: 0 2px 2px transparentize(black, 0.8);
+    color: $dropdown-color;
+    cursor: pointer;
+    display: none;
+    margin: 0;
+    overflow: show;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: $dropdown-distance-from-menu;
+    width: 228px;
+    z-index: 99999;
+
+    &:before {
+      @include position(absolute, 0 1em 0 0);
+      color: $dropdown-background;
+      content: "\25b2";
+      font-size: .8em;
+      pointer-events: none;
+      text-shadow: 0 -2px 2px transparentize(black, 0.7);
+      top: -0.7em;
+    }
+  }
+
+  .dropdown-menu li {
+    border-bottom: $dropdown-inner-border;
+    color: $dropdown-color;
+    list-style: none;
+    padding: $dropdown-padding / 2;
+  }
+
+  .dropdown-menu li:hover {
+    background: $dropdown-background-hover;
+  }
+
+  .dropdown-menu li:first-child {
+    border-top-left-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+  }
+
+  .dropdown-menu li:last-child {
+    border: none;
+    border-bottom-left-radius: $base-border-radius;
+    border-bottom-right-radius: $base-border-radius;
+  }
+
+  .show-menu {
+    display: block;
+  }
+}
+
+.dropdown {
+    line-height: 1em;
+    padding-bottom: 9px;
+}
+.dropdowns {
+    text-align: left;
+    padding-top: 16px;
+}
+
+
+
+/************************
+      More General
+************************/
+.log-time-button {
+  height: 40px;
+  width: 120px;
+  background-color: $primary-accent-color;
+  color: white;
+  font-size: 1em;
+  border: 0;
+  border-radius: 5px;
+}
+
+button:focus {
+outline: 0;
+box-shadow: none;
+}
+
+.dropdowns {
+  text-align: left;
+}

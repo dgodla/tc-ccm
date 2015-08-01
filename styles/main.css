@@ -1,0 +1,545 @@
+/*******************
+      IMPORTS
+*******************/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/********************
+    Global Sizes
+*********************/
+/********************
+      Colors
+*********************/
+/********************
+       Fonts
+*********************/
+/********************
+        Base
+*********************/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", serif; }
+
+/************************
+        GENERAL
+************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+html,
+body a {
+  text-decoration: none; }
+
+.header-bar {
+  background-color: #80C5C5;
+  height: 66px;
+  width: 100%; }
+
+.logo {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 6.17215%;
+  width: 65px;
+  margin-left: 0px;
+  padding: 3px;
+  background-color: #50A4A4; }
+  .logo:last-child {
+    margin-right: 0; }
+
+.dob-date,
+.dob-container,
+.age-container,
+.age-number,
+.gender {
+  color: white;
+  vertical-align: top;
+  margin-top: 18px;
+  font-size: 1.5em; }
+
+.dob-date,
+.age-number {
+  font-size: 1em; }
+
+.patient-name {
+  color: white;
+  font-size: 2.5em;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 7px;
+  width: 21%;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .patient-name:last-child {
+    margin-right: 0; }
+
+.dob-container {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  .dob-container:last-child {
+    margin-right: 0; }
+
+.age-container {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 6.17215%; }
+  .age-container:last-child {
+    margin-right: 0; }
+
+.gender {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 6.17215%; }
+  .gender:last-child {
+    margin-right: 0; }
+
+/*************************************
+            Chronic Box
+**************************************/
+.chronic-box {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 35.81322%;
+  margin-left: 5.11788%;
+  height: 274px;
+  border: 2px solid #ccc;
+  margin-top: 48px; }
+  .chronic-box::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .chronic-box:last-child {
+    margin-right: 0; }
+
+.title-box {
+  border-bottom: solid 2px #ccc;
+  height: 42px;
+  background-color: #F1F9FB;
+  padding: -11px;
+  margin-top: -6px; }
+
+.title-box > p {
+  font-size: 1.6em;
+  margin-left: 12px;
+  margin-top: 6px;
+  padding-top: 3px;
+  display: block;
+  background-color: #F1F9FB; }
+
+.timer-name {
+  text-align: center; }
+
+#controls {
+  text-align: center; }
+
+.fa-plus-circle {
+  font-size: 1.2em;
+  display: inline-block;
+  float: right;
+  padding: 5px; }
+
+.title-words {
+  padding: 18px;
+  font-size: 1.4em;
+  text-style: bold;
+  font-weight: 500; }
+
+/***********************
+     Conditions List
+************************/
+.tag-wrapper {
+  text-align: center;
+  border-radius: 5px; }
+
+.tag {
+  display: inline-block;
+  position: relative;
+  margin: 5px 10px 5px 0px; }
+
+.tag input {
+  opacity: 0;
+  position: absolute;
+  z-index: 300;
+  cursor: pointer;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.tag input:hover + label {
+  background: gray; }
+
+.tag label {
+  padding: 7px 34px 6px 18px;
+  position: relative;
+  z-index: 200;
+  color: white;
+  display: block;
+  border-radius: 16px;
+  background: #80C5C5;
+  -webkit-transition: all 0.08s ease-in;
+  transition: all 0.08s ease-in; }
+
+.tag .fa {
+  position: absolute;
+  z-index: 250;
+  right: 11px;
+  top: 9px;
+  color: white;
+  line-height: 0.95; }
+
+@-webkit-keyframes flick {
+  60% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+@keyframes flick {
+  60% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+/***********************
+    Enrollment Items
+************************/
+.status,
+.CCM {
+  color: #50A4A4;
+  font-weight: 700; }
+
+.enrollment-title,
+.status-title,
+.months-title,
+.follow-up-title {
+  width: 50%;
+  display: inline;
+  font-size: 1.2em; }
+
+.enrollment-title,
+.follow-up-title {
+  float: right; }
+
+.status-container {
+  padding: 10px;
+  margin-left: 12px; }
+
+.status-enrollment-container {
+  padding: 12px;
+  margin-left: 10px; }
+
+/***********************
+       Timer Box
+************************/
+.timer-box {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 50.18594%;
+  margin-left: 0.59709%;
+  height: 274px;
+  border: 2px solid #ccc;
+  margin-top: 48px; }
+  .timer-box:last-child {
+    margin-right: 0; }
+
+#time {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  border: 2px solid #ccc;
+  width: 141px;
+  height: 53px; }
+  #time:last-child {
+    margin-right: 0; }
+
+.icons {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  display: inline-block;
+  text-align: center;
+  padding: 3px; }
+  .icons:last-child {
+    margin-right: 0; }
+
+.icons > .fa {
+  color: #50A4A4;
+  font-size: 2.5em;
+  display: inline-block;
+  padding: 10px; }
+
+.fa-angle-double-left {
+  padding: 0px; }
+
+i.fa.fa-align-justify {
+  padding-left: 0; }
+
+i.fa.fa-angle-double-left {
+  padding-right: 0; }
+
+.column-1,
+.column-2,
+.column-3 {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 30.11389%;
+  text-align: center; }
+  .column-1:last-child,
+  .column-2:last-child,
+  .column-3:last-child {
+    margin-right: 0; }
+
+#hours,
+#minutes,
+#seconds {
+  font-size: 2.5em;
+  font-weight: 200; }
+
+div#time {
+  text-align: center;
+  margin: 19px;
+  margin-left: 36px; }
+
+.timer-colon {
+  font-size: 2em;
+  display: inline;
+  padding: 2px;
+  position: relative;
+  bottom: 4px; }
+
+#start_pause_resume,
+#reset {
+  height: 70px;
+  width: 70px;
+  border: 2px solid #ccc;
+  border-radius: 100%;
+  color: #50A4A4;
+  background-color: white;
+  font-size: 1em; }
+
+#total-minutes,
+#total-seconds {
+  font-size: 3.1em;
+  font-weight: 200; }
+
+.total-time-amount {
+  text-align: center;
+  margin-left: -6px;
+  margin-top: 69px; }
+
+.total-timer-colon {
+  font-size: 2em;
+  display: inline;
+  padding: 2px;
+  position: relative;
+  bottom: 4px; }
+
+/**********************
+      DatePicker
+***********************/
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  outline: none; }
+
+#datepicker {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Calendar_font_awesome.svg/20px-Calendar_font_awesome.svg.png") no-repeat;
+  background-position-x: 4px;
+  background-position-y: 4px; }
+
+#ui-datepicker-div {
+  background-color: #80C5C5;
+  border-radius: 15px; }
+
+.ui-datepicker-title {
+  color: white; }
+
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+  text-align: center; }
+
+td {
+  color: white; }
+  td a.ui-state-default {
+    color: white; }
+
+th > span {
+  color: #50A4A4; }
+
+input {
+  text-indent: 55px;
+  font-size: 1.2em;
+  color: #50A4A4;
+  font-weight: 300; }
+
+table.ui-datepicker-calendar {
+  padding: 15px; }
+
+#ui-datepicker-div {
+  padding-left: 15px;
+  padding-right: 15px;
+  z-index: -999;
+  color: transparent; }
+
+.datepicker-paragraph {
+  margin-top: 3px; }
+
+input#datepicker {
+  border: 0;
+  border: 1px solid #ccc;
+  padding: 3px;
+  border-radius: 3px; }
+
+/************************
+    Selects
+************************/
+.dropdown {
+  line-height: 1em; }
+  .dropdown .dropdown-container {
+    display: inline-block;
+    position: relative;
+    text-align: center; }
+  .dropdown .dropdown-description {
+    background: white;
+    border-bottom-left-radius: 3px;
+    border-bottom: 1px solid silver;
+    border-left: 1px solid silver;
+    border-top-left-radius: 3px;
+    border-top: 1px solid silver;
+    color: #999999;
+    float: left;
+    font-size: 0.7em;
+    line-height: 40px;
+    margin: 0;
+    padding: 0 0.5em 0 1em; }
+    @media screen and (min-width: 53.75em) {
+      .dropdown .dropdown-description {
+        font-size: .85em; } }
+  .dropdown .dropdown-button {
+    background: white;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top: 1px solid silver;
+    border-right: 1px solid silver;
+    border-bottom: 1px solid silver;
+    cursor: pointer;
+    float: right;
+    font-size: 0.8em;
+    line-height: 40px;
+    margin: 0;
+    padding: 0 2.5em 0 0.5em;
+    position: relative; }
+    @media screen and (min-width: 53.75em) {
+      .dropdown .dropdown-button {
+        font-size: .8em;
+        padding: 0 2.5em 0 0.5em; } }
+  .dropdown .dropdown-button:hover {
+    background-color: #f7f7f7; }
+  .dropdown .dropdown-button:after {
+    color: #333;
+    content: "\25BE";
+    display: block;
+    position: absolute;
+    right: 1em;
+    top: 0; }
+  .dropdown .dropdown-menu {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid silver;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    color: #333;
+    cursor: pointer;
+    display: none;
+    margin: 0;
+    overflow: show;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 228px;
+    z-index: 99999; }
+    .dropdown .dropdown-menu:before {
+      position: absolute;
+      top: 0;
+      right: 1em;
+      bottom: 0;
+      left: 0;
+      color: white;
+      content: "\25b2";
+      font-size: .8em;
+      pointer-events: none;
+      text-shadow: 0 -2px 2px rgba(0, 0, 0, 0.3);
+      top: -0.7em; }
+  .dropdown .dropdown-menu li {
+    border-bottom: 1px solid silver;
+    color: #333;
+    list-style: none;
+    padding: 0.5em; }
+  .dropdown .dropdown-menu li:hover {
+    background: #f7f7f7; }
+  .dropdown .dropdown-menu li:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+  .dropdown .dropdown-menu li:last-child {
+    border: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px; }
+  .dropdown .show-menu {
+    display: block; }
+
+.dropdown {
+  line-height: 1em;
+  padding-bottom: 9px; }
+
+.dropdowns {
+  text-align: left;
+  padding-top: 16px; }
+
+/************************
+      More General
+************************/
+.log-time-button {
+  height: 40px;
+  width: 120px;
+  background-color: #50A4A4;
+  color: white;
+  font-size: 1em;
+  border: 0;
+  border-radius: 5px; }
+
+button:focus {
+  outline: 0;
+  box-shadow: none; }
+
+.dropdowns {
+  text-align: left; }
+
+/*# sourceMappingURL=main.css.map */
