@@ -109,6 +109,48 @@ body a {
   .gender:last-child {
     margin-right: 0; }
 
+.fa-print {
+  border-left: 2px solid #50A4A4;
+  border-right: 2px solid #50A4A4; }
+
+.icons {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  display: inline-block;
+  text-align: center;
+  padding: 3px;
+  float: right; }
+  .icons:last-child {
+    margin-right: 0; }
+
+.icons > .fa {
+  color: #50A4A4;
+  font-size: 2.5em;
+  display: inline-block;
+  padding: 10px; }
+
+.fa-angle-double-left {
+  padding: 0px; }
+
+i.fa.fa-align-justify {
+  padding-left: 0; }
+
+i.fa.fa-angle-double-left {
+  padding-right: 0; }
+
+i.fa.fa-print {
+  margin-left: 10px;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+i.fa.fa-share-square-o {
+  margin-left: 10px; }
+
+.icons:last-child {
+  margin-right: -25px; }
+
 /*************************************
             Chronic Box
 **************************************/
@@ -275,32 +317,6 @@ body a {
   #time:last-child {
     margin-right: 0; }
 
-.icons {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-  display: inline-block;
-  text-align: center;
-  padding: 3px; }
-  .icons:last-child {
-    margin-right: 0; }
-
-.icons > .fa {
-  color: #50A4A4;
-  font-size: 2.5em;
-  display: inline-block;
-  padding: 10px; }
-
-.fa-angle-double-left {
-  padding: 0px; }
-
-i.fa.fa-align-justify {
-  padding-left: 0; }
-
-i.fa.fa-angle-double-left {
-  padding-right: 0; }
-
 .column-1,
 .column-2,
 .column-3 {
@@ -358,6 +374,28 @@ div#time {
   padding: 2px;
   position: relative;
   bottom: 4px; }
+
+@keyframes ripple {
+  0% {
+    opacity: 0.3; }
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px #80C5C5, 0 0 10px 10px red, 0 0 0 10px #50A4A4; }
+  100% {
+    box-shadow: 0 0 0 2px #80C5C5, 0 0 10px 10px red, 0 0 0 10px #50A4A4;
+    transform: scale(1.2);
+    opacity: 0; } }
+#start_pause_resume:active:after {
+  animation: ripple 1.3s ease-out 75ms; }
+
+#start_pause_resume:after {
+  width: 100px;
+  height: 100px;
+  top: -95px;
+  left: -5px;
+  transform: scale(0.9);
+  box-shadow: 0 0 0 2px #fff;
+  opacity: 0; }
 
 /**********************
       DatePicker
@@ -538,8 +576,5 @@ input#datepicker {
 button:focus {
   outline: 0;
   box-shadow: none; }
-
-.dropdowns {
-  text-align: left; }
 
 /*# sourceMappingURL=main.css.map */

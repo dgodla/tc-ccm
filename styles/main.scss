@@ -113,7 +113,47 @@ body a {
   @include span-columns(1);
 }
 
+.fa-print {
+  border-left: 2px solid $primary-accent-color;
+  border-right: 2px solid $primary-accent-color;
+}
+.icons{
+  @include span-columns(4);
+  display: inline-block;
+  text-align: center;
+  padding: 3px;
+  float: right;
+}
+.icons>.fa {
+  color: $primary-accent-color;
+  font-size: 2.5em;
+  display: inline-block;
+  padding: 10px;
+}
 
+.fa-angle-double-left {
+  padding: 0px;
+}
+
+i.fa.fa-align-justify {
+    padding-left: 0;
+}
+i.fa.fa-angle-double-left {
+    padding-right: 0;
+}
+
+i.fa.fa-print {
+    margin-left: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+i.fa.fa-share-square-o {
+    margin-left: 10px;
+}
+.icons:last-child {
+    margin-right: -25px;
+}
 /*************************************
             Chronic Box
 **************************************/
@@ -292,29 +332,7 @@ body a {
   width: 141px;
   height: 53px;
 }
-.icons{
-  @include span-columns(4);
-  display: inline-block;
-  text-align: center;
-  padding: 3px;
-}
-.icons>.fa {
-  color: $primary-accent-color;
-  font-size: 2.5em;
-  display: inline-block;
-  padding: 10px;
-}
 
-.fa-angle-double-left {
-  padding: 0px;
-}
-
-i.fa.fa-align-justify {
-    padding-left: 0;
-}
-i.fa.fa-angle-double-left {
-    padding-right: 0;
-}
 
 .column-1,
 .column-2,
@@ -374,8 +392,33 @@ div#time {
 }
 
 
+@keyframes ripple{
+  0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px $primary-color, 0 0 10px 10px red, 0 0 0 10px $primary-accent-color;
+	}
+	100% {
+		box-shadow: 0 0 0 2px $primary-color, 0 0 10px 10px red, 0 0 0 10px $primary-accent-color;
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
+#start_pause_resume:active:after{
+    animation:ripple 1.3s ease-out 75ms;
+  }
 
-
+#start_pause_resume:after{
+  width: 100px;
+	height: 100px;
+  top:-95px;
+  left:-5px;
+  transform:scale(.9);
+  box-shadow:0 0 0 2px #fff;
+  opacity:0;
+}
 
 
 /**********************
@@ -450,12 +493,7 @@ input#datepicker {
     Selects
 ************************/
 
-// .dropdown {
-//   height: 35px;
-//   width: 220px;
-//   font-size: 1.5em;
-//   line-height: 35px;
-// }
+
 .dropdown {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
@@ -620,8 +658,4 @@ input#datepicker {
 button:focus {
 outline: 0;
 box-shadow: none;
-}
-
-.dropdowns {
-  text-align: left;
 }
