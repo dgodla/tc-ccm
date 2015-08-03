@@ -3,17 +3,10 @@
 *******************/
 @import 'bourbon/bourbon';
 $visual-grid: false;
+$visual-grid-color: purple;
+$visual-grid-opacity: 0.1;
+$max-width: em(1300) !default;
 @import 'neat/neat';
-
-
-/********************
-    Global Sizes
-*********************/
-$banner-width: 100%;
-$banner-height: 100%;
-
-$tablet: new-breakpoint(min-width 501px max-width 840px 2);
-$mobile: new-breakpoint(max-width 500px 12);
 
 /********************
       Colors
@@ -33,16 +26,20 @@ $secondary-accent-color: $light-gray;
 *********************/
 $body-font: 'Open Sans', serif;
 
-
 /********************
         Base
 *********************/
+
 body {
   margin: 0;
   padding: 0;
   font-family: $body-font;
-
 }
+
+.container {
+  @include outer-container;
+}
+
 
 /************************
         GENERAL
@@ -62,7 +59,6 @@ body a {
 .header-bar {
   background-color: $primary-color;
   height: 66px;
-  width: $banner-width;
 }
 
 .logo {
@@ -160,15 +156,14 @@ i.fa.fa-share-square-o {
 
 .chronic-box {
   @include outer-container;
-  @include span-columns(4.475);
-  @include shift(.6);
+  @include span-columns(5);
   height: 274px;
   border: 2px solid #ccc;
   margin-top: 48px;
 }
 
 .title-box {
-    border-bottom: solid 2px #ccc;
+    border-bottom: solid 1px #ccc;
     height: 42px;
     background-color: $secondary-color;
     padding: -11px;
@@ -206,11 +201,6 @@ i.fa.fa-share-square-o {
   text-style: bold;
   font-weight: 500;
 }
-
-
-
-
-
 
 /***********************
      Conditions List
@@ -317,12 +307,13 @@ i.fa.fa-share-square-o {
 ************************/
 
 .timer-box {
-  @include span-columns(6.16);
-  @include shift(.07);
+  @include span-columns(6.75);
   height: 274px;
   border: 2px solid #ccc;
-  // @include outer-container;
   margin-top: 48px;
+  margin-right: 0;
+  float: right;
+  @include omega();
 
 }
 
@@ -337,9 +328,15 @@ i.fa.fa-share-square-o {
 .column-1,
 .column-2,
 .column-3 {
-  @include span-columns(2 of 6);
+  @include span-columns(4);
+  @include omega();
   text-align: center;
 }
+
+.column-2 {
+  width: 255px;
+}
+
 
 #hours,
 #minutes,
@@ -406,7 +403,7 @@ div#time {
 		opacity: 0;
 	}
 }
-#start_pause_resume:active:after{
+#start_pause_resume:hover:after{
     animation:ripple 1.3s ease-out 75ms;
   }
 
@@ -658,4 +655,182 @@ input#datepicker {
 button:focus {
 outline: 0;
 box-shadow: none;
+}
+
+/************************
+      Nav Boxes
+************************/
+
+.nav-boxes {
+  height: 55px;
+  @include outer-container;
+  @include span-columns(12);
+  margin-top: 35px;
+}
+.box-1,
+.box-2,
+.box-3,
+.box-4 {
+  display: inline-block;
+  border: solid 1px #ccc;
+  background-color: $secondary-color;
+  text-align: center;
+  font-size: .9em;
+  @include span-columns(3);
+  @include pad(20px);
+}
+
+
+/************************
+    Monthly Progress
+************************/
+
+.monthly-progress {
+  height: 2730px;
+  @include span-columns(12);
+  margin-top: 40px;
+  @include omega();
+}
+
+.left-column-1,
+.right-column-1 {
+  height: 2730px;
+  display: inline;
+  background-color: $secondary-accent-color;
+  border: solid 1px #ccc;
+  @include omega();
+  @include span-columns(5.9);
+  @include margin(0px 0px 10px 0px);
+}
+
+
+
+.lower-title-boxes {
+  height: 55px;
+}
+
+p.lower-titles {
+    position: relative;
+    top: 7px;
+    padding-left: 14px;
+}
+
+.initial-date {
+    font-size: 1.5em;
+    padding: 0px;
+    margin: 28px;
+}
+
+.fa-check,
+.fa-pencil {
+    float: right;
+    margin: 8px;
+    margin-right: 20px;
+    position: relative;
+    bottom: 3px;
+}
+
+.fa-pencil {
+  color: darkorange;
+}
+.fa-check {
+  color: green;
+}
+
+/************************
+       Blue-Boxes
+************************/
+
+.blue-box {
+  background-color: white;
+  @include margin(20px);
+  height: 143px;
+  border: 1px solid #ccc;
+}
+
+.blue-box-title {
+  background-color: $secondary-color;
+  font-size: 1.2em;
+  border-bottom: 1px solid #ccc;
+  height:45px;
+  padding-left: 15px;
+  padding-top: 8px;
+}
+
+.editable>p {
+  margin-left: 15px;
+}
+
+
+/************************
+     Right Column 1
+************************/
+
+.right-column-1 {
+  @include span-columns(5.9);
+  @include margin(0px 20px 20px 20px);
+  margin-right: 0;
+  float: right;
+
+}
+.lower-title-boxes {
+  text-align: left;
+}
+
+.white-container {
+  @include margin(20px);
+  height: 2570px;
+  background-color: white;
+  margin-top: 84px;
+  border: 1px solid #ccc;
+
+}
+.tabs {
+  height: 95px;
+  display: inline-block;
+  margin-top: 30px;
+  @include span-columns(12);
+  margin-left: 20px;
+}
+
+.tab-1,
+.tab-2,
+.tab-3 {
+  display: inline-block;
+  height: 55px;
+  border: 1px solid #ccc;
+  background-color: white;
+  text-align: center;
+  padding: 19px;
+  position: relative;
+  border-bottom: none;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.save-button {
+  background-color: $primary-accent-color;
+  height: 35px;
+  width: 80px;
+  color: white;
+  font-size: 1em;
+  border: 0;
+  border-radius: 5px;
+  margin-left: 22px;
+}
+
+.lower-datepicker,
+.lower-dropdowns {
+  @include span-columns(4);
+  @include omega();
+  text-align: center;
+
+}
+
+.lower-dropdowns {
+  width: 255px;
+}
+
+.updates {
+  margin-top: 30px;
+  height: 195px;
 }
