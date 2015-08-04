@@ -117,6 +117,20 @@ $(document).ready(function() {
     });
 
 
+  /***********************
+         Navigation
+  ************************/
+
+  $(".box-2").click(function(){
+   $('.right-column-1').css({
+     'width':'100%',
+     'float': 'none',
+     'margin': '0'
+   });
+   $('.left-column-1').hide();
+});
+
+
 
 
 

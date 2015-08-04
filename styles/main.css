@@ -23,7 +23,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", serif; }
+  font-family: "Open Sans", serif;
+  overflow-x: hidden; }
 
 .container {
   max-width: 81.25em;
@@ -615,12 +616,13 @@ button:focus {
   border: solid 1px #ccc;
   background-color: #F1F9FB;
   text-align: center;
-  font-size: .9em;
+  font-size: .99em;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 23.23176%;
-  padding: 20px; }
+  padding: 20px;
+  font-family: "Open Sans", serif; }
   .box-1:last-child,
   .box-2:last-child,
   .box-3:last-child,
@@ -781,5 +783,8 @@ p.lower-titles {
 .updates {
   margin-top: 30px;
   height: 195px; }
+
+button {
+  font-family: "Open Sans", serif; }
 
 /*# sourceMappingURL=main.css.map */
