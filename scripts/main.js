@@ -153,7 +153,6 @@ $(document).ready(function() {
   $(".box-3").click(function() {
     $('.monthly-progress').hide();
     $('.monthly-rec').show();
-
     $('.three').show();
     $('.one').hide();
     $('.two').hide();

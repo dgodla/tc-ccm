@@ -141,7 +141,7 @@ i.fa.fa-share-square-o {
   @include outer-container;
   @include span-columns(5);
   height: 274px;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   margin-top: 48px;
 }
 .title-box {
@@ -277,7 +277,7 @@ i.fa.fa-share-square-o {
 .timer-box {
   @include span-columns(6.75);
   height: 274px;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   margin-top: 48px;
   margin-right: 0;
   float: right;
@@ -285,7 +285,7 @@ i.fa.fa-share-square-o {
 }
 #time {
   @include span-columns(2);
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   width: 141px;
   height: 53px;
 }
@@ -320,7 +320,7 @@ div#time {
 #reset {
   height: 70px;
   width: 70px;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 100%;
   color: $primary-accent-color;
   background-color: white;
@@ -737,6 +737,7 @@ p.lower-titles {
   border: 0;
   border-radius: 5px;
   margin-left: 22px;
+  
 }
 .lower-datepicker,
 .lower-dropdowns {

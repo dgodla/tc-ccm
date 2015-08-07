@@ -172,7 +172,7 @@ i.fa.fa-share-square-o {
   margin-right: 2.35765%;
   width: 40.29137%;
   height: 274px;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   margin-top: 48px; }
   .chronic-box::after {
     clear: both;
@@ -308,7 +308,7 @@ i.fa.fa-share-square-o {
   margin-right: 2.35765%;
   width: 55.21853%;
   height: 274px;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   margin-top: 48px;
   margin-right: 0;
   float: right;
@@ -321,7 +321,7 @@ i.fa.fa-share-square-o {
   display: block;
   margin-right: 2.35765%;
   width: 14.70196%;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   width: 141px;
   height: 53px; }
   #time:last-child {
@@ -365,7 +365,7 @@ div#time {
 #reset {
   height: 70px;
   width: 70px;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 100%;
   color: #50a4a4;
   background-color: white;
