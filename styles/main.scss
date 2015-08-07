@@ -54,6 +54,11 @@ body a {
 button, .fa {
   cursor: pointer;
 }
+button:hover {
+
+}
+
+
 .header-bar {
   background-color: $primary-color;
   height: 66px;
@@ -359,6 +364,7 @@ div#time {
 }
 #start_pause_resume:hover:after {
   animation: ripple 1.3s ease-out 75ms;
+
 }
 #start_pause_resume:after {
   width: 100px;
@@ -737,7 +743,7 @@ p.lower-titles {
   border: 0;
   border-radius: 5px;
   margin-left: 22px;
-  
+
 }
 .lower-datepicker,
 .lower-dropdowns {
@@ -804,7 +810,7 @@ p.lower-titles {
 
 .based-paragraph {
   margin: 20px;
-  font-size: 1.1em;
+  font-size: .9em;
 }
 
 
@@ -872,4 +878,17 @@ p.lower-titles {
   border: 1px solid #ccc;
   background-color: white;
   border-bottom: none;
+}
+
+.month-selector {
+  float: right;
+  margin-right: 37px;
+}
+i.fa.fa-arrow-left {
+    padding-right: 16px;
+    color: #ccc;
+}
+i.fa.fa-arrow-right {
+    padding-left: 14px;
+    color: #ccc;
 }

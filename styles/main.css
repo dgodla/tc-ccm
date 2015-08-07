@@ -847,7 +847,7 @@ p.lower-titles {
 
 .based-paragraph {
   margin: 20px;
-  font-size: 1.1em; }
+  font-size: .9em; }
 
 /************************
     Page-3 Left Column
@@ -906,5 +906,17 @@ p.lower-titles {
   border: 1px solid #ccc;
   background-color: white;
   border-bottom: none; }
+
+.month-selector {
+  float: right;
+  margin-right: 37px; }
+
+i.fa.fa-arrow-left {
+  padding-right: 16px;
+  color: #ccc; }
+
+i.fa.fa-arrow-right {
+  padding-left: 14px;
+  color: #ccc; }
 
 /*# sourceMappingURL=main.css.map */
