@@ -47,8 +47,11 @@ html,
 body a {
   text-decoration: none; }
 
+button, .fa {
+  cursor: pointer; }
+
 .header-bar {
-  background-color: #80C5C5;
+  background-color: #80c5c5;
   height: 66px; }
 
 .logo {
@@ -57,9 +60,9 @@ body a {
   margin-right: 2.35765%;
   width: 6.17215%;
   width: 65px;
-  margin-left: 0px;
+  margin-left: 0;
   padding: 3px;
-  background-color: #50A4A4; }
+  background-color: #50a4a4; }
   .logo:last-child {
     margin-right: 0; }
 
@@ -116,8 +119,8 @@ body a {
     margin-right: 0; }
 
 .fa-print {
-  border-left: 2px solid #50A4A4;
-  border-right: 2px solid #50A4A4; }
+  border-left: 2px solid #50a4a4;
+  border-right: 2px solid #50a4a4; }
 
 .icons {
   float: left;
@@ -132,13 +135,13 @@ body a {
     margin-right: 0; }
 
 .icons > .fa {
-  color: #50A4A4;
+  color: #50a4a4;
   font-size: 2.5em;
   display: inline-block;
   padding: 10px; }
 
 .fa-angle-double-left {
-  padding: 0px; }
+  padding: 0; }
 
 i.fa.fa-align-justify {
   padding-left: 0; }
@@ -181,7 +184,7 @@ i.fa.fa-share-square-o {
 .title-box {
   border-bottom: solid 1px #ccc;
   height: 42px;
-  background-color: #F1F9FB;
+  background-color: #f1f9fb;
   padding: -11px;
   margin-top: -6px; }
 
@@ -191,7 +194,7 @@ i.fa.fa-share-square-o {
   margin-top: 6px;
   padding-top: 3px;
   display: block;
-  background-color: #F1F9FB; }
+  background-color: #f1f9fb; }
 
 .timer-name {
   text-align: center; }
@@ -221,7 +224,7 @@ i.fa.fa-share-square-o {
 .tag {
   display: inline-block;
   position: relative;
-  margin: 5px 10px 5px 0px; }
+  margin: 5px 10px 5px 0; }
 
 .tag input {
   opacity: 0;
@@ -242,7 +245,7 @@ i.fa.fa-share-square-o {
   color: white;
   display: block;
   border-radius: 16px;
-  background: #80C5C5;
+  background: #80c5c5;
   -webkit-transition: all 0.08s ease-in;
   transition: all 0.08s ease-in; }
 
@@ -273,7 +276,7 @@ i.fa.fa-share-square-o {
 ************************/
 .status,
 .CCM {
-  color: #50A4A4;
+  color: #50a4a4;
   font-weight: 700; }
 
 .enrollment-title,
@@ -349,8 +352,7 @@ i.fa.fa-share-square-o {
 
 div#time {
   text-align: center;
-  margin: 19px;
-  margin-left: 36px; }
+  margin: 19px 19px 19px 36px; }
 
 .timer-colon {
   font-size: 2em;
@@ -365,7 +367,7 @@ div#time {
   width: 70px;
   border: 2px solid #ccc;
   border-radius: 100%;
-  color: #50A4A4;
+  color: #50a4a4;
   background-color: white;
   font-size: 1em; }
 
@@ -391,9 +393,9 @@ div#time {
     opacity: 0.3; }
   40% {
     opacity: 0.5;
-    box-shadow: 0 0 0 2px #80C5C5, 0 0 10px 10px red, 0 0 0 10px #50A4A4; }
+    box-shadow: 0 0 0 2px #80c5c5, 0 0 10px 10px red, 0 0 0 10px #50a4a4; }
   100% {
-    box-shadow: 0 0 0 2px #80C5C5, 0 0 10px 10px red, 0 0 0 10px #50A4A4;
+    box-shadow: 0 0 0 2px #80c5c5, 0 0 10px 10px red, 0 0 0 10px #50a4a4;
     transform: scale(1.2);
     opacity: 0; } }
 #start_pause_resume:hover:after {
@@ -415,7 +417,8 @@ input[type="text"],
 input[type="password"],
 textarea,
 select {
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
 
 #datepicker {
   background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Calendar_font_awesome.svg/20px-Calendar_font_awesome.svg.png") no-repeat;
@@ -423,7 +426,7 @@ select {
   background-position-y: 4px; }
 
 #ui-datepicker-div {
-  background-color: #80C5C5;
+  background-color: #80c5c5;
   border-radius: 15px; }
 
 .ui-datepicker-title {
@@ -438,12 +441,12 @@ td {
     color: white; }
 
 th > span {
-  color: #50A4A4; }
+  color: #50a4a4; }
 
 input {
   text-indent: 55px;
   font-size: 1.2em;
-  color: #50A4A4;
+  color: #50a4a4;
   font-weight: 300; }
 
 table.ui-datepicker-calendar {
@@ -488,7 +491,7 @@ input#datepicker {
     padding: 0 0.5em 0 1em; }
     @media screen and (min-width: 53.75em) {
       .dropdown .dropdown-description {
-        font-size: .85em; } }
+        font-size: 0.85em; } }
   .dropdown .dropdown-button {
     background: white;
     border-bottom-right-radius: 3px;
@@ -501,11 +504,11 @@ input#datepicker {
     font-size: 0.8em;
     line-height: 40px;
     margin: 0;
-    padding: 0 2.5em 0 0.5em;
+    padding: 0;
     position: relative; }
     @media screen and (min-width: 53.75em) {
       .dropdown .dropdown-button {
-        font-size: .8em;
+        font-size: 0.8em;
         padding: 0 2.5em 0 0.5em; } }
   .dropdown .dropdown-button:hover {
     background-color: #f7f7f7; }
@@ -543,7 +546,7 @@ input#datepicker {
       left: 0;
       color: white;
       content: "\25b2";
-      font-size: .8em;
+      font-size: 0.8em;
       pointer-events: none;
       text-shadow: 0 -2px 2px rgba(0, 0, 0, 0.3);
       top: -0.7em; }
@@ -578,7 +581,7 @@ input#datepicker {
 .log-time-button {
   height: 40px;
   width: 120px;
-  background-color: #50A4A4;
+  background-color: #50a4a4;
   color: white;
   font-size: 1em;
   border: 0;
@@ -614,9 +617,9 @@ button:focus {
 .box-4 {
   display: inline-block;
   border: solid 1px #ccc;
-  background-color: #F1F9FB;
+  background-color: #f1f9fb;
   text-align: center;
-  font-size: .99em;
+  font-size: 0.99em;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -643,11 +646,22 @@ button:focus {
   .monthly-progress:last-child {
     margin-right: 0; }
 
+.monthly-rec {
+  height: 2730px;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-top: 40px;
+  margin-right: 0; }
+  .monthly-rec:last-child {
+    margin-right: 0; }
+
 .left-column-1,
 .right-column-1 {
   height: 2730px;
   display: inline;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border: solid 1px #ccc;
   margin-right: 0;
   float: left;
@@ -669,14 +683,13 @@ p.lower-titles {
 
 .initial-date {
   font-size: 1.5em;
-  padding: 0px;
+  padding: 0;
   margin: 28px; }
 
 .fa-check,
 .fa-pencil {
   float: right;
-  margin: 8px;
-  margin-right: 20px;
+  margin: 8px 20px 8px 8px;
   position: relative;
   bottom: 3px; }
 
@@ -696,7 +709,7 @@ p.lower-titles {
   border: 1px solid #ccc; }
 
 .blue-box-title {
-  background-color: #F1F9FB;
+  background-color: #f1f9fb;
   font-size: 1.2em;
   border-bottom: 1px solid #ccc;
   height: 45px;
@@ -727,8 +740,9 @@ p.lower-titles {
   margin: 20px;
   height: 2570px;
   background-color: white;
-  margin-top: 84px;
-  border: 1px solid #ccc; }
+  margin-top: 72px;
+  border: 1px solid #ccc;
+  border-top: none; }
 
 .tabs {
   height: 95px;
@@ -746,17 +760,16 @@ p.lower-titles {
 .tab-2,
 .tab-3 {
   display: inline-block;
-  height: 55px;
-  border: 1px solid #ccc;
-  background-color: white;
+  height: 43px;
   text-align: center;
-  padding: 19px;
+  padding: 14px;
   position: relative;
-  border-bottom: none;
-  border-radius: 8px 8px 0px 0px; }
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer; }
 
 .save-button {
-  background-color: #50A4A4;
+  background-color: #50a4a4;
   height: 35px;
   width: 80px;
   color: white;
@@ -784,7 +797,114 @@ p.lower-titles {
   margin-top: 30px;
   height: 195px; }
 
-button {
+.fa-check-circle.one {
+  position: relative;
+  bottom: 30px;
+  font-size: 1.5em;
+  right: -56px;
+  background-color: white;
+  border-radius: 100%;
+  color: #50a4a4;
+  z-index: 2;
+  fill-opacity: 1;
+  float: center; }
+
+.fa-check-circle.two {
+  position: relative;
+  bottom: 30px;
+  font-size: 1.5em;
+  right: -76px;
+  background-color: white;
+  border-radius: 100%;
+  color: #50a4a4;
+  z-index: 2;
+  fill-opacity: 1; }
+
+.fa-check-circle.three {
+  position: relative;
+  bottom: 51px;
+  font-size: 1.5em;
+  right: -151px;
+  background-color: white;
+  border-radius: 100%;
+  color: #50a4a4;
+  z-index: 2;
+  fill-opacity: 1; }
+
+.fa-check-circle.four {
+  position: relative;
+  bottom: 30px;
+  font-size: 1.5em;
+  right: -31px;
+  background-color: white;
+  border-radius: 100%;
+  color: #50a4a4;
+  z-index: 2;
+  fill-opacity: 1; }
+
+.box-3 {
+  height: 67px; }
+
+.based-paragraph {
+  margin: 20px;
+  font-size: 1.1em; }
+
+/************************
+    Page-3 Left Column
+************************/
+.page-3-dropdowns {
+  margin-top: 24px; }
+
+.select-dropdown {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  width: auto;
+  float: left;
+  border-radius: 2px; }
+  .select-dropdown:last-child {
+    margin-right: 0; }
+  .select-dropdown select {
+    padding: 8px 24px 8px 10px;
+    border: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 580px; }
+    .select-dropdown select:active, .select-dropdown select:focus {
+      outline: none;
+      box-shadow: none; }
+  .select-dropdown:after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #aaa; }
+
+.dropdown-blue-box {
+  height: 40px;
+  font-size: 1.2em;
   font-family: "Open Sans", serif; }
+
+.select-dropdown > select {
+  font-size: 1em;
+  font-family: "Open Sans", serif; }
+
+/***********************************
+    Smaller Nav Tabs on Right Side
+************************************/
+.clicked {
+  border: 1px solid #ccc;
+  background-color: white;
+  border-bottom: none; }
 
 /*# sourceMappingURL=main.css.map */

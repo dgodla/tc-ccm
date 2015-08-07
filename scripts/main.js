@@ -105,32 +105,92 @@ $(document).ready(function() {
   /***********************
         Dropdowns
   ************************/
-    $(".dropdown-button").click(function() {
-      var $button, $menu;
-      $button = $(this);
-      $menu = $button.siblings(".dropdown-menu");
-      $menu.toggleClass("show-menu");
-      $menu.children("li").click(function() {
-        $menu.removeClass("show-menu");
-        $button.html($(this).html());
-      });
+  $(".dropdown-button").click(function() {
+    var $button, $menu;
+    $button = $(this);
+    $menu = $button.siblings(".dropdown-menu");
+    $menu.toggleClass("show-menu");
+    $menu.children("li").click(function() {
+      $menu.removeClass("show-menu");
+      $button.html($(this).html());
     });
+  });
 
 
   /***********************
          Navigation
   ************************/
 
-  $(".box-2").click(function(){
-   $('.right-column-1').css({
-     'width':'100%',
-     'float': 'none',
-     'margin': '0'
-   });
-   $('.left-column-1').hide();
-});
+  $('.two').hide();
+  $('.three').hide();
+  $('.four').hide();
+  $('.monthly-rec').hide();
 
 
+
+  $(".box-2").click(function() {
+    $('.right-column-1').css({
+      'width': '100%',
+      'float': 'none',
+      'margin': '0'
+    });
+    $('.left-column-1').hide();
+    $('.two').show();
+    $('.one').hide();
+    $('.three').hide();
+    $('.four').hide();
+  });
+
+  $(".box-1").click(function() {
+    $('.one').show();
+    $('.two').hide();
+    $('.three').hide();
+    $('.four').hide();
+    $('.monthly-rec').hide();
+    $('.monthly-progress').show();
+  });
+
+  $(".box-3").click(function() {
+    $('.monthly-progress').hide();
+    $('.monthly-rec').show();
+
+    $('.three').show();
+    $('.one').hide();
+    $('.two').hide();
+    $('.four').hide();
+  });
+
+  $(".box-4").click(function() {
+    $('.four').show();
+    $('.one').hide();
+    $('.three').hide();
+    $('.two').hide();
+  });
+
+  $(".tab-2").click(function() {
+    $('.monthly-care').show();
+    $('.monthly-call').hide();
+    $('.time-log').hide();
+  });
+
+  $('.tab-1').addClass('clicked');
+  $(".tab-1").click(function() {
+    $(this).addClass("clicked");
+    $('.tab-2').removeClass('clicked');
+    $('.tab-3').removeClass('clicked');
+  });
+
+  $(".tab-2").click(function() {
+    $(this).addClass("clicked");
+    $('.tab-1').removeClass('clicked');
+    $('.tab-3').removeClass('clicked');
+  });
+
+  $(".tab-3").click(function() {
+    $(this).addClass("clicked");
+    $('.tab-1').removeClass('clicked');
+    $('.tab-2').removeClass('clicked');
+  });
 
 
 

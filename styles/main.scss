@@ -11,11 +11,10 @@ $max-width: em(1300) !default;
 /********************
       Colors
 *********************/
-$lighter-blue: #80C5C5;
-$darker-blue: #50A4A4;
-$gray-blue: #F1F9FB;
-$light-gray: #F2F2F2;
-
+$lighter-blue: #80c5c5;
+$darker-blue: #50a4a4;
+$gray-blue: #f1f9fb;
+$light-gray: #f2f2f2;
 $primary-color: $lighter-blue;
 $primary-accent-color: $darker-blue;
 $secondary-color: $gray-blue;
@@ -29,48 +28,43 @@ $body-font: 'Open Sans', serif;
 /********************
         Base
 *********************/
-
 body {
   margin: 0;
   padding: 0;
   font-family: $body-font;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
-
 .container {
   @include outer-container;
 }
 
-
 /************************
         GENERAL
 ************************/
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 html,
 body a {
   text-decoration: none;
 }
 
+button, .fa {
+  cursor: pointer;
+}
 .header-bar {
   background-color: $primary-color;
   height: 66px;
 }
-
 .logo {
   @include span-columns(1);
   width: 65px;
-  margin-left: 0px;
+  margin-left: 0;
   padding: 3px;
   background-color: $primary-accent-color;
-
 }
-
 .dob-date,
 .dob-container,
 .age-container,
@@ -79,15 +73,12 @@ body a {
   color: white;
   vertical-align: top;
   margin-top: 18px;
-  font-size: 1.5em
+  font-size: 1.5em;
 }
-
 .dob-date,
 .age-number {
   font-size: 1em;
 }
-
-
 .patient-name {
   color: white;
   font-size: 2.5em;
@@ -97,24 +88,20 @@ body a {
   width: 21%;
   @include span-columns(3);
 }
-
 .dob-container {
   @include span-columns(2);
 }
-
 .age-container {
   @include span-columns(1);
 }
-
 .gender {
   @include span-columns(1);
 }
-
 .fa-print {
   border-left: 2px solid $primary-accent-color;
   border-right: 2px solid $primary-accent-color;
 }
-.icons{
+.icons {
   @include span-columns(4);
   display: inline-block;
   text-align: center;
@@ -127,34 +114,29 @@ body a {
   display: inline-block;
   padding: 10px;
 }
-
 .fa-angle-double-left {
-  padding: 0px;
+  padding: 0;
 }
-
 i.fa.fa-align-justify {
-    padding-left: 0;
+  padding-left: 0;
 }
 i.fa.fa-angle-double-left {
-    padding-right: 0;
+  padding-right: 0;
 }
-
 i.fa.fa-print {
-    margin-left: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+  margin-left: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
 i.fa.fa-share-square-o {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 .icons:last-child {
-    margin-right: -25px;
+  margin-right: -25px;
 }
 /*************************************
             Chronic Box
 **************************************/
-
 .chronic-box {
   @include outer-container;
   @include span-columns(5);
@@ -162,40 +144,33 @@ i.fa.fa-share-square-o {
   border: 2px solid #ccc;
   margin-top: 48px;
 }
-
 .title-box {
-    border-bottom: solid 1px #ccc;
-    height: 42px;
-    background-color: $secondary-color;
-    padding: -11px;
-    margin-top: -6px;
+  border-bottom: solid 1px #ccc;
+  height: 42px;
+  background-color: $secondary-color;
+  padding: -11px;
+  margin-top: -6px;
 }
-
 .title-box > p {
-    font-size: 1.6em;
-    margin-left: 12px;
-    margin-top: 6px;
-    padding-top: 3px;
-    display: block;
-    background-color: $secondary-color;
-
+  font-size: 1.6em;
+  margin-left: 12px;
+  margin-top: 6px;
+  padding-top: 3px;
+  display: block;
+  background-color: $secondary-color;
 }
-
 .timer-name {
   text-align: center;
 }
-
 #controls {
   text-align: center;
 }
-
 .fa-plus-circle {
   font-size: 1.2em;
   display: inline-block;
   float: right;
   padding: 5px;
 }
-
 .title-words {
   padding: 18px;
   font-size: 1.4em;
@@ -206,7 +181,6 @@ i.fa.fa-share-square-o {
 /***********************
      Conditions List
 ************************/
-
 .tag-wrapper {
   text-align: center;
   border-radius: 5px;
@@ -214,7 +188,7 @@ i.fa.fa-share-square-o {
 .tag {
   display: inline-block;
   position: relative;
-  margin: 5px 10px 5px 0px;
+  margin: 5px 10px 5px 0;
 }
 .tag input {
   opacity: 0;
@@ -237,7 +211,7 @@ i.fa.fa-share-square-o {
   border-radius: 16px;
   background: $primary-color;
   -webkit-transition: all 0.08s ease-in;
-          transition: all 0.08s ease-in;
+  transition: all 0.08s ease-in;
 }
 .tag .fa {
   position: absolute;
@@ -247,38 +221,35 @@ i.fa.fa-share-square-o {
   color: white;
   line-height: 0.95;
 }
-
 @-webkit-keyframes flick {
   60% {
     -webkit-transform: scale(1.15);
-            transform: scale(1.15);
+    transform: scale(1.15);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 @keyframes flick {
   60% {
     -webkit-transform: scale(1.15);
-            transform: scale(1.15);
+    transform: scale(1.15);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 
 /***********************
     Enrollment Items
 ************************/
-
 .status,
 .CCM {
   color: $primary-accent-color;
   font-weight: 700;
 }
-
 .enrollment-title,
 .status-title,
 .months-title,
@@ -287,26 +258,22 @@ i.fa.fa-share-square-o {
   display: inline;
   font-size: 1.2em;
 }
-
 .enrollment-title,
 .follow-up-title {
   float: right;
 }
-
 .status-container {
-    padding: 10px;
-    margin-left: 12px;
+  padding: 10px;
+  margin-left: 12px;
 }
-
 .status-enrollment-container {
-    padding: 12px;
-    margin-left: 10px;
+  padding: 12px;
+  margin-left: 10px;
 }
 
 /***********************
        Timer Box
 ************************/
-
 .timer-box {
   @include span-columns(6.75);
   height: 274px;
@@ -315,17 +282,13 @@ i.fa.fa-share-square-o {
   margin-right: 0;
   float: right;
   @include omega();
-
 }
-
 #time {
   @include span-columns(2);
   border: 2px solid #ccc;
   width: 141px;
   height: 53px;
 }
-
-
 .column-1,
 .column-2,
 .column-3 {
@@ -333,12 +296,9 @@ i.fa.fa-share-square-o {
   @include omega();
   text-align: center;
 }
-
 .column-2 {
   width: 255px;
 }
-
-
 #hours,
 #minutes,
 #seconds {
@@ -346,19 +306,16 @@ i.fa.fa-share-square-o {
   font-weight: 200;
 }
 div#time {
-    text-align: center;
-    margin: 19px;
-    margin-left: 36px;
+  text-align: center;
+  margin: 19px 19px 19px 36px;
 }
-
 .timer-colon {
-    font-size: 2em;
-    display: inline;
-    padding: 2px;
-    position: relative;
-    bottom: 4px;
+  font-size: 2em;
+  display: inline;
+  padding: 2px;
+  position: relative;
+  bottom: 4px;
 }
-
 #start_pause_resume,
 #reset {
   height: 70px;
@@ -369,55 +326,49 @@ div#time {
   background-color: white;
   font-size: 1em;
 }
-
 #total-minutes,
 #total-seconds {
-      font-size: 3.1em;
-      font-weight: 200;
+  font-size: 3.1em;
+  font-weight: 200;
 }
 .total-time-amount {
-    text-align: center;
-    margin-left: -6px;
-    margin-top: 69px;
+  text-align: center;
+  margin-left: -6px;
+  margin-top: 69px;
 }
-
 .total-timer-colon {
-    font-size: 2em;
-    display: inline;
-    padding: 2px;
-    position: relative;
-    bottom: 4px;
+  font-size: 2em;
+  display: inline;
+  padding: 2px;
+  position: relative;
+  bottom: 4px;
 }
-
-
-@keyframes ripple{
+@keyframes ripple {
   0% {
-		opacity: 0.3;
-	}
-	40% {
-		opacity: 0.5;
-		box-shadow: 0 0 0 2px $primary-color, 0 0 10px 10px red, 0 0 0 10px $primary-accent-color;
-	}
-	100% {
-		box-shadow: 0 0 0 2px $primary-color, 0 0 10px 10px red, 0 0 0 10px $primary-accent-color;
-		transform: scale(1.2);
-		opacity: 0;
-	}
-}
-#start_pause_resume:hover:after{
-    animation:ripple 1.3s ease-out 75ms;
+    opacity: 0.3;
   }
-
-#start_pause_resume:after{
-  width: 100px;
-	height: 100px;
-  top:-95px;
-  left:-5px;
-  transform:scale(.9);
-  box-shadow:0 0 0 2px #fff;
-  opacity:0;
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px $primary-color, 0 0 10px 10px red, 0 0 0 10px $primary-accent-color;
+  }
+  100% {
+    box-shadow: 0 0 0 2px $primary-color, 0 0 10px 10px red, 0 0 0 10px $primary-accent-color;
+    transform: scale(1.2);
+    opacity: 0;
+  }
 }
-
+#start_pause_resume:hover:after {
+  animation: ripple 1.3s ease-out 75ms;
+}
+#start_pause_resume:after {
+  width: 100px;
+  height: 100px;
+  top: -95px;
+  left: -5px;
+  transform: scale(.9);
+  box-shadow: 0 0 0 2px #fff;
+  opacity: 0;
+}
 
 /**********************
       DatePicker
@@ -426,72 +377,61 @@ input[type="text"],
 input[type="password"],
 textarea,
 select {
-    outline: none;
+  outline: none;
+  cursor: pointer;
 }
-
 #datepicker {
-background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Calendar_font_awesome.svg/20px-Calendar_font_awesome.svg.png") no-repeat;
-background-position-x: 4px;
-background-position-y: 4px;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Calendar_font_awesome.svg/20px-Calendar_font_awesome.svg.png") no-repeat;
+  background-position-x: 4px;
+  background-position-y: 4px;
 }
-
 #ui-datepicker-div {
-    background-color: $primary-color;
-    border-radius: 15px;
+  background-color: $primary-color;
+  border-radius: 15px;
 }
-
 .ui-datepicker-title {
-    color: white;
+  color: white;
 }
 .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
-    text-align: center;
+  text-align: center;
 }
 td {
   color: white;
   a.ui-state-default {
     color: white;
+  }
 }
-}
-
 th>span {
   color: $primary-accent-color;
 }
-
 input {
   text-indent: 55px;
   font-size: 1.2em;
   color: $primary-accent-color;
   font-weight: 300;
-
 }
-
 table.ui-datepicker-calendar {
-    padding: 15px;
+  padding: 15px;
 }
-
 #ui-datepicker-div {
-    padding-left: 15px;
-    padding-right: 15px;
-    z-index:-999;
-    color: transparent;
+  padding-left: 15px;
+  padding-right: 15px;
+  z-index: -999;
+  color: transparent;
 }
 .datepicker-paragraph {
   margin-top: 3px;
 }
-
 input#datepicker {
-    border: 0;
-    border: 1px solid #ccc;
-    padding: 3px;
-    border-radius: 3px;
+  border: 0;
+  border: 1px solid #ccc;
+  padding: 3px;
+  border-radius: 3px;
 }
-
 
 /************************
     Selects
 ************************/
-
-
 .dropdown {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
@@ -510,7 +450,6 @@ input#datepicker {
   $dropdown-padding: 1em;
   $dropdown-distance-from-menu: 50px;
   $dropdown-arrow-top-distance: 0;
-
 
   line-height: $base-line-height;
 
@@ -535,7 +474,7 @@ input#datepicker {
     padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
 
     @include media($large-screen) {
-      font-size: .85em;
+      font-size: 0.85em;
     }
   }
 
@@ -551,19 +490,16 @@ input#datepicker {
     font-size: 0.8em;
     line-height: $dropdown-height;
     margin: 0;
-    padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+    padding: 0;
     position: relative;
-
     @include media($large-screen) {
-      font-size: .8em;
-      padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+      font-size: 0.8em;
+       padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
     }
   }
-
   .dropdown-button:hover {
     background-color: $dropdown-background-hover;
   }
-
   .dropdown-button:after {
     color: $base-font-color;
     content: "\25BE";
@@ -572,7 +508,6 @@ input#datepicker {
     right: $dropdown-padding;
     top: $dropdown-arrow-top-distance;
   }
-
   .dropdown-menu {
     @include transition (all 0.2s ease-in-out);
     background: $dropdown-background;
@@ -590,12 +525,11 @@ input#datepicker {
     top: $dropdown-distance-from-menu;
     width: 228px;
     z-index: 99999;
-
     &:before {
       @include position(absolute, 0 1em 0 0);
       color: $dropdown-background;
       content: "\25b2";
-      font-size: .8em;
+      font-size: 0.8em;
       pointer-events: none;
       text-shadow: 0 -2px 2px transparentize(black, 0.7);
       top: -0.7em;
@@ -630,15 +564,13 @@ input#datepicker {
 }
 
 .dropdown {
-    line-height: 1em;
-    padding-bottom: 9px;
+  line-height: 1em;
+  padding-bottom: 9px;
 }
 .dropdowns {
-    text-align: left;
-    padding-top: 16px;
+  text-align: left;
+  padding-top: 16px;
 }
-
-
 
 /************************
       More General
@@ -654,14 +586,13 @@ input#datepicker {
 }
 
 button:focus {
-outline: 0;
-box-shadow: none;
+  outline: 0;
+  box-shadow: none;
 }
 
 /************************
       Nav Boxes
 ************************/
-
 .nav-boxes {
   height: 55px;
   @include outer-container;
@@ -676,18 +607,23 @@ box-shadow: none;
   border: solid 1px #ccc;
   background-color: $secondary-color;
   text-align: center;
-  font-size: .99em;
+  font-size: 0.99em;
   @include span-columns(3);
   @include pad(20px);
   font-family: $body-font;
 }
 
-
 /************************
     Monthly Progress
 ************************/
-
 .monthly-progress {
+  height: 2730px;
+  @include span-columns(12);
+  margin-top: 40px;
+  @include omega();
+}
+
+.monthly-rec {
   height: 2730px;
   @include span-columns(12);
   margin-top: 40px;
@@ -704,34 +640,26 @@ box-shadow: none;
   @include span-columns(5.9);
   @include margin(0px 0px 10px 0px);
 }
-
-
-
 .lower-title-boxes {
   height: 55px;
 }
-
 p.lower-titles {
-    position: relative;
-    top: 7px;
-    padding-left: 14px;
+  position: relative;
+  top: 7px;
+  padding-left: 14px;
 }
-
 .initial-date {
-    font-size: 1.5em;
-    padding: 0px;
-    margin: 28px;
+  font-size: 1.5em;
+  padding: 0;
+  margin: 28px;
 }
-
 .fa-check,
 .fa-pencil {
-    float: right;
-    margin: 8px;
-    margin-right: 20px;
-    position: relative;
-    bottom: 3px;
+  float: right;
+  margin: 8px 20px 8px 8px;
+  position: relative;
+  bottom: 3px;
 }
-
 .fa-pencil {
   color: darkorange;
 }
@@ -742,50 +670,43 @@ p.lower-titles {
 /************************
        Blue-Boxes
 ************************/
-
 .blue-box {
   background-color: white;
   @include margin(20px);
   height: 143px;
   border: 1px solid #ccc;
 }
-
 .blue-box-title {
   background-color: $secondary-color;
   font-size: 1.2em;
   border-bottom: 1px solid #ccc;
-  height:45px;
+  height: 45px;
   padding-left: 15px;
   padding-top: 8px;
 }
-
 .editable>p {
   margin-left: 15px;
 }
 
-
 /************************
      Right Column 1
 ************************/
-
 .right-column-1 {
   @include span-columns(5.9);
   @include margin(0px 20px 20px 20px);
   margin-right: 0;
   float: right;
-
 }
 .lower-title-boxes {
   text-align: left;
 }
-
 .white-container {
   @include margin(20px);
   height: 2570px;
   background-color: white;
-  margin-top: 84px;
+  margin-top: 72px;
   border: 1px solid #ccc;
-
+  border-top: none;
 }
 .tabs {
   height: 95px;
@@ -794,21 +715,19 @@ p.lower-titles {
   @include span-columns(12);
   margin-left: 20px;
 }
-
 .tab-1,
 .tab-2,
 .tab-3 {
   display: inline-block;
-  height: 55px;
-  border: 1px solid #ccc;
-  background-color: white;
+  height: 43px;
   text-align: center;
-  padding: 19px;
+  padding: 14px;
   position: relative;
-  border-bottom: none;
-  border-radius: 8px 8px 0px 0px;
-}
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
 
+}
 .save-button {
   background-color: $primary-accent-color;
   height: 35px;
@@ -819,24 +738,137 @@ p.lower-titles {
   border-radius: 5px;
   margin-left: 22px;
 }
-
 .lower-datepicker,
 .lower-dropdowns {
   @include span-columns(4);
   @include omega();
   text-align: center;
-
 }
-
 .lower-dropdowns {
   width: 255px;
 }
-
 .updates {
   margin-top: 30px;
   height: 195px;
 }
 
-button {
+.fa-check-circle.one {
+  position: relative;
+  bottom: 30px;
+  font-size: 1.5em;
+  right: -56px;
+  background-color: white;
+  border-radius: 100%;
+  color: $primary-accent-color;
+  z-index: 2;
+  fill-opacity: 1;
+  float: center;
+}
+.fa-check-circle.two {
+  position: relative;
+  bottom: 30px;
+  font-size: 1.5em;
+  right: -76px;
+  background-color: white;
+  border-radius: 100%;
+  color: $primary-accent-color;
+  z-index: 2;
+  fill-opacity: 1;
+}
+.fa-check-circle.three {
+  position: relative;
+  bottom: 51px;
+  font-size: 1.5em;
+  right: -151px;
+  background-color: white;
+  border-radius: 100%;
+  color: $primary-accent-color;
+  z-index: 2;
+  fill-opacity: 1;
+}
+.fa-check-circle.four {
+  position: relative;
+  bottom: 30px;
+  font-size: 1.5em;
+  right: -31px;
+  background-color: white;
+  border-radius: 100%;
+  color: $primary-accent-color;
+  z-index: 2;
+  fill-opacity: 1;
+}
+.box-3 {
+  height: 67px;
+}
+
+.based-paragraph {
+  margin: 20px;
+  font-size: 1.1em;
+}
+
+
+/************************
+    Page-3 Left Column
+************************/
+
+.page-3-dropdowns {
+  margin-top: 24px;
+}
+
+.select-dropdown {
+  @include span-columns(12);
+  position: relative;
+  background-color: white;
+  width: auto;
+  float: left;
+  border-radius: 2px;
+  select {
+    padding: 8px 24px 8px 10px;
+    border: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+                width: 580px;
+
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #aaa;
+  }
+}
+
+.dropdown-blue-box {
+  height: 40px;
+  font-size: 1.2em;
   font-family: $body-font;
+}
+
+.select-dropdown>select {
+  font-size: 1em;
+  font-family: $body-font;
+}
+
+/***********************************
+    Smaller Nav Tabs on Right Side
+************************************/
+
+
+.clicked {
+  border: 1px solid #ccc;
+  background-color: white;
+  border-bottom: none;
 }
