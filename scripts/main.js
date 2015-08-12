@@ -8,37 +8,37 @@ $(document).ready(function() {
   var prev_hours = prev_minutes = prev_seconds = prev_milliseconds = undefined;
   var timeUpdate;
 
-  // Start/Pause/Resume button onClick
-  $("#start_pause_resume").button().click(function() {
-    // Start button
-    if ($(this).text() == "Start") { // check button label
-      $(this).html("<span class='ui-button-text'>Pause</span>");
-      updateTime(0, 0, 0, 0);
-    }
-    // Pause button
-    else if ($(this).text() == "Pause") {
-      clearInterval(timeUpdate);
-      $(this).html("<span class='ui-button-text'>Resume</span>");
-    }
-    // Resume button
-    else if ($(this).text() == "Resume") {
-      prev_hours = parseInt($("#hours").html());
-      prev_minutes = parseInt($("#minutes").html());
-      prev_seconds = parseInt($("#seconds").html());
-      prev_milliseconds = parseInt($("#milliseconds").html());
+  // // Start/Pause/Resume button onClick
+  // $("#start_pause_resume").button().click(function() {
+  //   // Start button
+  //   if ($(this).text() == "Start") { // check button label
+  //     $(this).html("<span class='ui-button-text'>Pause</span>");
+  //     updateTime(0, 0, 0, 0);
+  //   }
+  //   // Pause button
+  //   else if ($(this).text() == "Pause") {
+  //     clearInterval(timeUpdate);
+  //     $(this).html("<span class='ui-button-text'>Resume</span>");
+  //   }
+  //   // Resume button
+  //   else if ($(this).text() == "Resume") {
+  //     prev_hours = parseInt($("#hours").html());
+  //     prev_minutes = parseInt($("#minutes").html());
+  //     prev_seconds = parseInt($("#seconds").html());
+  //     prev_milliseconds = parseInt($("#milliseconds").html());
+  //
+  //     updateTime(prev_hours, prev_minutes, prev_seconds, prev_milliseconds);
+  //
+  //     $(this).html("<span class='ui-button-text'>Pause</span>");
+  //   }
+  // });
 
-      updateTime(prev_hours, prev_minutes, prev_seconds, prev_milliseconds);
-
-      $(this).html("<span class='ui-button-text'>Pause</span>");
-    }
-  });
-
-  // Reset button onClick
-  $("#reset").button().click(function() {
-    if (timeUpdate) clearInterval(timeUpdate);
-    setStopwatch(0, 0, 0, 0);
-    $("#start_pause_resume").html("<span class='ui-button-text'>Start</span>");
-  });
+  // // Reset button onClick
+  // $("#reset").button().click(function() {
+  //   if (timeUpdate) clearInterval(timeUpdate);
+  //   setStopwatch(0, 0, 0, 0);
+  //   $("#start_pause_resume").html("<span class='ui-button-text'>Start</span>");
+  // });
 
   // Update time in stopwatch periodically - every 25ms
   function updateTime(prev_hours, prev_minutes, prev_seconds, prev_milliseconds) {
@@ -88,9 +88,7 @@ $(document).ready(function() {
       Conditions Items
   ************************/
 
-  $(document).on("click", ".tag", function() {
-    $(this).remove();
-  });
+
 
   /***********************
         Datepicker
@@ -101,29 +99,13 @@ $(document).ready(function() {
   });
 
 
-
-  /***********************
-        Dropdowns
-  ************************/
-  $(".dropdown-button").click(function() {
-    var $button, $menu;
-    $button = $(this);
-    $menu = $button.siblings(".dropdown-menu");
-    $menu.toggleClass("show-menu");
-    $menu.children("li").click(function() {
-      $menu.removeClass("show-menu");
-      $button.html($(this).html());
-    });
-  });
-
-
   /***********************
          Navigation
   ************************/
 
-  $('.two').hide();
-  $('.three').hide();
-  $('.four').hide();
+  $('.two').css('visibility', 'hidden');
+  $('.three').css('visibility', 'hidden');
+  $('.four').css('visibility', 'hidden');
   $('.monthly-rec').hide();
 
 
@@ -135,41 +117,40 @@ $(document).ready(function() {
       'margin': '0'
     });
     $('.left-column-1').hide();
-    $('.two').show();
-    $('.one').hide();
-    $('.three').hide();
-    $('.four').hide();
+    $('.two').css('visibility','visible');
+    $('.one').css('visibility', 'hidden');
+    $('.three').css('visibility', 'hidden');
+    $('.four').css('visibility', 'hidden');
   });
 
   $(".box-1").click(function() {
-    $('.one').show();
-    $('.two').hide();
-    $('.three').hide();
-    $('.four').hide();
-    $('.monthly-rec').hide();
+    $('.two').css('visibility', 'hidden');
+    $('.three').css('visibility', 'hidden');
+    $('.four').css('visibility', 'hidden');
+    $('.monthly-rec').css('visibility', 'hidden');
     $('.monthly-progress').show();
   });
 
   $(".box-3").click(function() {
     $('.monthly-progress').hide();
     $('.monthly-rec').show();
-    $('.three').show();
-    $('.one').hide();
-    $('.two').hide();
-    $('.four').hide();
+    $('.three').css('visibility','visible');
+    $('.one').css('visibility', 'hidden');
+    $('.two').css('visibility', 'hidden');
+    $('.four').css('visibility', 'hidden');
   });
 
   $(".box-4").click(function() {
-    $('.four').show();
-    $('.one').hide();
-    $('.three').hide();
-    $('.two').hide();
+    $('.four').css('visibility','visible');
+    $('.one').css('visibility', 'hidden');
+    $('.three').css('visibility', 'hidden');
+    $('.two').css('visibility', 'hidden');
   });
 
   $(".tab-2").click(function() {
     $('.monthly-care').show();
-    $('.monthly-call').hide();
-    $('.time-log').hide();
+    $('.monthly-call').css('visibility', 'hidden');
+    $('.time-log').css('visibility', 'hidden');
   });
 
   $('.tab-1').addClass('clicked');
@@ -192,7 +173,21 @@ $(document).ready(function() {
   });
 
 
+  $('.box-1').click(function(){
+    if ( $('.one').css('visibility') == 'hidden' )
+      $('.one').css('visibility','visible');
+    else
+      $('.one').css('visibility','hidden');
+  });
 
+    $(".chosen-select").chosen({
+      placeholder_text_multiple: "Select a few Conditions"
+    });
+  // changes the bootstrap select to the custom selectpicker
+    $('.selectpicker').selectpicker();
+});
 
-
+jQuery('#datetimepicker').datetimepicker({
+  timepicker:false,
+  format:'m/d/Y'
 });

@@ -44,21 +44,29 @@ body {
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 html,
 body a {
   text-decoration: none;
 }
-
-button, .fa {
+button,
+.fa {
   cursor: pointer;
 }
 button:hover {
 
 }
-
-
+input,
+textarea {
+  font-family: $body-font;
+  font-size: 1em;
+}
+textarea {
+  margin: 0;
+}
 .header-bar {
   background-color: $primary-color;
   height: 66px;
@@ -364,7 +372,6 @@ div#time {
 }
 #start_pause_resume:hover:after {
   animation: ripple 1.3s ease-out 75ms;
-
 }
 #start_pause_resume:after {
   width: 100px;
@@ -381,201 +388,30 @@ div#time {
 ***********************/
 input[type="text"],
 input[type="password"],
-textarea,
-select {
+textarea {
   outline: none;
   cursor: pointer;
 }
-#datepicker {
-  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Calendar_font_awesome.svg/20px-Calendar_font_awesome.svg.png") no-repeat;
-  background-position-x: 4px;
-  background-position-y: 4px;
-}
-#ui-datepicker-div {
-  background-color: $primary-color;
-  border-radius: 15px;
-}
-.ui-datepicker-title {
-  color: white;
-}
-.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
-  text-align: center;
-}
-td {
-  color: white;
-  a.ui-state-default {
-    color: white;
-  }
-}
-th>span {
-  color: $primary-accent-color;
-}
 input {
-  text-indent: 55px;
-  font-size: 1.2em;
+  font-size: 1em;
   color: $primary-accent-color;
   font-weight: 300;
-}
-table.ui-datepicker-calendar {
-  padding: 15px;
-}
-#ui-datepicker-div {
-  padding-left: 15px;
-  padding-right: 15px;
-  z-index: -999;
-  color: transparent;
-}
-.datepicker-paragraph {
-  margin-top: 3px;
-}
-input#datepicker {
-  border: 0;
+  border-color: #ccc;
   border: 1px solid #ccc;
-  padding: 3px;
-  border-radius: 3px;
-}
-
-/************************
-    Selects
-************************/
-.dropdown {
-  $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
-  $base-line-height: 1em;
-  $base-background-color: white !default;
-  $dark-gray: #333 !default;
-  $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
-  $dropdown-color: $base-font-color;
-  $dropdown-description-color: lighten($dropdown-color, 40%);
-  $dropdown-border: 1px solid silver;
-  $dropdown-background: $base-background-color;
-  $dropdown-background-hover: darken($dropdown-background, 3%);
-  $dropdown-inner-border: 1px solid silver;
-  $dropdown-height: 40px;
-  $dropdown-padding: 1em;
-  $dropdown-distance-from-menu: 50px;
-  $dropdown-arrow-top-distance: 0;
-
-  line-height: $base-line-height;
-
-  .dropdown-container {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-  }
-
-  .dropdown-description {
-    background: $dropdown-background;
-    border-bottom-left-radius: $base-border-radius;
-    border-bottom: $dropdown-border;
-    border-left: $dropdown-border;
-    border-top-left-radius: $base-border-radius;
-    border-top: $dropdown-border;
-    color: $dropdown-description-color;
-    float: left;
-    font-size: 0.7em;
-    line-height: $dropdown-height;
-    margin: 0;
-    padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
-
-    @include media($large-screen) {
-      font-size: 0.85em;
-    }
-  }
-
-  .dropdown-button {
-    background: $dropdown-background;
-    border-bottom-right-radius: $base-border-radius;
-    border-top-right-radius: $base-border-radius;
-    border-top: $dropdown-border;
-    border-right: $dropdown-border;
-    border-bottom: $dropdown-border;
-    cursor: pointer;
-    float: right;
-    font-size: 0.8em;
-    line-height: $dropdown-height;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    @include media($large-screen) {
-      font-size: 0.8em;
-       padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
-    }
-  }
-  .dropdown-button:hover {
-    background-color: $dropdown-background-hover;
-  }
-  .dropdown-button:after {
-    color: $base-font-color;
-    content: "\25BE";
-    display: block;
-    position: absolute;
-    right: $dropdown-padding;
-    top: $dropdown-arrow-top-distance;
-  }
-  .dropdown-menu {
-    @include transition (all 0.2s ease-in-out);
-    background: $dropdown-background;
-    border-radius: $base-border-radius;
-    border: $dropdown-border;
-    box-shadow: 0 2px 2px transparentize(black, 0.8);
-    color: $dropdown-color;
-    cursor: pointer;
-    display: none;
-    margin: 0;
-    overflow: show;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    top: $dropdown-distance-from-menu;
-    width: 228px;
-    z-index: 99999;
-    &:before {
-      @include position(absolute, 0 1em 0 0);
-      color: $dropdown-background;
-      content: "\25b2";
-      font-size: 0.8em;
-      pointer-events: none;
-      text-shadow: 0 -2px 2px transparentize(black, 0.7);
-      top: -0.7em;
-    }
-  }
-
-  .dropdown-menu li {
-    border-bottom: $dropdown-inner-border;
-    color: $dropdown-color;
-    list-style: none;
-    padding: $dropdown-padding / 2;
-  }
-
-  .dropdown-menu li:hover {
-    background: $dropdown-background-hover;
-  }
-
-  .dropdown-menu li:first-child {
-    border-top-left-radius: $base-border-radius;
-    border-top-right-radius: $base-border-radius;
-  }
-
-  .dropdown-menu li:last-child {
-    border: none;
-    border-bottom-left-radius: $base-border-radius;
-    border-bottom-right-radius: $base-border-radius;
-  }
-
-  .show-menu {
-    display: block;
-  }
-}
-
-.dropdown {
-  line-height: 1em;
-  padding-bottom: 9px;
-}
-.dropdowns {
-  text-align: left;
-  padding-top: 16px;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
 }
 
 /************************
@@ -589,8 +425,9 @@ input#datepicker {
   font-size: 1em;
   border: 0;
   border-radius: 5px;
+  position: relative;
+  right: -9px;
 }
-
 button:focus {
   outline: 0;
   box-shadow: none;
@@ -609,14 +446,19 @@ button:focus {
 .box-2,
 .box-3,
 .box-4 {
-  display: inline-block;
+
+  // display: inline-block;
+  white-space: nowrap;
   border: solid 1px #ccc;
   background-color: $secondary-color;
   text-align: center;
-  font-size: 0.99em;
+  font-size: 0.96em;
   @include span-columns(3);
   @include pad(20px);
   font-family: $body-font;
+  @media screen and (max-width:1240px) {
+    font-size: 75%;
+  }
 }
 
 /************************
@@ -628,14 +470,12 @@ button:focus {
   margin-top: 40px;
   @include omega();
 }
-
 .monthly-rec {
   height: 2730px;
   @include span-columns(12);
   margin-top: 40px;
   @include omega();
 }
-
 .left-column-1,
 .right-column-1 {
   height: 2730px;
@@ -732,7 +572,6 @@ p.lower-titles {
   border-bottom: 0;
   border-radius: 8px 8px 0 0;
   cursor: pointer;
-
 }
 .save-button {
   background-color: $primary-accent-color;
@@ -743,13 +582,13 @@ p.lower-titles {
   border: 0;
   border-radius: 5px;
   margin-left: 22px;
-
 }
-.lower-datepicker,
-.lower-dropdowns {
+.white-selector,
+.second-timepicker {
   @include span-columns(4);
   @include omega();
   text-align: center;
+  margin-left: 20px;
 }
 .lower-dropdowns {
   width: 255px;
@@ -758,7 +597,6 @@ p.lower-titles {
   margin-top: 30px;
   height: 195px;
 }
-
 .fa-check-circle.one {
   position: relative;
   bottom: 30px;
@@ -807,21 +645,17 @@ p.lower-titles {
 .box-3 {
   height: 67px;
 }
-
 .based-paragraph {
   margin: 20px;
-  font-size: .9em;
+  font-size: 0.9em;
 }
-
 
 /************************
     Page-3 Left Column
 ************************/
-
 .page-3-dropdowns {
   margin-top: 24px;
 }
-
 .select-dropdown {
   @include span-columns(12);
   position: relative;
@@ -834,10 +668,9 @@ p.lower-titles {
     border: none;
     background-color: transparent;
     -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-                width: 580px;
-
+    -moz-appearance: none;
+    appearance: none;
+    width: 580px;
     &:active,
     &:focus {
       outline: none;
@@ -857,13 +690,11 @@ p.lower-titles {
     border-top: 5px solid #aaa;
   }
 }
-
 .dropdown-blue-box {
   height: 40px;
   font-size: 1.2em;
   font-family: $body-font;
 }
-
 .select-dropdown>select {
   font-size: 1em;
   font-family: $body-font;
@@ -872,23 +703,85 @@ p.lower-titles {
 /***********************************
     Smaller Nav Tabs on Right Side
 ************************************/
-
-
 .clicked {
   border: 1px solid #ccc;
   background-color: white;
   border-bottom: none;
 }
-
 .month-selector {
   float: right;
   margin-right: 37px;
 }
 i.fa.fa-arrow-left {
-    padding-right: 16px;
-    color: #ccc;
+  padding-right: 16px;
+  color: #ccc;
 }
 i.fa.fa-arrow-right {
-    padding-left: 14px;
-    color: #ccc;
+  padding-left: 14px;
+  color: #ccc;
+}
+i {
+  z-index: 999;
+}
+.editable {
+  height: 96px;
+  position: relative;
+
+  // bottom: 16px;
+}
+textarea {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  outline: 0;
+  border: none;
+  border: 0;
+}
+textarea:focus {
+  border: $primary-color 2px solid;
+}
+.updates textarea {
+  height: 154%;
+}
+.top-select,
+.bottom-select,
+.datepicker-paragraph {
+  margin-top: 14px;
+}
+.short-words {
+  position: relative;
+  bottom: -9px;
+}
+.first-timepicker {
+  width: 220px;
+  position: relative;
+  right: -13px;
+}
+.chosen-select {
+  width: 300px;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.conditions-list {
+  text-align: center;
 }

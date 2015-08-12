@@ -3,11 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Surf & Paddle Co.</title>
-  <link rel="stylesheet" href="styles/main.css">
+  <title>Thorough Care</title>
+
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css">
-  <link rel="stylesheet" href="bower_components/jqueryui/themes/base/">
+
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/datetimepicker-master/jquery.datetimepicker.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/jqueryui/themes/base/">
+  <link rel="stylesheet" href="bower_components/chosen/chosen.min.css">
 </head>
 
 <body>
@@ -35,26 +41,15 @@
       </div>
       <div class="conditions-box">
         <div class="title-words">Conditions
-          <i class="fa fa-plus-circle"></i>
         </div>
         <div class="conditions-list">
-          <div class="tag-wrapper">
-            <div class="tag">
-              <input type="checkbox" />
-              <label for="">Diabetes</label>
-              <i class="fa fa-times-circle"></i>
-            </div>
-            <div class="tag">
-              <input type="checkbox" />
-              <label for="">Heart Failure</label>
-              <i class="fa fa-times-circle"></i>
-            </div>
-            <div class="tag">
-              <input type="checkbox" />
-              <label for="">Hypertension</label>
-              <i class="fa fa-times-circle"></i>
-            </div>
-          </div>
+          <select class="chosen-select" multiple>
+            <option value="Diabetes">Diabetes</option>
+            <option value="Heart Failure">Heart Failure</option>
+            <option value="Heart Disease">Heart Disease</option>
+            <option value="Asthma">Asthma</option>
+            <option value="COPD">COPD</option>
+          </select>
         </div>
         <div class="status-enrollment-container">
           <div class="status-container">
@@ -101,39 +96,33 @@
           <button id="reset">Reset</button>
         </div>
       </div>
+
       <div class="column-2">
-        <div class="dropdowns">
-          <div class="dropdown">
-            <div class="dropdown-container">
-              <p class="dropdown-description">Select</p>
-              <p class="dropdown-button">Appointment Type</p>
-              <ul class="dropdown-menu dropdown-select">
-                <li>Monthly Clinical Review</li>
-                <li>Regular Weekly Checkup</li>
-                <li>Emergency Appointment</li>
-              </ul>
-            </div>
-          </div>
 
-          <div class="dropdown">
-            <div class="dropdown-container">
-              <p class="dropdown-description">Select</p>
-              <p class="dropdown-button">Current Doctor</p>
-              <ul class="dropdown-menu dropdown-select">
-                <li>Patti Russ, RN</li>
-                <li>Checkup McGee, MD</li>
-                <li>Hurtmyself Dawg, MD</li>
-              </ul>
-            </div>
-          </div>
-
-          <p class="datepicker-paragraph">
-            <input type="text" id="datepicker" readonly="readonly">
-          </p>
-        </div>
-
+        <span class="short-words">As:</span>
+        <select class="selectpicker top-select">
+          <option>Monthly Clinical Review</option>
+          <option>Regular Weekly Checkup</option>
+          <option>Emergency Appointment</option>
+        </select>
+        <span class="short-words">By:</span>
+        <select class="selectpicker bottom-select">
+          <optgroup label="Physicians">
+            <option>Dr. Jones</option>
+            <option>Dr. Johnson</option>
+          </optgroup>
+          <optgroup label="Care Managers">
+            <option>Nancy Smith</option>
+            <option>Patti Russ</option>
+            <option>Judy Jones</option>
+          </optgroup>
+        </select>
+        <p class="datepicker-paragraph">
+          <input type="text" class="first-timepicker" id="datetimepicker" readonly="readonly" placeholder="MM/DD/YY">
+        </p>
         <button class="log-time-button">Log Time</button>
       </div>
+
       <div class="column-3">
         <div class="total-time-amount">
           <span id="total-minutes">25</span>
@@ -144,8 +133,9 @@
           <p class="total-time-title">Total Time</p>
         </div>
       </div>
-    </div>
 
+
+    </div>
 
     <div class="nav-boxes">
       <button class="box-1">Monthly Progress Update<i class="fa fa-check-circle one"></i></button>
@@ -154,7 +144,7 @@
       <button class="box-4">Initial Recommendations Review<i class="fa fa-check-circle four"></i></button>
     </div>
 
-    <!----------------- PAGE 1 -------------->
+    <!--/////////// PAGE 1 ////////////-->
 
     <div class="monthly-progress">
       <div class="left-column-1">
@@ -173,8 +163,10 @@
             Goals Important to Patient
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              Lose Weight
+              Control Blood Sugar Levels
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -182,8 +174,10 @@
             Specific Goals/Targets Agreed Upon
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              Lose Weight
+              Control Blood Sugar Levels
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -191,8 +185,10 @@
             Potential Barriers
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              Lose Weight
+              Control Blood Sugar Levels
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -200,8 +196,10 @@
             Problems and Symptoms
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              Lose Weight
+              Control Blood Sugar Levels
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -209,8 +207,10 @@
             Expected Outcomes
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              Lose Weight
+              Control Blood Sugar Levels
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -218,8 +218,10 @@
             Other Providers
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              Lose Weight
+              Control Blood Sugar Levels
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -227,8 +229,10 @@
             Resources/Support System
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              Lose Weight
+              Control Blood Sugar Levels
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -236,8 +240,10 @@
             Patient numbers to track monthly
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              Lose Weight
+              Control Blood Sugar Levels
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -245,8 +251,10 @@
             Medications
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              Lose Weight
+              Control Blood Sugar Levels
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -254,8 +262,10 @@
             Allergies
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              Lose Weight
+              Control Blood Sugar Levels
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -263,8 +273,10 @@
             All Conditions
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              Lose Weight
+              Control Blood Sugar Levels
+            </textarea>
           </div>
         </div>
       </div>
@@ -274,8 +286,7 @@
           <p class="lower-titles">
             Current Monthly Update
             <span class="month-selector">
-              <i class="fa fa-arrow-left"></i>
-                July 2015
+              <i class="fa fa-arrow-left"></i> July 2015
               <i class="fa fa-arrow-right"></i>
             </span>
           </p>
@@ -295,20 +306,15 @@
 
         <div class="white-container">
 
-          <div class="dropdowns ">
-            <div class="dropdown lower-dropdowns">
-              <div class="dropdown-container lower-dropdown-container">
-                <p class="dropdown-description">Choose</p>
-                <p class="dropdown-button">Appointment Type</p>
-                <ul class="dropdown-menu dropdown-select">
-                  <li>Monthly Clinical Review</li>
-                  <li>Regular Weekly Checkup</li>
-                  <li>Emergency Appointment</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <input class="lower-datepicker" type="text" id="datepicker" readonly="readonly">
+          <select class="selectpicker white-selector">
+            <option>Monthly Clinical Review</option>
+            <option>Regular Weekly Checkup</option>
+            <option>Emergency Appointment</option>
+          </select>
+
+          <p class="datepicker-lower-paragraph">
+            <input type="text" class="second-timepicker" id="datetimepicker" readonly="readonly" placeholder="MM/DD/YY">
+          </p>
           <button class="save-button">
             Save
           </button>
@@ -317,8 +323,10 @@
               Updates about achieving these goals
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                Lose Weight
+                Control Blood Sugar Levels
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -326,8 +334,10 @@
               Progress towards reducing barriers
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                Lose Weight
+                Control Blood Sugar Levels
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -335,8 +345,10 @@
               Updates about problems/symptoms
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                Lose Weight
+                Control Blood Sugar Levels
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -344,8 +356,10 @@
               Progress toward expected outcomes
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                Lose Weight
+                Control Blood Sugar Levels
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -353,8 +367,10 @@
               Any changes in other providers?
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                Lose Weight
+                Control Blood Sugar Levels
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -362,8 +378,10 @@
               Any changes in resources/support?
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                Lose Weight
+                Control Blood Sugar Levels
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -371,8 +389,10 @@
               Patient numbers to track monthly
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                Lose Weight
+                Control Blood Sugar Levels
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -380,8 +400,10 @@
               Medications
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                Lose Weight
+                Control Blood Sugar Levels
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -389,8 +411,10 @@
               Allergies
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                Lose Weight
+                Control Blood Sugar Levels
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -398,8 +422,10 @@
               All Conditions
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                Lose Weight
+                Control Blood Sugar Levels
+              </textarea>
             </div>
           </div>
         </div>
@@ -414,21 +440,12 @@
             Initial Action Items
           </p>
         </div>
-        <div class="dropdowns page-3-dropdowns">
-          <div class="dropdown lower-dropdowns">
-            <div class="dropdown-container lower-dropdown-container">
-              <p class="dropdown-description">Choose</p>
-              <p class="dropdown-button">Appointment Type</p>
-              <ul class="dropdown-menu dropdown-select">
-                <li>Monthly Clinical Review</li>
-                <li>Regular Weekly Checkup</li>
-                <li>Emergency Appointment</li>
-              </ul>
-            </div>
-          </div>
+        <select class="selectpicker">
+          <option>Monthly Clinical Review</option>
+          <option>Regular Weekly Checkup</option>
+          <option>Emergency Appointment</option>
+        </select>
 
-
-        </div>
         <input class="lower-datepicker" type="text" id="datepicker" readonly="readonly">
         <button class="save-button">
           Save
@@ -443,8 +460,10 @@
             Treatment for Tests
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -452,8 +471,10 @@
             Blah Blah title two
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -461,8 +482,10 @@
             Blah blah title three
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -470,8 +493,10 @@
             Medication changes to make
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -479,8 +504,10 @@
             Health education classes needed
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -488,8 +515,10 @@
             Diet
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -497,8 +526,10 @@
             Exercise
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -506,8 +537,10 @@
             Stress Management Assistance
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -515,8 +548,10 @@
             Safety
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
           </div>
         </div>
         <div class="blue-box">
@@ -524,22 +559,22 @@
             Other Habits to change
           </div>
           <div class="editable">
-            <p>Lose Weight</p>
-            <p>Control Blood Sugar Levels</p>
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
           </div>
         </div>
-        <div class="blue-box dropdown-blue-box">
-          <div class="select-dropdown">
-            <select>
-              <option value="" disabled selected>Number of Appointments this year</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-        </div>
+
+        <select class="selectpicker">
+          <option value="" disabled selected>Number of Appointments this year</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+
       </div>
 
       <div class="right-column-1">
@@ -563,19 +598,13 @@
 
         <div class="white-container">
 
-          <div class="dropdowns ">
-            <div class="dropdown lower-dropdowns">
-              <div class="dropdown-container lower-dropdown-container">
-                <p class="dropdown-description">Choose</p>
-                <p class="dropdown-button">Appointment Type</p>
-                <ul class="dropdown-menu dropdown-select">
-                  <li>Monthly Clinical Review</li>
-                  <li>Regular Weekly Checkup</li>
-                  <li>Emergency Appointment</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+
+          <select class="selectpicker">
+            <option>Monthly Clinical Review</option>
+            <option>Regular Weekly Checkup</option>
+            <option>Emergency Appointment</option>
+          </select>
+
           <input class="lower-datepicker" type="text" id="datepicker" readonly="readonly">
           <button class="save-button">
             Save
@@ -585,8 +614,10 @@
               Updates about achieving these goals
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -594,8 +625,10 @@
               Progress towards reducing barriers
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -603,8 +636,10 @@
               Updates about problems/symptoms
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -612,8 +647,10 @@
               Progress toward expected outcomes
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -621,8 +658,10 @@
               Any changes in other providers?
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -630,8 +669,10 @@
               Any changes in resources/support?
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -639,8 +680,10 @@
               Patient numbers to track monthly
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -648,8 +691,10 @@
               Medications
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -657,8 +702,10 @@
               Allergies
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
             </div>
           </div>
           <div class="blue-box">
@@ -666,20 +713,28 @@
               All Conditions
             </div>
             <div class="editable">
-              <p>Lose Weight</p>
-              <p>Control Blood Sugar Levels</p>
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
 
 
 </body>
-<script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+
 <script src="bower_components/jqueryui/jquery-ui.js" type="text/javascript"></script>
+<script src="bower_components/bootstrap/js/bootstrap.min.js"></script>
+<script src="bower_components/bootstrap-select/js/bootstrap-select.js"></script>
+
+<script src="bower_components/datetimepicker-master/jquery.js"></script>
+<script src="bower_components/datetimepicker-master/jquery.datetimepicker.js"></script>
 <script src="scripts/main.js" type="text/javascript"></script>
+<script src="bower_components/chosen/chosen.jquery.min.js"></script>
 
 </html>
