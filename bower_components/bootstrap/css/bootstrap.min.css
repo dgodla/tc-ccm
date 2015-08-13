@@ -698,7 +698,7 @@ textarea.input-lg, select[multiple].input-lg {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 1em;
   line-height: 1.42857143;
   border-radius: 4px;
   -webkit-user-select: none;
@@ -1424,7 +1424,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 .close {
   float: right;
   font-size: 21px;
-  font-weight: bold;
+  /*font-weight: bold;*/
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
@@ -1461,13 +1461,13 @@ button.close {
   outline: 0
 }
 .modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -25%);
-  -ms-transform: translate(0, -25%);
-  -o-transform: translate(0, -25%);
-  transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out
+  -webkit-transform: translate(0, -15%);
+  -ms-transform: translate(0, -15%);
+  -o-transform: translate(0, -15%);
+  transform: translate(0, -15%);
+  -webkit-transition: -webkit-transform .4s ease-out;
+  -o-transition: -o-transform .4s ease-out;
+  transition: transform .4s ease-out
 }
 .modal.in .modal-dialog {
   -webkit-transform: translate(0, 0);
@@ -1488,8 +1488,8 @@ button.close {
   position: relative;
   background-color: #fff;
   border: 1px solid #999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border: 4px solid #ccc;
+  border-radius: 1px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   -webkit-background-clip: padding-box;
@@ -1523,6 +1523,7 @@ button.close {
 }
 .modal-title {
   margin: 0;
+  font-family: Open Sans;
   line-height: 1.42857143
 }
 .modal-body {
@@ -1553,7 +1554,7 @@ button.close {
 }
 @media (min-width:768px) {
   .modal-dialog {
-    width: 600px;
+    width: 500px;
     margin: 30px auto
   }
   .modal-content {

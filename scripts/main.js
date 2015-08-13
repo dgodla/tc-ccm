@@ -185,6 +185,19 @@ $(document).ready(function() {
     });
   // changes the bootstrap select to the custom selectpicker
     $('.selectpicker').selectpicker();
+
+    // add the animation to the modal
+    $(".modal").each(function(index) {
+      $(this).on('show.bs.modal', function(e) {
+        var open = $(this).attr('data-easein');
+        if (open == 'shake') {
+        } else {
+          $('.modal-dialog').velocity('transition.' + open);
+        }
+      });
+    });
+
+
 });
 
 jQuery('#datetimepicker').datetimepicker({

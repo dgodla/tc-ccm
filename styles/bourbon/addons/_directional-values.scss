@@ -26,10 +26,10 @@
   $C: if( length($vals) < 3, $A, nth($vals, 3));
   $D: if( length($vals) < 2, $A, nth($vals, if( length($vals) < 4, 2, 4) ));
 
-  @if $A == 0 { $A: 0 }
-  @if $B == 0 { $B: 0 }
-  @if $C == 0 { $C: 0 }
-  @if $D == 0 { $D: 0 }
+  @if $A == 0px { $A: 0px }
+  @if $B == 0px { $B: 0px }
+  @if $C == 0px { $C: 0 }
+  @if $D == 0px { $D: 0px }
 
   @if $A == $B and $A == $C and $A == $D { $output: $A          }
   @else if $A == $C and $B == $D         { $output: $A $B       }

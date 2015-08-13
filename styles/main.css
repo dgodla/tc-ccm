@@ -21,8 +21,8 @@ html {
         Base
 *********************/
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font-family: "Open Sans", serif;
   overflow-x: hidden; }
 
@@ -295,7 +295,7 @@ i.fa.fa-share-square-o {
 .months-title,
 .follow-up-title {
   width: 50%;
-  display: inline;
+  display: inline-flex;
   font-size: 1.2em; }
 
 .enrollment-title,
@@ -552,7 +552,7 @@ button:focus {
   display: block;
   margin-right: 2.35765%;
   width: 47.96819%;
-  margin: 0 0 10px; }
+  margin: 0px 0px 10px; }
   .left-column-1:last-child,
   .right-column-1:last-child {
     margin-right: 0; }
@@ -611,7 +611,7 @@ p.lower-titles {
   display: block;
   margin-right: 2.35765%;
   width: 47.96819%;
-  margin: 0 20px 20px;
+  margin: 0px 20px 20px;
   margin-right: 0;
   float: right; }
   .right-column-1:last-child {
@@ -866,5 +866,24 @@ textarea:focus {
 
 .conditions-list {
   text-align: center; }
+
+/******** MODAL **********/
+.modal-body {
+  text-align: left; }
+
+.modal-select {
+  position: relative;
+  right: -13px; }
+
+.modal-title {
+  font-size: 1.5em;
+  font-weight: normal; }
+
+.modal-header,
+.modal-buttons-center {
+  text-align: center; }
+
+.modal-titles {
+  margin-left: 13px; }
 
 /*# sourceMappingURL=main.css.map */

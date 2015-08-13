@@ -29,8 +29,8 @@ $body-font: 'Open Sans', serif;
         Base
 *********************/
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font-family: $body-font;
   overflow-x: hidden;
 }
@@ -268,7 +268,7 @@ i.fa.fa-share-square-o {
 .months-title,
 .follow-up-title {
   width: 50%;
-  display: inline;
+  display: inline-flex;
   font-size: 1.2em;
 }
 .enrollment-title,
@@ -784,4 +784,37 @@ textarea:focus {
 }
 .conditions-list {
   text-align: center;
+}
+
+
+/******** MODAL **********/
+
+.modal-body {
+  text-align: left;
+}
+
+// .modal-select,
+// .modal-timpicker,
+// .modal-buttons {
+//   display: block;
+//   @include span-columns(12);
+// }
+
+.modal-select {
+    position: relative;
+    right: -13px;
+}
+
+.modal-title {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.modal-header,
+.modal-buttons-center {
+  text-align: center;
+}
+
+.modal-titles {
+  margin-left: 13px;
 }
