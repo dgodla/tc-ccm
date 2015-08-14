@@ -886,4 +886,21 @@ textarea:focus {
 .modal-titles {
   margin-left: 13px; }
 
+#reset {
+  color: orangered; }
+
+.span12 {
+  width: 100%;
+  float: none;
+  margin: 0; }
+
+.initial-items-header {
+  margin: 28px; }
+
+.floatright {
+  float: right; }
+
+.floatleft {
+  float: left; }
+
 /*# sourceMappingURL=main.css.map */

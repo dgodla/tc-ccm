@@ -4,41 +4,41 @@ $(document).ready(function() {
         Stop Watch
   ************************/
 
-  var hours = minutes = seconds = milliseconds = 0;
-  var prev_hours = prev_minutes = prev_seconds = prev_milliseconds = undefined;
+  var minutes = seconds = milliseconds = 0;
+  var prev_minutes = prev_seconds = prev_milliseconds = undefined;
   var timeUpdate;
 
-  // // Start/Pause/Resume button onClick
-  // $("#start_pause_resume").button().click(function() {
-  //   // Start button
-  //   if ($(this).text() == "Start") { // check button label
-  //     $(this).html("<span class='ui-button-text'>Pause</span>");
-  //     updateTime(0, 0, 0, 0);
-  //   }
-  //   // Pause button
-  //   else if ($(this).text() == "Pause") {
-  //     clearInterval(timeUpdate);
-  //     $(this).html("<span class='ui-button-text'>Resume</span>");
-  //   }
-  //   // Resume button
-  //   else if ($(this).text() == "Resume") {
-  //     prev_hours = parseInt($("#hours").html());
-  //     prev_minutes = parseInt($("#minutes").html());
-  //     prev_seconds = parseInt($("#seconds").html());
-  //     prev_milliseconds = parseInt($("#milliseconds").html());
-  //
-  //     updateTime(prev_hours, prev_minutes, prev_seconds, prev_milliseconds);
-  //
-  //     $(this).html("<span class='ui-button-text'>Pause</span>");
-  //   }
-  // });
+  // Start/Pause/Resume button onClick
+  $("#start_pause_resume").button().click(function() {
+    // Start button
+    if ($(this).text() == "Start") { // check button label
+      $(this).html("<span class='ui-button-text'>Pause</span>");
+      updateTime(0, 0, 0, 0);
+    }
+    // Pause button
+    else if ($(this).text() == "Pause") {
+      clearInterval(timeUpdate);
+      $(this).html("<span class='ui-button-text'>Resume</span>");
+    }
+    // Resume button
+    else if ($(this).text() == "Resume") {
+      prev_hours = parseInt($("#hours").html());
+      prev_minutes = parseInt($("#minutes").html());
+      prev_seconds = parseInt($("#seconds").html());
+      prev_milliseconds = parseInt($("#milliseconds").html());
 
-  // // Reset button onClick
-  // $("#reset").button().click(function() {
-  //   if (timeUpdate) clearInterval(timeUpdate);
-  //   setStopwatch(0, 0, 0, 0);
-  //   $("#start_pause_resume").html("<span class='ui-button-text'>Start</span>");
-  // });
+      updateTime(prev_hours, prev_minutes, prev_seconds, prev_milliseconds);
+
+      $(this).html("<span class='ui-button-text'>Pause</span>");
+    }
+  });
+
+  // Reset button onClick
+  $("#reset").click(function() {
+    if (timeUpdate) clearInterval(timeUpdate);
+    setStopwatch(0, 0, 0, 0);
+    $("#start_pause_resume").html("<span class='ui-button-text'>Start</span>");
+  });
 
   // Update time in stopwatch periodically - every 25ms
   function updateTime(prev_hours, prev_minutes, prev_seconds, prev_milliseconds) {
@@ -84,11 +84,6 @@ $(document).ready(function() {
   }
 
 
-  /***********************
-      Conditions Items
-  ************************/
-
-
 
   /***********************
         Datepicker
@@ -108,14 +103,18 @@ $(document).ready(function() {
   $('.four').css('visibility', 'hidden');
   $('.monthly-rec').hide();
 
+  $(".box-1").click(function() {
+    $('.two').css('visibility', 'hidden');
+    $('.three').css('visibility', 'hidden');
+    $('.four').css('visibility', 'hidden');
+    $('.monthly-rec').css('visibility', 'hidden');
+    $('.monthly-progress').show();
+    $('.right-column-1').removeClass('span12');
+    $('.left-column-1').show();
+  });
 
-
-  $(".box-2").click(function() {
-    $('.right-column-1').css({
-      'width': '100%',
-      'float': 'none',
-      'margin': '0'
-    });
+  $(".box-2").click(function(){
+    $('.right-column-1').addClass('span12');
     $('.left-column-1').hide();
     $('.two').css('visibility','visible');
     $('.one').css('visibility', 'hidden');
@@ -123,15 +122,9 @@ $(document).ready(function() {
     $('.four').css('visibility', 'hidden');
   });
 
-  $(".box-1").click(function() {
-    $('.two').css('visibility', 'hidden');
-    $('.three').css('visibility', 'hidden');
-    $('.four').css('visibility', 'hidden');
-    $('.monthly-rec').css('visibility', 'hidden');
-    $('.monthly-progress').show();
-  });
-
   $(".box-3").click(function() {
+    $('.left-column-1').show();
+    $('.right-column-1').removeClass('span12');
     $('.monthly-progress').hide();
     $('.monthly-rec').show();
     $('.three').css('visibility','visible');
@@ -145,6 +138,13 @@ $(document).ready(function() {
     $('.one').css('visibility', 'hidden');
     $('.three').css('visibility', 'hidden');
     $('.two').css('visibility', 'hidden');
+    // $('.monthly-rec').hide();
+    $('.initial-action-items').addClass('floatright');
+    $('.monthly-progress').show();
+    $('.currently-monthly-update').hide();
+    $('.initial-patient-centered-care-plan').addClass('floatleft');
+
+
   });
 
   $(".tab-2").click(function() {
@@ -184,7 +184,7 @@ $(document).ready(function() {
       placeholder_text_multiple: "Select a few Conditions"
     });
   // changes the bootstrap select to the custom selectpicker
-    $('.selectpicker').selectpicker();
+
 
     // add the animation to the modal
     $(".modal").each(function(index) {
@@ -197,10 +197,10 @@ $(document).ready(function() {
       });
     });
 
+    $('.datetimepicker').datetimepicker({
+      timepicker:false,
+      format:'m/d/Y'
+    });
 
-});
 
-jQuery('#datetimepicker').datetimepicker({
-  timepicker:false,
-  format:'m/d/Y'
 });

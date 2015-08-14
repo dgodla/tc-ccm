@@ -793,13 +793,6 @@ textarea:focus {
   text-align: left;
 }
 
-// .modal-select,
-// .modal-timpicker,
-// .modal-buttons {
-//   display: block;
-//   @include span-columns(12);
-// }
-
 .modal-select {
     position: relative;
     right: -13px;
@@ -817,4 +810,26 @@ textarea:focus {
 
 .modal-titles {
   margin-left: 13px;
+}
+
+#reset {
+    color: orangered;
+}
+
+.span12 {
+    width: 100%;
+    float: none;
+    margin: 0;
+}
+
+.initial-items-header {
+  margin: 28px;
+}
+
+.floatright {
+  float: right;
+}
+
+.floatleft {
+  float:left
 }

@@ -7,13 +7,13 @@
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css">
-
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/css/bootstrap.min.css">
+
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css">
-  <link rel="stylesheet" type="text/css" href="bower_components/datetimepicker-master/jquery.datetimepicker.css">
   <link rel="stylesheet" type="text/css" href="styles/main.css">
   <link rel="stylesheet" type="text/css" href="bower_components/jqueryui/themes/base/">
   <link rel="stylesheet" href="bower_components/chosen/chosen.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/datetimepicker-master/jquery.datetimepicker.css">
 </head>
 
 <body>
@@ -78,7 +78,7 @@
                           </select>
                           <p class="datepicker-paragraph">
                             <div class="modal-titles">Effective:</div>
-                            <input type="text" class="first-timepicker" id="datetimepicker" readonly="readonly" placeholder="MM/DD/YY">
+                            <input type="text" class="datetimepicker modal-select" readonly="readonly" placeholder="MM/DD/YY">
                           </p>
                           <p class="reason">
                             <div class="modal-titles">Reason for change: (optional)</div>
@@ -153,7 +153,7 @@
             </optgroup>
           </select>
           <p class="datepicker-paragraph">
-            <input type="text" class="first-timepicker" id="datetimepicker" readonly="readonly" placeholder="MM/DD/YY">
+            <input type="text" class="first-timepicker datetimepicker" readonly="readonly" placeholder="MM/DD/YY">
           </p>
           <button class="log-time-button">Log Time</button>
         </div>
@@ -182,7 +182,7 @@
       <!--/////////// PAGE 1 ////////////-->
 
       <div class="monthly-progress">
-        <div class="left-column-1">
+        <div class="left-column-1 initial-patient-centered-care-plan">
           <div class="title-box lower-title-boxes">
             <p class="lower-titles">
               Initial Patient Centered Care Plan
@@ -305,7 +305,7 @@
           </div>
         </div>
 
-        <div class="right-column-1">
+        <div class="right-column-1 current-monthly-update">
           <div class="title-box lower-title-boxes">
             <p class="lower-titles">
               Current Monthly Update
@@ -337,7 +337,7 @@
             </select>
 
             <p class="datepicker-lower-paragraph">
-              <input type="text" class="second-timepicker" id="datetimepicker" readonly="readonly" placeholder="MM/DD/YY">
+              <input type="text" class="second-timepicker datetimepicker"  readonly="readonly" placeholder="MM/DD/YY">
             </p>
             <button class="save-button">
               Save
@@ -448,26 +448,27 @@
 
       <!----------------- PAGE 3 -------------->
       <div class="monthly-rec">
-        <div class="left-column-1">
+        <div class="left-column-1 initial-action-items">
           <div class="title-box lower-title-boxes">
             <p class="lower-titles">
               Initial Action Items
             </p>
           </div>
-          <select class="selectpicker">
-            <option>Monthly Clinical Review</option>
-            <option>Regular Weekly Checkup</option>
-            <option>Emergency Appointment</option>
-          </select>
+          <div class="initial-items-header">
+            <select class="selectpicker">
+              <option>Monthly Clinical Review</option>
+              <option>Regular Weekly Checkup</option>
+              <option>Emergency Appointment</option>
+            </select>
 
-          <input class="lower-datepicker" type="text" id="datepicker" readonly="readonly">
-          <button class="save-button">
-            Save
-          </button>
-          <p class="based-paragraph">
-            Based upon the patient’s initial assessment, the following orders are recommended. This list can be reviewed with the patient during a monthly CCM call.
-          </p>
-
+            <input class="lower-datepicker datetimepicker" type="text"  readonly="readonly">
+            <button class="save-button">
+              Save
+            </button>
+            <p class="based-paragraph">
+              Based upon the patient’s initial assessment, the following orders are recommended. This list can be reviewed with the patient during a monthly CCM call.
+            </p>
+          </div>
 
           <div class="blue-box">
             <div class="blue-box-title">
@@ -619,7 +620,7 @@
               <option>Emergency Appointment</option>
             </select>
 
-            <input class="lower-datepicker" type="text" id="datetimepicker" readonly="readonly">
+            <input class="lower-datepicker datetimepicker" type="text" readonly="readonly">
             <button class="save-button">
               Save
             </button>
@@ -741,16 +742,23 @@
 
 </body>
 
-<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
 <script src="bower_components/jqueryui/jquery-ui.js" type="text/javascript"></script>
 <script src="bower_components/bootstrap/js/bootstrap.js"></script>
+<script src="bower_components/bootstrap-select/js/bootstrap-select.js"></script>
+<script type="text/javascript">
+      $(document).ready(function(e) {
+            $('.selectpicker').selectpicker();
+        });
+</script>
+<script src="bower_components/chosen/chosen.jquery.min.js"></script>
 <script src="bower_components/velocity/velocity.min.js"></script>
 <script src="bower_components/velocity/velocity.ui.min.js"></script>
-<script src="bower_components/bootstrap-select/js/bootstrap-select.js"></script>
-<script src="bower_components/datetimepicker-master/jquery.js"></script>
+
+<!-- <script src="bower_components/datetimepicker-master/jquery.js"></script> -->
 <script src="bower_components/datetimepicker-master/jquery.datetimepicker.js"></script>
 
 <script src="scripts/main.js" type="text/javascript"></script>
-<script src="bower_components/chosen/chosen.jquery.min.js"></script>
+
 
 </html>
