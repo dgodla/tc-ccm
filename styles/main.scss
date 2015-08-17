@@ -867,3 +867,26 @@ ul {
 
 
 }
+
+
+
+.bootstrap-select,
+.btn:focus,
+li:focus,
+li:active,
+.btn:active,
+.selected {
+    outline: none !important;
+}
+
+select:active, select:hover {
+  outline: none !important;
+}
+
+.btn:focus,
+.btn:active,
+.opt,
+.text,
+a {
+   outline: none !important;
+}

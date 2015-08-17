@@ -812,6 +812,9 @@ i {
   position: relative; }
 
 textarea {
+  white-space: nowrap;
+  padding-left: 16px;
+  padding-top: 10px;
   height: 100%;
   width: 100%;
   outline: none;
@@ -951,5 +954,23 @@ ul {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+.bootstrap-select,
+.btn:focus,
+li:focus,
+li:active,
+.btn:active,
+.selected {
+  outline: none !important; }
+
+select:active, select:hover {
+  outline: none !important; }
+
+.btn:focus,
+.btn:active,
+.opt,
+.text,
+a {
+  outline: none !important; }
 
 /*# sourceMappingURL=main.css.map */
