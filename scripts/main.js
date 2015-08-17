@@ -154,7 +154,7 @@ $(document).ready(function() {
   $(".tab-2").click(function() {
     $('.monthly-care').show();
     $('.monthly-call').css('visibility', 'hidden');
-    $('.time-log').css('visibility', 'hidden');
+    // $('.time-log').css('visibility', 'hidden');
   });
 
   $('.tab-1').addClass('clicked');
