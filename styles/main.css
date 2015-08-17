@@ -893,9 +893,7 @@ textarea:focus {
   color: orangered; }
 
 .span12 {
-  width: 100%;
-  float: none;
-  margin: 0; }
+  width: 100%; }
 
 .initial-items-header {
   margin: 28px; }

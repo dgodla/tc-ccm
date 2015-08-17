@@ -101,45 +101,53 @@ $(document).ready(function() {
   $('.two').css('visibility', 'hidden');
   $('.three').css('visibility', 'hidden');
   $('.four').css('visibility', 'hidden');
-  $('.monthly-rec').hide();
+  $('.doctor-time-log').css('visibility', 'hidden');
+  $('.date-time-log').css('visibility', 'hidden');
+  $('.initial-action-items').hide();
+
 
   $(".box-1").click(function() {
     $('.two').css('visibility', 'hidden');
     $('.three').css('visibility', 'hidden');
     $('.four').css('visibility', 'hidden');
-    $('.monthly-rec').css('visibility', 'hidden');
-    $('.monthly-progress').show();
+    // $('.monthly-rec').css('visibility', 'hidden');
+    // $('.monthly-progress').show();
     $('.right-column-1').removeClass('span12');
-    $('.left-column-1').show();
+    $('.initial-patient-centered-care-plan').show();
+    // $('.left-column-1').show();
   });
 
-  $(".box-2").click(function(){
+  $(".box-2").click(function() {
+    $('.initial-patient-centered-care-plan').hide();
     $('.right-column-1').addClass('span12');
-    $('.left-column-1').hide();
-    $('.two').css('visibility','visible');
+    $('.two').css('visibility', 'visible');
     $('.one').css('visibility', 'hidden');
     $('.three').css('visibility', 'hidden');
     $('.four').css('visibility', 'hidden');
+    $('.doctor-time-log').css('visibility', 'visible');
+    $('.date-time-log').css('visibility', 'visible');
   });
 
   $(".box-3").click(function() {
     $('.left-column-1').show();
+    // $('.right-column-1').removeClass('span12');
+    // $('.monthly-progress').hide();
+    // $('.monthly-rec').show();
     $('.right-column-1').removeClass('span12');
-    $('.monthly-progress').hide();
-    $('.monthly-rec').show();
-    $('.three').css('visibility','visible');
+    $('.initial-patient-centered-care-plan').show();
+    $('.three').css('visibility', 'visible');
     $('.one').css('visibility', 'hidden');
     $('.two').css('visibility', 'hidden');
     $('.four').css('visibility', 'hidden');
   });
 
   $(".box-4").click(function() {
-    $('.four').css('visibility','visible');
+    $('.four').css('visibility', 'visible');
     $('.one').css('visibility', 'hidden');
     $('.three').css('visibility', 'hidden');
     $('.two').css('visibility', 'hidden');
-    $('.monthly-progress').show();
-    $('.monthly-rec').show();
+    // $('.monthly-progress').show();
+    // $('.monthly-rec').show();
     $('.initial-action-items').addClass('floatright');
     $('.initial-patient-centered-care-plan').show();
     $('.currently-monthly-update').hide();
@@ -177,48 +185,49 @@ $(document).ready(function() {
   });
 
 
-  $('.box-1').click(function(){
-    if ( $('.one').css('visibility') == 'hidden' )
-      $('.one').css('visibility','visible');
+  $('.box-1').click(function() {
+    if ($('.one').css('visibility') == 'hidden')
+      $('.one').css('visibility', 'visible');
     else
-      $('.one').css('visibility','hidden');
+      $('.one').css('visibility', 'hidden');
   });
 
-    $(".chosen-select").chosen({
-      placeholder_text_multiple: "Select a few Conditions"
-    });
+  $(".chosen-select").chosen({
+    placeholder_text_multiple: "Select a few Conditions"
+  });
   // changes the bootstrap select to the custom selectpicker
 
 
-    // add the animation to the modal
-    $(".modal").each(function(index) {
-      $(this).on('show.bs.modal', function(e) {
-        var open = $(this).attr('data-easein');
-        if (open == 'shake') {
-        } else {
-          $('.modal-dialog').velocity('transition.' + open);
-        }
-      });
+  // add the animation to the modal
+  $(".modal").each(function(index) {
+    $(this).on('show.bs.modal', function(e) {
+      var open = $(this).attr('data-easein');
+      if (open == 'shake') {} else {
+        $('.modal-dialog').velocity('transition.' + open);
+      }
     });
+  });
 
-    $('.datetimepicker').datetimepicker({
-      timepicker:false,
-      format:'m/d/Y'
+  $('.datetimepicker').datetimepicker({
+    timepicker: false,
+    format: 'm/d/Y'
+  });
+
+  $('ul.tabs li').click(function() {
+    var tab_id = $(this).attr('data-tab');
+
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#" + tab_id).addClass('current');
+  });
+
+  $('.fa-times-circle').click(function() {
+    $(this).parent().parent().hide('slow', function() {
+      $(this).remove();
     });
-
-    $('ul.tabs li').click(function(){
-  		var tab_id = $(this).attr('data-tab');
-
-  		$('ul.tabs li').removeClass('current');
-  		$('.tab-content').removeClass('current');
-
-  		$(this).addClass('current');
-  		$("#"+tab_id).addClass('current');
-  	});
-
-    $('.fa-times-circle').click(function(){
-      $(this).parent().parent().hide('slow', function(){ $(this).remove(); });
-    });
+  });
 
 
 });
