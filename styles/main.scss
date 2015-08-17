@@ -890,3 +890,61 @@ select:active, select:hover {
 a {
    outline: none !important;
 }
+
+
+.doctor-time-log,
+.date-time-log {
+@include span-columns(12);
+
+}
+.time-log,
+.time-log-entry {
+  @include span-columns(12);
+  @include pad(20px);
+}
+
+.entry-row {
+  @include span-columns(12);
+  @include shift(1);
+  @include pad(0 0 10px 0);
+}
+
+.entry-row>span {
+  @include span-columns(3);
+  @include omega(4n);
+  font-size: 1.2em;
+}
+
+.time-log-month {
+  font-weight: bold;
+  font-size: 1.5em;
+  @include shift(1);
+  @include span-columns(2 of 12);
+}
+
+.time-log-month-total-1,
+.time-log-month-total-2 {
+  font-weight: bold;
+  font-size: 1.5em;
+  @include shift(7);
+  @include span-columns(2 of 12);
+}
+
+.time-log-header{
+  @include span-columns(12);
+  @include pad(0 0 20px 0);
+}
+
+i.fa.fa-times-circle {
+    padding-left: 10px;
+    color: orangered;
+    font-size: 1.2em;
+}
+
+.time-log-month-total-1 {
+  color: green;
+}
+
+.time-log-month-total-2 {
+  color: orangered;
+}

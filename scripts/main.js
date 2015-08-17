@@ -216,7 +216,9 @@ $(document).ready(function() {
   		$("#"+tab_id).addClass('current');
   	});
 
-
+    $('.fa-times-circle').click(function(){
+      $(this).parent().parent().hide('slow', function(){ $(this).remove(); });
+    });
 
 
 });

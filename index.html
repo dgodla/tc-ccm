@@ -54,726 +54,291 @@
         <div class="status-enrollment-container">
           <div class="status-container">
             <div class="status-title">Status:
-                <div class="modExample">
-                  <a href="#myModal1" role="button" data-target="#myModal1"  class="status" data-toggle="modal">  ACTIVE</a>
-                  <div id="myModal1" class="modal fade" data-easein="fadeIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                          <h4 class="modal-title" id="myModalLabel">Enrollment</h4>
-                        </div>
-                        <div class="modal-body">
-                          <div class="modal-titles">Change enrollment status to:</div>
-                          <select class="selectpicker modal-select">
-                            <optgroup label="Physicians">
-                              <option>Dr. Jones</option>
-                              <option>Dr. Johnson</option>
-                            </optgroup>
-                            <optgroup label="Care Managers">
-                              <option>Nancy Smith</option>
-                              <option>Patti Russ</option>
-                              <option>Judy Jones</option>
-                            </optgroup>
-                          </select>
-                          <p class="datepicker-paragraph">
-                            <div class="modal-titles">Effective:</div>
-                            <input type="text" class="datetimepicker modal-select" readonly="readonly" placeholder="MM/DD/YY">
-                          </p>
-                          <p class="reason">
-                            <div class="modal-titles">Reason for change: (optional)</div>
-                            <input  class="modal-titles" type="text">
-                          </p>
-                          <div class="modal-buttons-center">
-                            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                            <button class="btn btn-primary">Change Status</button>
-                          </div>
+              <div class="modExample">
+                <a href="#myModal1" role="button" data-target="#myModal1" class="status" data-toggle="modal">  ACTIVE</a>
+                <div id="myModal1" class="modal fade" data-easein="fadeIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">Enrollment</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="modal-titles">Change enrollment status to:</div>
+                        <select class="selectpicker modal-select">
+                          <optgroup label="Physicians">
+                            <option>Dr. Jones</option>
+                            <option>Dr. Johnson</option>
+                          </optgroup>
+                          <optgroup label="Care Managers">
+                            <option>Nancy Smith</option>
+                            <option>Patti Russ</option>
+                            <option>Judy Jones</option>
+                          </optgroup>
+                        </select>
+                        <p class="datepicker-paragraph">
+                          <div class="modal-titles">Effective:</div>
+                          <input type="text" class="datetimepicker modal-select" readonly="readonly" placeholder="MM/DD/YY">
+                        </p>
+                        <p class="reason">
+                          <div class="modal-titles">Reason for change: (optional)</div>
+                          <input class="modal-titles" type="text">
+                        </p>
+                        <div class="modal-buttons-center">
+                          <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                          <button class="btn btn-primary">Change Status</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="enrollment-title">Enrollment:
-                <span class="enrollment">
-                  07/13/15
-                </span>
-              </div>
             </div>
-            <div>
-              <div class="months-title">Months of CCM:
-                <span class="CCM">
-                  3
-                </span>
-              </div>
-              <div class="follow-up-title">Next Follow-up:
-                <span class="follow-up">
-                  08/15/15
-                </span>
-              </div>
+            <div class="enrollment-title">Enrollment:
+              <span class="enrollment">
+                07/13/15
+              </span>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="timer-box">
-        <div class="title-box">
-          <p>Timer</p>
-        </div>
-        <div class="column-1">
-          <div id="time">
-            <span id="minutes">00</span>
-            <p class="timer-colon">:</p>
-            <span id="seconds">00</span>
-          </div>
-          <p class="timer-name">Task Timer</p>
-          <div id="controls">
-            <button id="start_pause_resume">Start</button>
-            <button id="reset">Reset</button>
-          </div>
-        </div>
-
-        <div class="column-2">
-          <span class="short-words">As:</span>
-          <select class="selectpicker top-select">
-            <option>Monthly Clinical Review</option>
-            <option>Regular Weekly Checkup</option>
-            <option>Emergency Appointment</option>
-          </select>
-          <span class="short-words">By:</span>
-          <select class="selectpicker bottom-select">
-            <optgroup label="Physicians">
-              <option>Dr. Jones</option>
-              <option>Dr. Johnson</option>
-            </optgroup>
-            <optgroup label="Care Managers">
-              <option>Nancy Smith</option>
-              <option>Patti Russ</option>
-              <option>Judy Jones</option>
-            </optgroup>
-          </select>
-          <p class="datepicker-paragraph">
-            <input type="text" class="first-timepicker datetimepicker" readonly="readonly" placeholder="MM/DD/YY">
-          </p>
-          <button class="log-time-button">Log Time</button>
-        </div>
-
-        <div class="column-3">
-          <div class="total-time-amount">
-            <span id="total-minutes">25</span>
-            <p class="total-timer-colon">:</p>
-            <span id="total-seconds">37</span>
           </div>
           <div>
-            <p class="total-time-title">Total Time</p>
-          </div>
-        </div>
-
-
-      </div>
-
-      <div class="nav-boxes">
-        <button class="box-1">Monthly Progress Update<i class="fa fa-check-circle one"></i></button>
-        <button class="box-2">Monthly Call Review<i class="fa fa-check-circle two"></i></button>
-        <button class="box-3">Monthly Recommendations Review<i class="fa fa-check-circle three"></i></button>
-        <button class="box-4">Initial Recommendations Review<i class="fa fa-check-circle four"></i></button>
-      </div>
-
-      <!--/////////// PAGE 1 ////////////-->
-
-      <div class="monthly-progress">
-        <div class="left-column-1 initial-patient-centered-care-plan">
-          <div class="title-box lower-title-boxes">
-            <p class="lower-titles">
-              Initial Patient Centered Care Plan
-              <i class="fa fa-check"></i>
-              <i class="fa fa-pencil"></i>
-            </p>
-          </div>
-          <div class="initial-date">
-            August 15, 2015
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Goals Important to Patient
-            </div>
-            <div class="editable">
-              <textarea>
-                Lose Weight Control Blood Sugar Levels
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Specific Goals/Targets Agreed Upon
-            </div>
-            <div class="editable">
-              <textarea>
-                Lose Weight Control Blood Sugar Levels
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Potential Barriers
-            </div>
-            <div class="editable">
-              <textarea>
-                Lose Weight Control Blood Sugar Levels
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Problems and Symptoms
-            </div>
-            <div class="editable">
-              <textarea>
-                Lose Weight Control Blood Sugar Levels
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Expected Outcomes
-            </div>
-            <div class="editable">
-              <textarea>
-                Lose Weight Control Blood Sugar Levels
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Other Providers
-            </div>
-            <div class="editable">
-              <textarea>
-                Lose Weight Control Blood Sugar Levels
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Resources/Support System
-            </div>
-            <div class="editable">
-              <textarea>
-                Lose Weight Control Blood Sugar Levels
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Patient numbers to track monthly
-            </div>
-            <div class="editable">
-              <textarea>
-                Lose Weight Control Blood Sugar Levels
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Medications
-            </div>
-            <div class="editable">
-              <textarea>
-                Lose Weight Control Blood Sugar Levels
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Allergies
-            </div>
-            <div class="editable">
-              <textarea>
-                Lose Weight Control Blood Sugar Levels
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              All Conditions
-            </div>
-            <div class="editable">
-              <textarea>
-                Lose Weight Control Blood Sugar Levels
-              </textarea>
-            </div>
-          </div>
-        </div>
-
-        <div class="right-column-1 current-monthly-update">
-          <div class="title-box lower-title-boxes">
-            <p class="lower-titles">
-              Current Monthly Update
-              <span class="month-selector">
-                <i class="fa fa-arrow-left"></i> July 2015
-                <i class="fa fa-arrow-right"></i>
+            <div class="months-title">Months of CCM:
+              <span class="CCM">
+                3
               </span>
-            </p>
+            </div>
+            <div class="follow-up-title">Next Follow-up:
+              <span class="follow-up">
+                08/15/15
+              </span>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <ul class="tabs">
-            <li class="tab-1 tab-link" data-tab="tab-1">
-              Monthly Care Plan Review
-            </li>
-            <li class="tab-2 tab-link" data-tab="tab-2">
-              Monthly Call Time Log
-            </li>
-            <li class="tab-3 tab-link" data-tab="tab-3">
-              Time log
-            </li>
-          </ul>
-
-          <div class="white-container">
-            <div class="monthly-care-review-plan tab-content current" id="tab-1">
-              <select class="selectpicker white-selector">
-                <option>Monthly Clinical Review</option>
-                <option>Regular Weekly Checkup</option>
-                <option>Emergency Appointment</option>
-              </select>
-
-              <p class="datepicker-lower-paragraph">
-                <input type="text" class="second-timepicker datetimepicker"  readonly="readonly" placeholder="MM/DD/YY">
-              </p>
-              <button class="save-button">
-                Save
-              </button>
-              <div class="blue-box updates">
-                <div class="blue-box-title">
-                  Updates about achieving these goals
-                </div>
-                <div class="editable">
-                  <textarea>
-                    Lose Weight Control Blood Sugar Levels
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Progress towards reducing barriers
-                </div>
-                <div class="editable">
-                  <textarea>
-                    Lose Weight Control Blood Sugar Levels
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Updates about problems/symptoms
-                </div>
-                <div class="editable">
-                  <textarea>
-                    Lose Weight Control Blood Sugar Levels
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Progress toward expected outcomes
-                </div>
-                <div class="editable">
-                  <textarea>
-                    Lose Weight Control Blood Sugar Levels
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Any changes in other providers?
-                </div>
-                <div class="editable">
-                  <textarea>
-                    Lose Weight Control Blood Sugar Levels
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Any changes in resources/support?
-                </div>
-                <div class="editable">
-                  <textarea>
-                    Lose Weight Control Blood Sugar Levels
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Patient numbers to track monthly
-                </div>
-                <div class="editable">
-                  <textarea>
-                    Lose Weight Control Blood Sugar Levels
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Medications
-                </div>
-                <div class="editable">
-                  <textarea>
-                    Lose Weight Control Blood Sugar Levels
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Allergies
-                </div>
-                <div class="editable">
-                  <textarea>
-                    Lose Weight Control Blood Sugar Levels
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  All Conditions
-                </div>
-                <div class="editable">
-                  <textarea>
-                    Lose Weight Control Blood Sugar Levels
-                  </textarea>
-                </div>
-              </div>
-            </div>
-            <div class="monthly-call-time-log tab-content" id="tab-2">
-              <select class="selectpicker white-selector">
-                <option>Monthly Clinical Review</option>
-                <option>Regular Weekly Checkup</option>
-                <option>Emergency Appointment</option>
-              </select>
-
-              <p class="datepicker-lower-paragraph">
-                <input type="text" class="second-timepicker datetimepicker"  readonly="readonly" placeholder="MM/DD/YY">
-              </p>
-              <button class="save-button">
-                Save
-              </button>
-              <div class="blue-box updates">
-                <div class="blue-box-title">
-                  New Concerns identified by patients
-                </div>
-                <div class="editable">
-                  <textarea>
-
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Interventions to patient concerns
-                </div>
-                <div class="editable">
-                  <textarea>
-
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Patient Goals / to-do list for next 30 days
-                </div>
-                <div class="editable">
-                  <textarea>
-
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Care Team / to-do list for next 30 days
-                </div>
-                <div class="editable">
-                  <textarea>
-
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Other notes about this month's engagement
-                </div>
-                <div class="editable">
-                  <textarea>
-
-                  </textarea>
-                </div>
-              </div>
-              <div class="Schedule-follow">
-                <div class="schedule-title">Schedule next follow-up</div>
-                <input class="datetimepicker schedule-datepicker" type="text" placeholder="MM/DD/YY" readonly="readonly">
-              </div>
-              <button class="schedule-button">Schedule</button>
-
-            </div>
-
-
-
-            <div class="time-log tab-content" id="tab-3">
-              <select class="selectpicker white-selector">
-                <option>Monthly Clinical Review</option>
-                <option>Regular Weekly Checkup</option>
-                <option>Emergency Appointment</option>
-              </select>
-
-              <p class="datepicker-lower-paragraph">
-                <input type="text" class="second-timepicker datetimepicker"  readonly="readonly" placeholder="MM/DD/YY">
-              </p>
-              <button class="save-button">
-                Save
-              </button>
-              <div class="blue-box updates">
-                <div class="blue-box-title">
-                  New Concerns identified by patients
-                </div>
-                <div class="editable">
-                  <textarea>
-
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Interventions to patient concerns
-                </div>
-                <div class="editable">
-                  <textarea>
-
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Patient Goals / to-do list for next 30 days
-                </div>
-                <div class="editable">
-                  <textarea>
-
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Care Team / to-do list for next 30 days
-                </div>
-                <div class="editable">
-                  <textarea>
-
-                  </textarea>
-                </div>
-              </div>
-              <div class="blue-box">
-                <div class="blue-box-title">
-                  Other notes about this month's engagement
-                </div>
-                <div class="editable">
-                  <textarea>
-
-                  </textarea>
-                </div>
-              </div>
-              <div class="Schedule-follow">
-                <div class="schedule-title">Schedule next follow-up</div>
-                <input class="datetimepicker schedule-datepicker" type="text" placeholder="MM/DD/YY" readonly="readonly">
-              </div>
-              <button class="schedule-button">Schedule</button>
-
-            </div>
-
-
-
-
-
-
-          </div>
-
-
-
+    <div class="timer-box">
+      <div class="title-box">
+        <p>Timer</p>
+      </div>
+      <div class="column-1">
+        <div id="time">
+          <span id="minutes">00</span>
+          <p class="timer-colon">:</p>
+          <span id="seconds">00</span>
+        </div>
+        <p class="timer-name">Task Timer</p>
+        <div id="controls">
+          <button id="start_pause_resume">Start</button>
+          <button id="reset">Reset</button>
         </div>
       </div>
 
-      <!----------------- PAGE 3 -------------->
-      <div class="monthly-rec">
-        <div class="left-column-1 initial-action-items">
-          <div class="title-box lower-title-boxes">
-            <p class="lower-titles">
-              Initial Action Items
-            </p>
-          </div>
-          <div class="initial-items-header">
-            <select class="selectpicker">
-              <option>Monthly Clinical Review</option>
-              <option>Regular Weekly Checkup</option>
-              <option>Emergency Appointment</option>
-            </select>
+      <div class="column-2">
+        <span class="short-words">As:</span>
+        <select class="selectpicker top-select">
+          <option>Monthly Clinical Review</option>
+          <option>Regular Weekly Checkup</option>
+          <option>Emergency Appointment</option>
+        </select>
+        <span class="short-words">By:</span>
+        <select class="selectpicker bottom-select">
+          <optgroup label="Physicians">
+            <option>Dr. Jones</option>
+            <option>Dr. Johnson</option>
+          </optgroup>
+          <optgroup label="Care Managers">
+            <option>Nancy Smith</option>
+            <option>Patti Russ</option>
+            <option>Judy Jones</option>
+          </optgroup>
+        </select>
+        <p class="datepicker-paragraph">
+          <input type="text" class="first-timepicker datetimepicker" readonly="readonly" placeholder="MM/DD/YY">
+        </p>
+        <button class="log-time-button">Log Time</button>
+      </div>
 
-            <input class="lower-datepicker datetimepicker" type="text"  readonly="readonly">
-            <button class="save-button">
-              Save
-            </button>
-            <p class="based-paragraph">
-              Based upon the patient’s initial assessment, the following orders are recommended. This list can be reviewed with the patient during a monthly CCM call.
-            </p>
-          </div>
+      <div class="column-3">
+        <div class="total-time-amount">
+          <span id="total-minutes">25</span>
+          <p class="total-timer-colon">:</p>
+          <span id="total-seconds">37</span>
+        </div>
+        <div>
+          <p class="total-time-title">Total Time</p>
+        </div>
+      </div>
 
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Treatment for Tests
-            </div>
-            <div class="editable">
-              <textarea>
-                <p>Lose Weight</p>
-                <p>Control Blood Sugar Levels</p>
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Blah Blah title two
-            </div>
-            <div class="editable">
-              <textarea>
-                <p>Lose Weight</p>
-                <p>Control Blood Sugar Levels</p>
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Blah blah title three
-            </div>
-            <div class="editable">
-              <textarea>
-                <p>Lose Weight</p>
-                <p>Control Blood Sugar Levels</p>
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Medication changes to make
-            </div>
-            <div class="editable">
-              <textarea>
-                <p>Lose Weight</p>
-                <p>Control Blood Sugar Levels</p>
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Health education classes needed
-            </div>
-            <div class="editable">
-              <textarea>
-                <p>Lose Weight</p>
-                <p>Control Blood Sugar Levels</p>
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Diet
-            </div>
-            <div class="editable">
-              <textarea>
-                <p>Lose Weight</p>
-                <p>Control Blood Sugar Levels</p>
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Exercise
-            </div>
-            <div class="editable">
-              <textarea>
-                <p>Lose Weight</p>
-                <p>Control Blood Sugar Levels</p>
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Stress Management Assistance
-            </div>
-            <div class="editable">
-              <textarea>
-                <p>Lose Weight</p>
-                <p>Control Blood Sugar Levels</p>
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Safety
-            </div>
-            <div class="editable">
-              <textarea>
-                <p>Lose Weight</p>
-                <p>Control Blood Sugar Levels</p>
-              </textarea>
-            </div>
-          </div>
-          <div class="blue-box">
-            <div class="blue-box-title">
-              Other Habits to change
-            </div>
-            <div class="editable">
-              <textarea>
-                <p>Lose Weight</p>
-                <p>Control Blood Sugar Levels</p>
-              </textarea>
-            </div>
-          </div>
 
-          <select class="selectpicker">
-            <option value="" disabled selected>Number of Appointments this year</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
+    </div>
 
+    <div class="nav-boxes">
+      <button class="box-1">Monthly Progress Update<i class="fa fa-check-circle one"></i></button>
+      <button class="box-2">Monthly Call Review<i class="fa fa-check-circle two"></i></button>
+      <button class="box-3">Monthly Recommendations Review<i class="fa fa-check-circle three"></i></button>
+      <button class="box-4">Initial Recommendations Review<i class="fa fa-check-circle four"></i></button>
+    </div>
+
+    <!--/////////// PAGE 1 ////////////-->
+
+    <div class="monthly-progress">
+      <div class="left-column-1 initial-patient-centered-care-plan">
+        <div class="title-box lower-title-boxes">
+          <p class="lower-titles">
+            Initial Patient Centered Care Plan
+            <i class="fa fa-check"></i>
+            <i class="fa fa-pencil"></i>
+          </p>
+        </div>
+        <div class="initial-date">
+          August 15, 2015
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Goals Important to Patient
+          </div>
+          <div class="editable">
+            <textarea>
+              Lose Weight Control Blood Sugar Levels
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Specific Goals/Targets Agreed Upon
+          </div>
+          <div class="editable">
+            <textarea>
+              Lose Weight Control Blood Sugar Levels
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Potential Barriers
+          </div>
+          <div class="editable">
+            <textarea>
+              Lose Weight Control Blood Sugar Levels
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Problems and Symptoms
+          </div>
+          <div class="editable">
+            <textarea>
+              Lose Weight Control Blood Sugar Levels
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Expected Outcomes
+          </div>
+          <div class="editable">
+            <textarea>
+              Lose Weight Control Blood Sugar Levels
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Other Providers
+          </div>
+          <div class="editable">
+            <textarea>
+              Lose Weight Control Blood Sugar Levels
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Resources/Support System
+          </div>
+          <div class="editable">
+            <textarea>
+              Lose Weight Control Blood Sugar Levels
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Patient numbers to track monthly
+          </div>
+          <div class="editable">
+            <textarea>
+              Lose Weight Control Blood Sugar Levels
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Medications
+          </div>
+          <div class="editable">
+            <textarea>
+              Lose Weight Control Blood Sugar Levels
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Allergies
+          </div>
+          <div class="editable">
+            <textarea>
+              Lose Weight Control Blood Sugar Levels
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            All Conditions
+          </div>
+          <div class="editable">
+            <textarea>
+              Lose Weight Control Blood Sugar Levels
+            </textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-column-1 current-monthly-update">
+        <div class="title-box lower-title-boxes">
+          <p class="lower-titles">
+            Current Monthly Update
+            <span class="month-selector">
+              <i class="fa fa-arrow-left"></i> July 2015
+              <i class="fa fa-arrow-right"></i>
+            </span>
+          </p>
         </div>
 
-        <div class="right-column-1">
-          <div class="title-box lower-title-boxes">
-            <p class="lower-titles">
-              Current Monthly Update
-            </p>
-          </div>
+        <ul class="tabs">
+          <li class="tab-1 tab-link" data-tab="tab-1">
+            Monthly Care Plan Review
+          </li>
+          <li class="tab-2 tab-link" data-tab="tab-2">
+            Monthly Call Time Log
+          </li>
+          <li class="tab-3 tab-link" data-tab="tab-3">
+            Time log
+          </li>
+        </ul>
 
-          <div class="tabs">
-            <div class="tab-1 clicked">
-              Monthly Care Plan Review
-            </div>
-            <div class="tab-2 clicked">
-              Monthly Call Time Log
-            </div>
-            <div class="tab-3 clicked">
-              Time log
-            </div>
-          </div>
-
-          <div class="white-container">
-
-
-            <select class="selectpicker">
+        <div class="white-container">
+          <div class="monthly-care-review-plan tab-content current" id="tab-1">
+            <select class="selectpicker white-selector">
               <option>Monthly Clinical Review</option>
               <option>Regular Weekly Checkup</option>
               <option>Emergency Appointment</option>
             </select>
 
-            <input class="lower-datepicker datetimepicker" type="text" readonly="readonly">
+            <p class="datepicker-lower-paragraph">
+              <input type="text" class="second-timepicker datetimepicker" readonly="readonly" placeholder="MM/DD/YY">
+            </p>
             <button class="save-button">
               Save
             </button>
@@ -783,8 +348,7 @@
               </div>
               <div class="editable">
                 <textarea>
-                  <p>Lose Weight</p>
-                  <p>Control Blood Sugar Levels</p>
+                  Lose Weight Control Blood Sugar Levels
                 </textarea>
               </div>
             </div>
@@ -794,8 +358,7 @@
               </div>
               <div class="editable">
                 <textarea>
-                  <p>Lose Weight</p>
-                  <p>Control Blood Sugar Levels</p>
+                  Lose Weight Control Blood Sugar Levels
                 </textarea>
               </div>
             </div>
@@ -805,8 +368,7 @@
               </div>
               <div class="editable">
                 <textarea>
-                  <p>Lose Weight</p>
-                  <p>Control Blood Sugar Levels</p>
+                  Lose Weight Control Blood Sugar Levels
                 </textarea>
               </div>
             </div>
@@ -816,8 +378,7 @@
               </div>
               <div class="editable">
                 <textarea>
-                  <p>Lose Weight</p>
-                  <p>Control Blood Sugar Levels</p>
+                  Lose Weight Control Blood Sugar Levels
                 </textarea>
               </div>
             </div>
@@ -827,8 +388,7 @@
               </div>
               <div class="editable">
                 <textarea>
-                  <p>Lose Weight</p>
-                  <p>Control Blood Sugar Levels</p>
+                  Lose Weight Control Blood Sugar Levels
                 </textarea>
               </div>
             </div>
@@ -838,8 +398,7 @@
               </div>
               <div class="editable">
                 <textarea>
-                  <p>Lose Weight</p>
-                  <p>Control Blood Sugar Levels</p>
+                  Lose Weight Control Blood Sugar Levels
                 </textarea>
               </div>
             </div>
@@ -849,8 +408,7 @@
               </div>
               <div class="editable">
                 <textarea>
-                  <p>Lose Weight</p>
-                  <p>Control Blood Sugar Levels</p>
+                  Lose Weight Control Blood Sugar Levels
                 </textarea>
               </div>
             </div>
@@ -860,8 +418,7 @@
               </div>
               <div class="editable">
                 <textarea>
-                  <p>Lose Weight</p>
-                  <p>Control Blood Sugar Levels</p>
+                  Lose Weight Control Blood Sugar Levels
                 </textarea>
               </div>
             </div>
@@ -871,8 +428,7 @@
               </div>
               <div class="editable">
                 <textarea>
-                  <p>Lose Weight</p>
-                  <p>Control Blood Sugar Levels</p>
+                  Lose Weight Control Blood Sugar Levels
                 </textarea>
               </div>
             </div>
@@ -882,15 +438,463 @@
               </div>
               <div class="editable">
                 <textarea>
-                  <p>Lose Weight</p>
-                  <p>Control Blood Sugar Levels</p>
+                  Lose Weight Control Blood Sugar Levels
                 </textarea>
               </div>
+            </div>
+          </div>
+          <div class="monthly-call-time-log tab-content" id="tab-2">
+            <select class="selectpicker white-selector">
+              <option>Monthly Clinical Review</option>
+              <option>Regular Weekly Checkup</option>
+              <option>Emergency Appointment</option>
+            </select>
+
+            <p class="datepicker-lower-paragraph">
+              <input type="text" class="second-timepicker datetimepicker" readonly="readonly" placeholder="MM/DD/YY">
+            </p>
+            <button class="save-button">
+              Save
+            </button>
+            <div class="blue-box updates">
+              <div class="blue-box-title">
+                New Concerns identified by patients
+              </div>
+              <div class="editable">
+                <textarea>
+
+                </textarea>
+              </div>
+            </div>
+            <div class="blue-box">
+              <div class="blue-box-title">
+                Interventions to patient concerns
+              </div>
+              <div class="editable">
+                <textarea>
+
+                </textarea>
+              </div>
+            </div>
+            <div class="blue-box">
+              <div class="blue-box-title">
+                Patient Goals / to-do list for next 30 days
+              </div>
+              <div class="editable">
+                <textarea>
+
+                </textarea>
+              </div>
+            </div>
+            <div class="blue-box">
+              <div class="blue-box-title">
+                Care Team / to-do list for next 30 days
+              </div>
+              <div class="editable">
+                <textarea>
+
+                </textarea>
+              </div>
+            </div>
+            <div class="blue-box">
+              <div class="blue-box-title">
+                Other notes about this month's engagement
+              </div>
+              <div class="editable">
+                <textarea>
+
+                </textarea>
+              </div>
+            </div>
+            <div class="Schedule-follow">
+              <div class="schedule-title">Schedule next follow-up</div>
+              <input class="datetimepicker schedule-datepicker" type="text" placeholder="MM/DD/YY" readonly="readonly">
+            </div>
+            <button class="schedule-button">Schedule</button>
+
+          </div>
+
+
+
+          <div class="time-log tab-content" id="tab-3">
+
+
+
+            <div class="time-log-entry">
+              <div class="time-log-header">
+                <div class="time-log-month">June 2015</div>
+                <div class="time-log-month-total-1">32:41</div>
+              </div>
+              <div class="entry-row">
+                <span>Initial Action Item Review</span>
+                <span class="doctor-time-log">Dr.Sandeep Grewel</span>
+                <span class="date-time-log">June 5, 2015</span>
+                <span>05:00<i class="fa fa-times-circle"></i></span>
+
+              </div>
+              <div class="entry-row">
+                <span>Prep for Care Plan Review</span>
+                <span class="doctor-time-log">Patti Russ</span>
+                <span class="date-time-log">June 5, 2015</span>
+                <span>10:00<i class="fa fa-times-circle"></i></span>
+
+              </div>
+              <div class="entry-row">
+                <span>Monthly Call with Patient</span>
+                <span class="doctor-time-log">Patti Russ</span>
+                <span class="date-time-log">June 5, 2015</span>
+                <span>15:41<i class="fa fa-times-circle"></i></span>
+
+              </div>
+              <div class="entry-row">
+                <span>Reviewing Labs</span>
+                <span class="doctor-time-log">Dr.Sandeep Grewel</span>
+                <span class="date-time-log">June 5, 2015</span>
+                <span>02:00<i class="fa fa-times-circle"></i></span>
+
+              </div>
+            </div>
+            <div class="time-log-entry">
+              <div class="time-log-header">
+                <div class="time-log-month">May 2015</div>
+                <div class="time-log-month-total-2">18:30</div>
+              </div>
+              <div class="entry-row">
+                <span>Initial Action Item Review</span>
+                <span class="doctor-time-log">Dr.Sandeep Grewel</span>
+                <span class="date-time-log">June 5, 2015</span>
+                <span>05:00<i class="fa fa-times-circle"></i></span>
+
+              </div>
+              <div class="entry-row">
+                <span>Prep for Care Plan Review</span>
+                <span class="doctor-time-log">Patti Russ</span>
+                <span class="date-time-log">June 5, 2015</span>
+                <span>05:30<i class="fa fa-times-circle"></i></span>
+
+              </div>
+              <div class="entry-row">
+                <span>Monthly Call with Patient</span>
+                <span class="doctor-time-log">Patti Russ</span>
+                <span class="date-time-log">June 5, 2015</span>
+                <span>04:00<i class="fa fa-times-circle"></i></span>
+
+              </div>
+              <div class="entry-row">
+                <span>Reviewing Labs</span>
+                <span class="doctor-time-log">Dr.Sandeep Grewel</span>
+                <span class="date-time-log">June 5, 2015</span>
+                <span>02:00<i class="fa fa-times-circle"></i></span>
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <!----------------- PAGE 3 -------------->
+    <div class="monthly-rec">
+      <div class="left-column-1 initial-action-items">
+        <div class="title-box lower-title-boxes">
+          <p class="lower-titles">
+            Initial Action Items
+          </p>
+        </div>
+        <div class="initial-items-header">
+          <select class="selectpicker">
+            <option>Monthly Clinical Review</option>
+            <option>Regular Weekly Checkup</option>
+            <option>Emergency Appointment</option>
+          </select>
+
+          <input class="lower-datepicker datetimepicker" type="text" readonly="readonly">
+          <button class="save-button">
+            Save
+          </button>
+          <p class="based-paragraph">
+            Based upon the patient’s initial assessment, the following orders are recommended. This list can be reviewed with the patient during a monthly CCM call.
+          </p>
+        </div>
+
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Treatment for Tests
+          </div>
+          <div class="editable">
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Blah Blah title two
+          </div>
+          <div class="editable">
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Blah blah title three
+          </div>
+          <div class="editable">
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Medication changes to make
+          </div>
+          <div class="editable">
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Health education classes needed
+          </div>
+          <div class="editable">
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Diet
+          </div>
+          <div class="editable">
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Exercise
+          </div>
+          <div class="editable">
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Stress Management Assistance
+          </div>
+          <div class="editable">
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Safety
+          </div>
+          <div class="editable">
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
+          </div>
+        </div>
+        <div class="blue-box">
+          <div class="blue-box-title">
+            Other Habits to change
+          </div>
+          <div class="editable">
+            <textarea>
+              <p>Lose Weight</p>
+              <p>Control Blood Sugar Levels</p>
+            </textarea>
+          </div>
+        </div>
+
+        <select class="selectpicker">
+          <option value="" disabled selected>Number of Appointments this year</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+
+      </div>
+
+      <div class="right-column-1">
+        <div class="title-box lower-title-boxes">
+          <p class="lower-titles">
+            Current Monthly Update
+          </p>
+        </div>
+
+        <div class="tabs">
+          <div class="tab-1 clicked">
+            Monthly Care Plan Review
+          </div>
+          <div class="tab-2 clicked">
+            Monthly Call Time Log
+          </div>
+          <div class="tab-3 clicked">
+            Time log
+          </div>
+        </div>
+
+        <div class="white-container">
+
+
+          <select class="selectpicker">
+            <option>Monthly Clinical Review</option>
+            <option>Regular Weekly Checkup</option>
+            <option>Emergency Appointment</option>
+          </select>
+
+          <input class="lower-datepicker datetimepicker" type="text" readonly="readonly">
+          <button class="save-button">
+            Save
+          </button>
+          <div class="blue-box updates">
+            <div class="blue-box-title">
+              Updates about achieving these goals
+            </div>
+            <div class="editable">
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Progress towards reducing barriers
+            </div>
+            <div class="editable">
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Updates about problems/symptoms
+            </div>
+            <div class="editable">
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Progress toward expected outcomes
+            </div>
+            <div class="editable">
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Any changes in other providers?
+            </div>
+            <div class="editable">
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Any changes in resources/support?
+            </div>
+            <div class="editable">
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Patient numbers to track monthly
+            </div>
+            <div class="editable">
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Medications
+            </div>
+            <div class="editable">
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Allergies
+            </div>
+            <div class="editable">
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              All Conditions
+            </div>
+            <div class="editable">
+              <textarea>
+                <p>Lose Weight</p>
+                <p>Control Blood Sugar Levels</p>
+              </textarea>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 
 </body>
@@ -900,9 +904,9 @@
 <script src="bower_components/bootstrap/js/bootstrap.js"></script>
 <script src="bower_components/bootstrap-select/js/bootstrap-select.js"></script>
 <script type="text/javascript">
-      $(document).ready(function(e) {
-            $('.selectpicker').selectpicker();
-        });
+  $(document).ready(function(e) {
+    $('.selectpicker').selectpicker();
+  });
 </script>
 <script src="bower_components/chosen/chosen.jquery.min.js"></script>
 <script src="bower_components/velocity/velocity.min.js"></script>
