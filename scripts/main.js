@@ -138,11 +138,15 @@ $(document).ready(function() {
     $('.one').css('visibility', 'hidden');
     $('.three').css('visibility', 'hidden');
     $('.two').css('visibility', 'hidden');
-    // $('.monthly-rec').hide();
-    $('.initial-action-items').addClass('floatright');
     $('.monthly-progress').show();
+    $('.monthly-rec').show();
+    $('.initial-action-items').addClass('floatright');
+    $('.initial-patient-centered-care-plan').show();
     $('.currently-monthly-update').hide();
     $('.initial-patient-centered-care-plan').addClass('floatleft');
+    $('.initial-action-items').show();
+    $('.right-column-1').hide();
+    $('.initial-action-items').appendTo('.monthly-progress');
 
 
   });
@@ -201,6 +205,18 @@ $(document).ready(function() {
       timepicker:false,
       format:'m/d/Y'
     });
+
+    $('ul.tabs li').click(function(){
+  		var tab_id = $(this).attr('data-tab');
+
+  		$('ul.tabs li').removeClass('current');
+  		$('.tab-content').removeClass('current');
+
+  		$(this).addClass('current');
+  		$("#"+tab_id).addClass('current');
+  	});
+
+
 
 
 });

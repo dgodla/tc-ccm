@@ -29,8 +29,8 @@ $body-font: 'Open Sans', serif;
         Base
 *********************/
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-family: $body-font;
   overflow-x: hidden;
 }
@@ -621,15 +621,15 @@ p.lower-titles {
   fill-opacity: 1;
 }
 .fa-check-circle.three {
-    position: relative;
-    bottom: 32px;
-    font-size: 1.5em;
-    right: -17px;
-    background-color: white;
-    border-radius: 100%;
-    color: #50a4a4;
-    z-index: 2;
-    fill-opacity: 1;
+  position: relative;
+  bottom: 32px;
+  font-size: 1.5em;
+  right: -17px;
+  background-color: white;
+  border-radius: 100%;
+  color: #50a4a4;
+  z-index: 2;
+  fill-opacity: 1;
 }
 .fa-check-circle.four {
   position: relative;
@@ -786,50 +786,80 @@ textarea:focus {
   text-align: center;
 }
 
-
 /******** MODAL **********/
-
 .modal-body {
   text-align: left;
 }
-
 .modal-select {
-    position: relative;
-    right: -13px;
+  position: relative;
+  right: -13px;
 }
-
 .modal-title {
   font-size: 1.5em;
   font-weight: normal;
 }
-
 .modal-header,
 .modal-buttons-center {
   text-align: center;
 }
-
 .modal-titles {
   margin-left: 13px;
 }
-
 #reset {
-    color: orangered;
+  color: orangered;
 }
-
 .span12 {
-    width: 100%;
-    float: none;
-    margin: 0;
+  width: 100%;
+  float: none;
+  margin: 0;
 }
-
 .initial-items-header {
   margin: 28px;
 }
-
 .floatright {
   float: right;
 }
-
 .floatleft {
-  float:left
+  float: left;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.current {
+  display: inherit;
+}
+ul {
+  -webkit-padding-start: 0px;
+}
+
+.Schedule-follow {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 20px;
+
+    @include span-columns(12);
+        text-align: center;
+}
+
+.schedule-title {
+  @include span-columns(6 of 12);
+}
+
+.schedule-datepicker {
+  @include span-columns(3 of 12);
+}
+
+.schedule-button {
+  background-color: $primary-accent-color;
+  height: 35px;
+  width: 100px;
+  color: white;
+  font-size: 1em;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
 }
