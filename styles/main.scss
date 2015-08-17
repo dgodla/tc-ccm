@@ -730,12 +730,16 @@ i {
   // bottom: 16px;
 }
 textarea {
+  white-space: nowrap;
+  padding-left: 16px;
+  padding-top: 10px;
   height: 100%;
   width: 100%;
   outline: none;
   outline: 0;
   border: none;
   border: 0;
+
 }
 textarea:focus {
   border: $primary-color 2px solid;

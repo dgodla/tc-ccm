@@ -156,7 +156,10 @@ legend {
   padding: 0
 }
 textarea {
-  overflow: auto
+  overflow: auto;
+  white-space: nowrap;
+  padding-left: 16px;
+  padding-top: 10px;
 }
 optgroup {
   font-weight: bold
