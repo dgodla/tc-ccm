@@ -36,6 +36,7 @@ body {
 }
 .container {
   @include outer-container;
+
 }
 
 /************************
@@ -153,6 +154,7 @@ i.fa.fa-share-square-o {
 .chronic-box {
   @include outer-container;
   @include span-columns(5);
+  @include omega(1n);
   height: 274px;
   border: 1px solid #ccc;
   margin-top: 48px;
@@ -288,13 +290,15 @@ i.fa.fa-share-square-o {
        Timer Box
 ************************/
 .timer-box {
-  @include span-columns(6.75);
+  @include span-columns(6.75 of 12);
+  // @include shift(5.25);
   height: 274px;
   border: 1px solid #ccc;
   margin-top: 48px;
   margin-right: 0;
   float: right;
-  @include omega();
+
+  // @include omega();
 }
 #time {
   @include span-columns(2);
@@ -303,15 +307,18 @@ i.fa.fa-share-square-o {
   height: 53px;
 }
 .column-1,
-.column-2,
+
 .column-3 {
-  @include span-columns(4);
+  @include span-columns(3.75);
   @include omega();
   text-align: center;
 }
 .column-2 {
-  width: 255px;
+  @include span-columns(4.5);
+  text-align: center;
 }
+
+
 #hours,
 #minutes,
 #seconds {
@@ -346,7 +353,7 @@ div#time {
 }
 .total-time-amount {
   text-align: center;
-  margin-left: -6px;
+  // margin-left: -6px;
   margin-top: 69px;
 }
 .total-timer-colon {
@@ -757,10 +764,15 @@ textarea:focus {
   position: relative;
   bottom: -9px;
 }
+
 .first-timepicker {
+  @include span-columns(10);
+  @include shift(1);
   width: 220px;
   position: relative;
   right: -13px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .chosen-select {
   width: 300px;
@@ -955,4 +967,49 @@ i.fa.fa-times-circle {
 
 .bigger-width {
   width: 66% !important;
+}
+
+.select-divs {
+  @include span-columns(12);
+}
+
+.chronic-and-timer-div {
+  @include span-columns(12);
+  // @include omega();
+}
+
+
+
+@media only screen and (max-width: 1330px) {
+  .dob-container,
+  .age-container,
+  .gender {
+  font-size: 1.1em;
+}
+// .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+//   @include span-columns(10);
+//   float:right;
+// }
+.short-words {
+  bottom: -19px;
+}
+.firsttimepicker {
+  @include span-columns(10);
+}
+}
+
+@media only screen and (max-width: 1200px) {
+.chronic-and-timer-div {
+    @include span-columns(12, block-collapse);
+    // @include omega();
+  }
+.chronic-box {
+  @include span-columns(5);
+  // @include omega(2n);
+}
+.timer-box {
+  @include span-columns(7, block-collapse);
+  border-left: 0px;
+}
+
 }

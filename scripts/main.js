@@ -216,8 +216,6 @@ $(document).ready(function() {
     $(this).addClass("clicked");
     $('.tab-1').removeClass('clicked');
     $('.tab-2').removeClass('clicked');
-
-
   });
 
   $('.box-1').click(function() {
@@ -260,8 +258,6 @@ $(document).ready(function() {
     timepicker: false,
     format: 'm/d/Y'
   });
-
-
 
 
 });
