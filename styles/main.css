@@ -516,12 +516,6 @@ button:focus {
   .box-3:last-child,
   .box-4:last-child {
     margin-right: 0; }
-  @media screen and (max-width: 1240px) {
-    .box-1,
-    .box-2,
-    .box-3,
-    .box-4 {
-      font-size: 75%; } }
 
 /************************
     Monthly Progress
@@ -734,9 +728,6 @@ p.lower-titles {
   z-index: 2;
   fill-opacity: 1; }
 
-.box-3 {
-  height: 67px; }
-
 .based-paragraph {
   margin: 20px;
   font-size: 0.9em; }
@@ -929,7 +920,7 @@ textarea:focus {
   display: inherit; }
 
 ul {
-  -webkit-padding-start: 0px; }
+  -webkit-padding-start: 0; }
 
 .Schedule-follow {
   font-size: 1.2em;
@@ -979,7 +970,8 @@ li:active,
 .selected {
   outline: none !important; }
 
-select:active, select:hover {
+select:active,
+select:hover {
   outline: none !important; }
 
 .btn:focus,
@@ -1090,23 +1082,30 @@ i.fa.fa-times-circle {
   .chronic-and-timer-div:last-child {
     margin-right: 0; }
 
+/**********************************
+       Responsive Adjustments
+**********************************/
 @media only screen and (max-width: 1330px) {
   .dob-container,
   .age-container,
   .gender {
-    font-size: 1.1em; }
+    font-size: 1.1em;
+    margin-top: 20px; }
+
+  .patient-name {
+    font-size: 2em; }
 
   .short-words {
-    bottom: -19px; }
+    bottom: -9px; }
 
-  .firsttimepicker {
+  .first-timepicker {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 82.94039%; }
-    .firsttimepicker:last-child {
+    .first-timepicker:last-child {
       margin-right: 0; } }
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1041px) and (max-width: 1200px) {
   .chronic-and-timer-div {
     float: left;
     display: block;
@@ -1126,8 +1125,203 @@ i.fa.fa-times-circle {
     float: left;
     display: block;
     width: 59.70863%;
-    border-left: 0px; }
+    border-left: 0; }
     .timer-box:last-child {
-      width: 57.35098%; } }
+      width: 57.35098%; }
+
+  .status-enrollment-container {
+    font-size: 14px; }
+
+  .nav-boxes {
+    font-size: 14px;
+    height: 55px;
+    max-width: 81.25em;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    display: block;
+    width: 102.35765%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    max-width: 200em; }
+    .nav-boxes::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .nav-boxes:last-child {
+      width: 100%; }
+
+  #time {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    width: 67%; }
+    #time:last-child {
+      margin-right: 0; } }
+@media only screen and (max-width: 1250px) {
+  .bootstrap-select {
+    width: 200px !important; }
+
+  .select-divs {
+    width: 105%; }
+
+  .first-timepicker {
+    width: 200px; }
+
+  div#time {
+    margin-left: 30px; } }
+@media only screen and (max-width: 1040px) {
+  .chronic-box {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    max-width: 81.25em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 8.5298%;
+    height: 230px; }
+    .chronic-box:last-child {
+      margin-right: 0; }
+    .chronic-box::after {
+      clear: both;
+      content: "";
+      display: table; }
+
+  .timer-box {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    max-width: 81.25em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 8.5298%; }
+    .timer-box:last-child {
+      margin-right: 0; }
+    .timer-box::after {
+      clear: both;
+      content: "";
+      display: table; }
+
+  .chronic-and-timer-div {
+    max-width: 81.25em;
+    margin-left: auto;
+    margin-right: auto; }
+    .chronic-and-timer-div::after {
+      clear: both;
+      content: "";
+      display: table; }
+
+  .conditions-box {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-left: 8.5298%;
+    margin-top: 30px; }
+    .conditions-box:last-child {
+      margin-right: 0; }
+
+  .title-words,
+  .conditions-list {
+    display: inline; }
+
+  .timer-box > .title-box > p,
+  .chronic-box > .title-box > p {
+    text-align: center; }
+
+  .status-enrollment-container {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .status-enrollment-container:last-child {
+      margin-right: 0; }
+
+  .patient-name {
+    margin-right: 1.35765%; }
+
+  .dob-container {
+    width: 145px; }
+
+  .age-container {
+    width: 80px; }
+
+  .gender {
+    margin-right: 0; }
+
+  .patient-name {
+    font-size: 1.7em;
+    margin-top: 6px; }
+
+  .chosen-container-active,
+  .chosen-with-drop {
+    width: 530px; }
+
+  .chosen-select {
+    width: 530px; }
+
+  .lower-titles {
+    font-size: 1.25em !important; }
+
+  .column-2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 27.02647%;
+    text-align: center;
+    position: relative;
+    right: -45px; }
+
+  .total-time-amount {
+    text-align: center;
+    margin-top: 39px;
+    font-size: 21px;
+    /* border: 1px #ccc solid; */ }
+
+  .column-1, .column-3 {
+    float: left;
+    display: block;
+    /* margin-right: 12.35765%; */
+    width: 23.62911%;
+    /* margin-right: 50px; */
+    text-align: center;
+    margin-left: 64px; }
+
+  .status-enrollment-container {
+    font-size: 14px; }
+
+  .nav-boxes {
+    font-size: 13px;
+    height: 55px;
+    max-width: 81.25em;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    display: block;
+    width: 102.35765%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    max-width: 200em; }
+    .nav-boxes::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .nav-boxes:last-child {
+      width: 100%; }
+
+  #time {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    width: 67%; }
+    #time:last-child {
+      margin-right: 0; }
+
+  .tabs {
+    font-size: 12.5px; } }
 
 /*# sourceMappingURL=main.css.map */

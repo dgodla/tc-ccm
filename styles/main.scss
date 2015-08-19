@@ -36,7 +36,6 @@ body {
 }
 .container {
   @include outer-container;
-
 }
 
 /************************
@@ -291,6 +290,7 @@ i.fa.fa-share-square-o {
 ************************/
 .timer-box {
   @include span-columns(6.75 of 12);
+
   // @include shift(5.25);
   height: 274px;
   border: 1px solid #ccc;
@@ -307,7 +307,6 @@ i.fa.fa-share-square-o {
   height: 53px;
 }
 .column-1,
-
 .column-3 {
   @include span-columns(3.75);
   @include omega();
@@ -317,8 +316,6 @@ i.fa.fa-share-square-o {
   @include span-columns(4.5);
   text-align: center;
 }
-
-
 #hours,
 #minutes,
 #seconds {
@@ -353,6 +350,7 @@ div#time {
 }
 .total-time-amount {
   text-align: center;
+
   // margin-left: -6px;
   margin-top: 69px;
 }
@@ -462,9 +460,6 @@ button:focus {
   @include span-columns(3);
   @include pad(20px);
   font-family: $body-font;
-  @media screen and (max-width:1240px) {
-    font-size: 75%;
-  }
 }
 
 /************************
@@ -648,9 +643,9 @@ p.lower-titles {
   z-index: 2;
   fill-opacity: 1;
 }
-.box-3 {
-  height: 67px;
-}
+// .box-3 {
+//   height: 67px;
+// }
 .based-paragraph {
   margin: 20px;
   font-size: 0.9em;
@@ -747,7 +742,6 @@ textarea {
   outline: 0;
   border: none;
   border: 0;
-
 }
 textarea:focus {
   border: $primary-color 2px solid;
@@ -764,7 +758,6 @@ textarea:focus {
   position: relative;
   bottom: -9px;
 }
-
 .first-timepicker {
   @include span-columns(10);
   @include shift(1);
@@ -827,6 +820,7 @@ textarea:focus {
 }
 .span12 {
   width: 100%;
+
   // float: none;
   // margin: 0;
 }
@@ -846,26 +840,21 @@ textarea:focus {
   display: inherit;
 }
 ul {
-  -webkit-padding-start: 0px;
+  -webkit-padding-start: 0;
 }
-
 .Schedule-follow {
-    font-size: 1.2em;
-    font-weight: bold;
-    padding-bottom: 20px;
-
-    @include span-columns(12);
-        text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-bottom: 20px;
+  @include span-columns(12);
+  text-align: center;
 }
-
 .schedule-title {
   @include span-columns(6 of 12);
 }
-
 .schedule-datepicker {
   @include span-columns(3 of 12);
 }
-
 .schedule-button {
   background-color: $primary-accent-color;
   height: 35px;
@@ -878,62 +867,52 @@ ul {
   margin-left: auto;
   margin-right: auto;
 }
-
 .bootstrap-select,
 .btn:focus,
 li:focus,
 li:active,
 .btn:active,
 .selected {
-    outline: none !important;
-}
-
-select:active, select:hover {
   outline: none !important;
 }
-
+select:active,
+select:hover {
+  outline: none !important;
+}
 .btn:focus,
 .btn:active,
 .opt,
 .text,
 a {
-   outline: none !important;
+  outline: none !important;
 }
-
-
 .doctor-time-log,
 .date-time-log {
-@include span-columns(12);
-
+  @include span-columns(12);
 }
 .time-log,
 .time-log-entry {
   @include span-columns(12);
   @include pad(20px);
 }
-
 .entry-row {
   @include span-columns(12);
   @include shift(1);
   @include pad(0 0 10px 0);
 }
-
 .entry-row>span {
   @include span-columns(3);
   @include omega(4n);
   font-size: 1.2em;
 }
-
 .span-header {
   width: 50%;
 }
-
 .time-log-month {
   font-weight: bold;
   font-size: 1.5em;
   @include shift(1);
 }
-
 .time-log-month-total-1,
 .time-log-month-total-2 {
   font-weight: bold;
@@ -941,75 +920,195 @@ a {
   float: right;
   padding-right: 8%;
 }
-
-.time-log-header{
+.time-log-header {
   @include span-columns(12);
   @include pad(0 0 20px 0);
 }
-
 i.fa.fa-times-circle {
-    padding-left: 10px;
-    color: orangered;
-    font-size: 1.2em;
+  padding-left: 10px;
+  color: orangered;
+  font-size: 1.2em;
 }
-
 .time-log-month-total-1 {
   color: green;
 }
-
 .time-log-month-total-2 {
   color: orangered;
 }
-
 .tab-content {
   display: none;
 }
-
 .bigger-width {
   width: 66% !important;
 }
-
 .select-divs {
   @include span-columns(12);
 }
-
 .chronic-and-timer-div {
   @include span-columns(12);
-  // @include omega();
 }
 
-
-
+/**********************************
+       Responsive Adjustments
+**********************************/
 @media only screen and (max-width: 1330px) {
   .dob-container,
   .age-container,
   .gender {
-  font-size: 1.1em;
-}
-// .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-//   @include span-columns(10);
-//   float:right;
-// }
-.short-words {
-  bottom: -19px;
-}
-.firsttimepicker {
-  @include span-columns(10);
-}
-}
-
-@media only screen and (max-width: 1200px) {
-.chronic-and-timer-div {
-    @include span-columns(12, block-collapse);
-    // @include omega();
+    font-size: 1.1em;
+    margin-top: 20px;
   }
-.chronic-box {
-  @include span-columns(5);
-  // @include omega(2n);
+  .patient-name {
+    font-size: 2em;
+  }
+  .short-words {
+    bottom: -9px;
+  }
+  .first-timepicker {
+    @include span-columns(10);
+  }
 }
-.timer-box {
-  @include span-columns(7, block-collapse);
-  border-left: 0px;
+@media only screen and (min-width: 1041px) and (max-width: 1200px) {
+  .chronic-and-timer-div {
+    @include span-columns(12, block-collapse);
+  }
+  .chronic-box {
+    @include span-columns(5);
+  }
+  .timer-box {
+    @include span-columns(7, block-collapse);
+    border-left: 0;
+  }
+  .status-enrollment-container {
+    font-size: 14px;
+  }
+  .nav-boxes {
+    font-size: 14px;
+    height: 55px;
+    @include outer-container;
+    @include span-columns(12, block-collapse);
+    margin-top: 35px;
+    margin-bottom: 35px;
+    max-width: 200em;
+  }
+  #time {
+    @include span-columns(10);
+    width: 67%;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .bootstrap-select {
+    width: 200px !important;
+  }
+  .select-divs {
+    width: 105%;
+  }
+  .first-timepicker {
+    width: 200px;
+  }
+  div#time {
+    margin-left: 30px;
+  }
+}
+@media only screen and (max-width: 1040px) {
+  .chronic-box {
+    @include span-columns(10);
+    @include outer-container;
+    @include shift(1);
+    height: 230px;
+  }
+  .timer-box {
+    @include span-columns(10);
+    @include outer-container;
+    @include shift(1);
+  }
+  .chronic-and-timer-div {
+    @include outer-container;
+  }
+  .conditions-box {
+    @include span-columns(12);
+    @include shift(1);
+    margin-top: 30px;
+  }
+  .title-words,
+  .conditions-list {
+    display: inline;
+  }
+  .timer-box>.title-box>p,
+  .chronic-box>.title-box>p {
+    text-align: center;
+  }
+  .status-enrollment-container {
+    @include span-columns(12);
+  }
+  .patient-name {
+    margin-right: 1.35765%;
+  }
+  .dob-container {
+    width: 145px;
+  }
+  .age-container {
+    width: 80px;
+  }
+  .gender {
+    margin-right: 0;
+  }
+  .patient-name {
+    font-size: 1.7em;
+    margin-top: 6px;
+  }
+  .chosen-container-active,
+  .chosen-with-drop {
+    width: 530px;
+  }
+  .chosen-select {
+    width: 530px;
+  }
+  .lower-titles {
+    font-size: 1.25em !important;
+  }
+  .column-2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 27.02647%;
+    text-align: center;
+    position: relative;
+    right: -45px;
+}
+.total-time-amount {
+    text-align: center;
+    margin-top: 39px;
+    font-size: 21px;
+    /* border: 1px #ccc solid; */
+}
+.column-1, .column-3 {
+    float: left;
+    display: block;
+    /* margin-right: 12.35765%; */
+    width: 23.62911%;
+    /* margin-right: 50px; */
+    text-align: center;
+    margin-left: 64px;
 }
 
+.status-enrollment-container {
+  font-size: 14px;
+}
+.nav-boxes {
+  font-size: 13px;
+  height: 55px;
+  @include outer-container;
+  @include span-columns(12, block-collapse);
+  margin-top: 35px;
+  margin-bottom: 35px;
+  max-width: 200em;
+}
+#time {
+  @include span-columns(10);
+  width: 67%;
+}
+.tabs {
+  font-size: 12.5px;
+}
 }
