@@ -1082,6 +1082,14 @@ i.fa.fa-times-circle {
   .chronic-and-timer-div:last-child {
     margin-right: 0; }
 
+.first-timepicker,
+.second-timepicker {
+  background-image: url("http://i59.tinypic.com/213jk3r.png");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position-x: 18px;
+  background-position-y: 3px; }
+
 /**********************************
        Responsive Adjustments
 **********************************/
