@@ -101,6 +101,7 @@ $(document).ready(function() {
   /***********************
          On page Load
   ************************/
+  $('.one').css('visibility', 'visible');
   $('.two').css('visibility', 'hidden');
   $('.three').css('visibility', 'hidden');
   $('.four').css('visibility', 'hidden');
@@ -146,6 +147,7 @@ $(document).ready(function() {
     $('.doctor-time-log').css('visibility', 'visible');
     $('.date-time-log').css('visibility', 'visible');
     $('.span-header').removeClass('bigger-width');
+    $('.one').css('visibility', 'hidden');
 
   });
 
@@ -168,6 +170,7 @@ $(document).ready(function() {
     $('.doctor-time-log').css('visibility', 'hidden');
     $('.date-time-log').css('visibility', 'hidden');
     $('.span-header').addClass('bigger-width');
+    $('.one').css('visibility', 'hidden');
   });
 
   /********************************
@@ -188,6 +191,7 @@ $(document).ready(function() {
     $('.doctor-time-log').css('visibility', 'hidden');
     $('.date-time-log').css('visibility', 'hidden');
     $('.span-header').addClass('bigger-width');
+    $('.one').css('visibility', 'hidden');
 
   });
 
@@ -218,12 +222,12 @@ $(document).ready(function() {
     $('.tab-2').removeClass('clicked');
   });
 
-  $('.box-1').click(function() {
-    if ($('.one').css('visibility') == 'hidden')
-      $('.one').css('visibility', 'visible');
-    else
-      $('.one').css('visibility', 'hidden');
-  });
+  // $('.box-1').click(function() {
+  //   if ($('.one').css('visibility') == 'hidden')
+  //     $('.one').css('visibility', 'visible');
+  //   else
+  //     $('.one').css('visibility', 'hidden');
+  // });
 
   $('ul.tabs li').click(function() {
     var tab_id = $(this).attr('data-tab');
