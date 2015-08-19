@@ -222,13 +222,6 @@ $(document).ready(function() {
     $('.tab-2').removeClass('clicked');
   });
 
-  // $('.box-1').click(function() {
-  //   if ($('.one').css('visibility') == 'hidden')
-  //     $('.one').css('visibility', 'visible');
-  //   else
-  //     $('.one').css('visibility', 'hidden');
-  // });
-
   $('ul.tabs li').click(function() {
     var tab_id = $(this).attr('data-tab');
     $('ul.tabs li').removeClass('current');
