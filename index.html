@@ -8,7 +8,6 @@
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/css/bootstrap.min.css">
-
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css">
   <link rel="stylesheet" type="text/css" href="styles/main.css">
   <link rel="stylesheet" type="text/css" href="bower_components/jqueryui/themes/base/">
@@ -87,7 +86,7 @@
                         </p>
                         <div class="modal-buttons-center">
                           <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                          <button class="btn btn-primary">Change Status</button>
+                          <button class="btn btn-primary" data-dismiss="modal">Change Status</button>
                         </div>
                       </div>
                     </div>
@@ -464,11 +463,11 @@
                 </textarea>
               </div>
             </div>
-            <div class="blue-box">
+            <div class="blue-box all-conditions-blue-box">
               <div class="blue-box-title">
                 All Conditions
               </div>
-              <div class="editable">
+              <div class="editable  all-conditions-box">
                 <textarea>
                   Lose Weight
                   Control Blood Sugar Levels
@@ -672,7 +671,7 @@
             </optgroup>
           </select>
 
-          <input class="lower-datepicker datetimepicker" type="text" readonly="readonly">
+          <input class="lower-datepicker datetimepicker" type="text" placeholder="  /      /  " readonly="readonly">
           <button class="save-button">
             Save
           </button>
@@ -685,8 +684,8 @@
           <div class="blue-box-title">
             Treatment for Tests
           </div>
-          <div class="editable">
-            <textarea>
+          <div class="editable ui-widget">
+            <textarea class="tags">
               Lose Weight
               Control Blood Sugar Levels
             </textarea>
@@ -696,8 +695,8 @@
           <div class="blue-box-title">
             Blah Blah title two
           </div>
-          <div class="editable">
-            <textarea>
+          <div class="editable ui-widget">
+            <textarea class="tags">
               Lose Weight
               Control Blood Sugar Levels
             </textarea>
@@ -707,8 +706,8 @@
           <div class="blue-box-title">
             Blah blah title three
           </div>
-          <div class="editable">
-            <textarea>
+          <div class="editable ui-widget">
+            <textarea class="tags">
               Lose Weight
               Control Blood Sugar Levels
             </textarea>
@@ -718,8 +717,8 @@
           <div class="blue-box-title">
             Medication changes to make
           </div>
-          <div class="editable">
-            <textarea>
+          <div class="editable ui-widget">
+            <textarea class="tags">
               Lose Weight
               Control Blood Sugar Levels
             </textarea>
@@ -729,8 +728,8 @@
           <div class="blue-box-title">
             Health education classes needed
           </div>
-          <div class="editable">
-            <textarea>
+          <div class="editable ui-widget">
+            <textarea class="tags">
               Lose Weight
               Control Blood Sugar Levels
             </textarea>
@@ -740,8 +739,8 @@
           <div class="blue-box-title">
             Diet
           </div>
-          <div class="editable">
-            <textarea>
+          <div class="editable ui-widget">
+            <textarea class="tags">
               <p>Lose Weight</p>
               <p>Control Blood Sugar Levels</p>
             </textarea>
@@ -751,8 +750,8 @@
           <div class="blue-box-title">
             Exercise
           </div>
-          <div class="editable">
-            <textarea>
+          <div class="editable ui-widget">
+            <textarea class="tags">
               Lose Weight
               Control Blood Sugar Levels
             </textarea>
@@ -762,8 +761,8 @@
           <div class="blue-box-title">
             Stress Management Assistance
           </div>
-          <div class="editable">
-            <textarea>
+          <div class="editable ui-widget">
+            <textarea class="tags">
               Lose Weight
               Control Blood Sugar Levels
             </textarea>
@@ -773,8 +772,8 @@
           <div class="blue-box-title">
             Safety
           </div>
-          <div class="editable">
-            <textarea>
+          <div class="editable ui-widget">
+            <textarea class="tags">
               Lose Weight
               Control Blood Sugar Levels
             </textarea>
@@ -784,14 +783,13 @@
           <div class="blue-box-title">
             Other Habits to change
           </div>
-          <div class="editable">
-            <textarea>
+          <div class="editable ui-widget">
+            <textarea class="tags">
               Lose Weight
               Control Blood Sugar Levels
             </textarea>
           </div>
         </div>
-
         <select class="selectpicker appointment-select">
           <option value="" disabled selected>Number of Appointments each year</option>
           <option value="1">“Patient should have 1 office visit each year”</option>
@@ -801,13 +799,9 @@
           <option value="5">“Patients should have an office visit every 2 weeks”</option>
           <option value="6">“Patients should have an office visit every week”</option>
         </select>
-
       </div>
   </div>
-
-
 </body>
-
 <script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
 <script src="bower_components/jqueryui/jquery-ui.js" type="text/javascript"></script>
 <script src="bower_components/bootstrap/js/bootstrap.js"></script>
@@ -820,10 +814,8 @@
 <script src="bower_components/chosen/chosen.jquery.min.js"></script>
 <script src="bower_components/velocity/velocity.min.js"></script>
 <script src="bower_components/velocity/velocity.ui.min.js"></script>
-
 <!-- <script src="bower_components/datetimepicker-master/jquery.js"></script> -->
 <script src="bower_components/datetimepicker-master/jquery.datetimepicker.js"></script>
-
 <script src="scripts/main.js" type="text/javascript"></script>
 
 

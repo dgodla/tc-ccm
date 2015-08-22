@@ -632,7 +632,7 @@ p.lower-titles {
   border: 1px solid #ccc; }
 
 .tabs {
-  height: 95px;
+  height: 75px;
   display: inline-block;
   margin-top: 30px;
   float: left;
@@ -889,6 +889,10 @@ textarea:focus {
   position: relative;
   right: -13px; }
 
+.btn-group.bootstrap-select.modal-select,
+.modal-titles {
+  width: 276px !important; }
+
 .modal-title {
   font-size: 1.5em;
   font-weight: normal; }
@@ -1084,8 +1088,19 @@ i.fa.fa-times-circle {
   .chronic-and-timer-div:last-child {
     margin-right: 0; }
 
+.datetimepicker {
+  background-image: url("http://i59.tinypic.com/213jk3r.png");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position-x: 20px;
+  background-position-y: 7px; }
+
+input.datetimepicker.modal-select {
+  width: 276px; }
+
 .first-timepicker,
-.second-timepicker {
+.second-timepicker,
+.lower-datepicker {
   background-image: url("http://i59.tinypic.com/213jk3r.png");
   background-size: 25px 25px;
   background-repeat: no-repeat;
@@ -1112,8 +1127,68 @@ i.fa.fa-times-circle {
   margin-bottom: 29px; }
 
 .appointment-select {
-  width: 93.5% !important;
-  margin: 20px; }
+  width: 93.7% !important;
+  margin: 20px;
+  margin-top: 3px; }
+
+.first-timepicker:last-child {
+  margin-right: 0;
+  margin-left: 19px; }
+
+.ui-autocomplete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  display: none;
+  min-width: 160px;
+  padding: 4px 0;
+  margin: 0 0 10px 25px;
+  list-style: none;
+  background-color: #ffffff;
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px; }
+
+.ui-menu-item > a.ui-corner-all {
+  display: block;
+  padding: 3px 15px;
+  clear: both;
+  font-weight: normal;
+  line-height: 18px;
+  color: #555555;
+  white-space: nowrap;
+  text-decoration: none; }
+
+.ui-menu-item {
+  margin: 5px; }
+
+.ui-menu-item:hover {
+  cursor: pointer;
+  background-color: #ccc; }
+
+.ui-state-hover, .ui-state-active {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #80c5c5;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  background-image: none;
+  cursor: pointer; }
 
 /*******************************************************************
                        Responsive Adjustments
@@ -1203,7 +1278,13 @@ i.fa.fa-times-circle {
     width: 200px; }
 
   div#time {
-    margin-left: 30px; } }
+    margin-left: 30px; }
+
+  .all-conditions-box {
+    height: 51px; }
+
+  .all-conditions-blue-box {
+    height: 99px; } }
 @media only screen and (max-width: 1040px) {
   .chronic-box {
     float: left;
