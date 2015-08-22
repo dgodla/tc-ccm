@@ -84,177 +84,185 @@ $(document).ready(function() {
   }
 
 
+});
+/***********************
+      Datepicker
+************************/
 
-  /***********************
-        Datepicker
-  ************************/
-
-  $(function() {
-    $("#datepicker").datepicker();
-  });
+$(function() {
+  $("#datepicker").datepicker();
+});
 
 
-  /*************************************
-          ~~~  NAVIGATION ~~~
-  **************************************/
+/*************************************
+        ~~~  NAVIGATION ~~~
+**************************************/
 
-  /***********************
-         On page Load
-  ************************/
+/***********************
+       On page Load
+************************/
+$('.one').css('visibility', 'visible');
+$('.two').css('visibility', 'hidden');
+$('.three').css('visibility', 'hidden');
+$('.four').css('visibility', 'hidden');
+$('.initial-action-items').hide();
+$('.doctor-time-log').hide();
+$('.date-time-log').hide();
+$('.doctor-time-log').css('visibility', 'hidden');
+$('.date-time-log').css('visibility', 'hidden');
+$('.span-header').addClass('bigger-width');
+
+/***********************
+ Monthly Progress Update
+************************/
+$(".box-1").click(function() {
   $('.one').css('visibility', 'visible');
   $('.two').css('visibility', 'hidden');
   $('.three').css('visibility', 'hidden');
   $('.four').css('visibility', 'hidden');
-  $('.initial-action-items').hide();
+  $('.right-column-1').removeClass('span12');
+  $('.initial-patient-centered-care-plan').show();
   $('.doctor-time-log').hide();
   $('.date-time-log').hide();
   $('.doctor-time-log').css('visibility', 'hidden');
   $('.date-time-log').css('visibility', 'hidden');
   $('.span-header').addClass('bigger-width');
+  $('.initial-action-items').hide();
+  $('.current-monthly-update').show();
 
-  /***********************
-   Monthly Progress Update
-  ************************/
-  $(".box-1").click(function() {
-    $('.one').css('visibility', 'visible');
-    $('.two').css('visibility', 'hidden');
-    $('.three').css('visibility', 'hidden');
-    $('.four').css('visibility', 'hidden');
-    $('.right-column-1').removeClass('span12');
-    $('.initial-patient-centered-care-plan').show();
-    $('.doctor-time-log').hide();
-    $('.date-time-log').hide();
-    $('.doctor-time-log').css('visibility', 'hidden');
-    $('.date-time-log').css('visibility', 'hidden');
-    $('.span-header').addClass('bigger-width');
+});
 
-  });
+/***********************
+   Monthly Call Review
+************************/
+$(".box-2").click(function() {
+  $('.current-monthly-update').show();
+  $('.initial-action-items').hide();
+  $('.initial-patient-centered-care-plan').hide();
+  $('.current-monthly-update').addClass('span12');
+  $('.two').css('visibility', 'visible');
+  $('.one').css('visibility', 'hidden');
+  $('.three').css('visibility', 'hidden');
+  $('.four').css('visibility', 'hidden');
+  $('.doctor-time-log').show();
+  $('.date-time-log').show();
+  $('.doctor-time-log').css('visibility', 'visible');
+  $('.date-time-log').css('visibility', 'visible');
+  $('.span-header').removeClass('bigger-width');
+  $('.one').css('visibility', 'hidden');
 
-  /***********************
-     Monthly Call Review
-  ************************/
-  $(".box-2").click(function() {
-    $('.current-monthly-update').show();
-    $('.initial-action-items').hide();
-    $('.initial-patient-centered-care-plan').hide();
-    $('.current-monthly-update').addClass('span12');
-    $('.two').css('visibility', 'visible');
-    $('.one').css('visibility', 'hidden');
-    $('.three').css('visibility', 'hidden');
-    $('.four').css('visibility', 'hidden');
-    $('.doctor-time-log').show();
-    $('.date-time-log').show();
-    $('.doctor-time-log').css('visibility', 'visible');
-    $('.date-time-log').css('visibility', 'visible');
-    $('.span-header').removeClass('bigger-width');
-    $('.one').css('visibility', 'hidden');
+});
 
-  });
+/********************************
+  Monthly Recommendations Review
+*********************************/
+$(".box-3").click(function() {
+  $('.current-monthly-update').removeClass('span12');
+  $('.initial-patient-centered-care-plan').hide();
+  $('.initial-action-items').show();
+  $('.three').css('visibility', 'visible');
+  $('.one').css('visibility', 'hidden');
+  $('.two').css('visibility', 'hidden');
+  $('.four').css('visibility', 'hidden');
+  $('.initial-action-items').removeClass('floatright');
+  $('.initial-patient-centered-care-plan').removeClass('floatleft');
+  $('.current-monthly-update').show();
+  $('.doctor-time-log').hide();
+  $('.date-time-log').hide();
+  $('.doctor-time-log').css('visibility', 'hidden');
+  $('.date-time-log').css('visibility', 'hidden');
+  $('.span-header').addClass('bigger-width');
+  $('.one').css('visibility', 'hidden');
+});
 
-  /********************************
-    Monthly Recommendations Review
-  *********************************/
-  $(".box-3").click(function() {
-    $('.current-monthly-update').removeClass('span12');
-    $('.initial-patient-centered-care-plan').hide();
-    $('.initial-action-items').show();
-    $('.three').css('visibility', 'visible');
-    $('.one').css('visibility', 'hidden');
-    $('.two').css('visibility', 'hidden');
-    $('.four').css('visibility', 'hidden');
-    $('.initial-action-items').removeClass('floatright');
-    $('.initial-patient-centered-care-plan').removeClass('floatleft');
-    $('.current-monthly-update').show();
-    $('.doctor-time-log').hide();
-    $('.date-time-log').hide();
-    $('.doctor-time-log').css('visibility', 'hidden');
-    $('.date-time-log').css('visibility', 'hidden');
-    $('.span-header').addClass('bigger-width');
-    $('.one').css('visibility', 'hidden');
-  });
+/********************************
+  Initial Recommendations Review
+*********************************/
+$(".box-4").click(function() {
+  $('.four').css('visibility', 'visible');
+  $('.one').css('visibility', 'hidden');
+  $('.three').css('visibility', 'hidden');
+  $('.two').css('visibility', 'hidden');
+  $('.current-monthly-update').hide();
+  $('.initial-action-items').show();
+  $('.initial-action-items').addClass('floatright');
+  $('.initial-patient-centered-care-plan').show();
+  $('.initial-patient-centered-care-plan').addClass('floatleft');
+  $('.doctor-time-log').show();
+  $('.date-time-log').show();
+  $('.doctor-time-log').css('visibility', 'hidden');
+  $('.date-time-log').css('visibility', 'hidden');
+  $('.span-header').addClass('bigger-width');
+  $('.one').css('visibility', 'hidden');
 
-  /********************************
-    Initial Recommendations Review
-  *********************************/
-  $(".box-4").click(function() {
-    $('.four').css('visibility', 'visible');
-    $('.one').css('visibility', 'hidden');
-    $('.three').css('visibility', 'hidden');
-    $('.two').css('visibility', 'hidden');
-    $('.current-monthly-update').hide();
-    $('.initial-action-items').show();
-    $('.initial-action-items').addClass('floatright');
-    $('.initial-patient-centered-care-plan').show();
-    $('.initial-patient-centered-care-plan').addClass('floatleft');
-    $('.doctor-time-log').show();
-    $('.date-time-log').show();
-    $('.doctor-time-log').css('visibility', 'hidden');
-    $('.date-time-log').css('visibility', 'hidden');
-    $('.span-header').addClass('bigger-width');
-    $('.one').css('visibility', 'hidden');
+});
 
-  });
+/*****************************************
+  Current Monthly Update Navigation Tabs
+******************************************/
+$(".tab-2").click(function() {
+  $('.monthly-care').show();
+  $('.monthly-call').css('visibility', 'hidden');
+});
 
-  /*****************************************
-    Current Monthly Update Navigation Tabs
-  ******************************************/
-  $(".tab-2").click(function() {
-    $('.monthly-care').show();
-    $('.monthly-call').css('visibility', 'hidden');
-  });
+$('.tab-1').addClass('clicked');
+$(".tab-1").click(function() {
+  $(this).addClass("clicked");
+  $('.tab-2').removeClass('clicked');
+  $('.tab-3').removeClass('clicked');
+});
 
-  $('.tab-1').addClass('clicked');
-  $(".tab-1").click(function() {
-    $(this).addClass("clicked");
-    $('.tab-2').removeClass('clicked');
-    $('.tab-3').removeClass('clicked');
-  });
+$(".tab-2").click(function() {
+  $(this).addClass("clicked");
+  $('.tab-1').removeClass('clicked');
+  $('.tab-3').removeClass('clicked');
+});
 
-  $(".tab-2").click(function() {
-    $(this).addClass("clicked");
-    $('.tab-1').removeClass('clicked');
-    $('.tab-3').removeClass('clicked');
-  });
+$(".tab-3").click(function() {
+  $(this).addClass("clicked");
+  $('.tab-1').removeClass('clicked');
+  $('.tab-2').removeClass('clicked');
+});
 
-  $(".tab-3").click(function() {
-    $(this).addClass("clicked");
-    $('.tab-1').removeClass('clicked');
-    $('.tab-2').removeClass('clicked');
-  });
+$('ul.tabs li').click(function() {
+  var tab_id = $(this).attr('data-tab');
+  $('ul.tabs li').removeClass('current');
+  $('.tab-content').removeClass('current');
+  $(this).addClass('current');
+  $("#" + tab_id).addClass('current');
+});
 
-  $('ul.tabs li').click(function() {
-    var tab_id = $(this).attr('data-tab');
-    $('ul.tabs li').removeClass('current');
-    $('.tab-content').removeClass('current');
-    $(this).addClass('current');
-    $("#" + tab_id).addClass('current');
-  });
 
-  $('.fa-times-circle').click(function() {
-    $(this).parent().parent().hide('slow', function() {
+// Adds a delete class to the item clicked
+$('.fa-times-circle').click(function() {
+  $(this).parent().parent().addClass('to-delete');
+});
+
+// If YES on Are You Sure? then animates and removes item
+var myFunction = function() {
+  $('.yes-button').click(function() {
+    $('.to-delete').hide('slow', function() {
       $(this).remove();
     });
   });
+};
 
-  // changes the bootstrap select to the custom selectpicker
-  $(".chosen-select").chosen({
-    placeholder_text_multiple: "Select a few Conditions"
+// changes the bootstrap select to the custom selectpicker
+$(".chosen-select").chosen({
+  placeholder_text_multiple: "Select a few Conditions"
+});
+
+// add the animation to the modal
+$(".modal").each(function(index) {
+  $(this).on('show.bs.modal', function(e) {
+    var open = $(this).attr('data-easein');
+    if (open == 'shake') {} else {
+      $('.modal-dialog').velocity('transition.' + open);
+    }
   });
+});
 
-  // add the animation to the modal
-  $(".modal").each(function(index) {
-    $(this).on('show.bs.modal', function(e) {
-      var open = $(this).attr('data-easein');
-      if (open == 'shake') {} else {
-        $('.modal-dialog').velocity('transition.' + open);
-      }
-    });
-  });
-
-  $('.datetimepicker').datetimepicker({
-    timepicker: false,
-    format: 'm/d/Y'
-  });
-
-
+$('.datetimepicker').datetimepicker({
+  timepicker: false,
+  format: 'm/d/Y'
 });

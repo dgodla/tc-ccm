@@ -466,26 +466,29 @@ button:focus {
     Monthly Progress
 ************************/
 .monthly-progress {
-  height: 2730px;
+  height: 1940px;
   @include span-columns(12);
   margin-top: 40px;
   @include omega();
 }
 .monthly-rec {
-  height: 2730px;
+  height: 1940px;
   @include span-columns(12);
   margin-top: 40px;
   @include omega();
 }
 .left-column-1,
 .right-column-1 {
-  height: 2730px;
+  height: 1940px;
   display: inline;
   background-color: $secondary-accent-color;
   border: solid 1px #ccc;
   @include omega();
   @include span-columns(5.9);
   @include margin(0px 0px 10px 0px);
+}
+.right-column-1 {
+  height: 1963px;
 }
 .lower-title-boxes {
   height: 55px;
@@ -549,7 +552,7 @@ p.lower-titles {
 }
 .white-container {
   @include margin(20px);
-  height: 2570px;
+  height: 1815px;
   background-color: white;
   margin-top: 72px;
   border: 1px solid #ccc;
@@ -948,7 +951,6 @@ i.fa.fa-times-circle {
   @include span-columns(12);
 }
 
-
 .first-timepicker,
 .second-timepicker {
     background-image: url("http://i59.tinypic.com/213jk3r.png");
@@ -958,8 +960,26 @@ i.fa.fa-times-circle {
     background-position-y: 3px;
 }
 
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: top;
+    border-top: 8px solid #ccc;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    content: "";
+}
 
-
+.are-you-sure-header {
+  border-bottom: 0px;
+}
+.are-you-sure-body {
+  text-align: center;
+}
+.are-you-sure-titles {
+  margin-bottom: 29px;
+}
 
 /**********************************
        Responsive Adjustments
