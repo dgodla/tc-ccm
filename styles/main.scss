@@ -980,9 +980,15 @@ i.fa.fa-times-circle {
   margin-bottom: 29px;
 }
 
-/**********************************
-       Responsive Adjustments
-**********************************/
+.appointment-select {
+  width: 93.5% !important;
+  margin: 20px;
+}
+
+
+/*******************************************************************
+                       Responsive Adjustments
+********************************************************************/
 @media only screen and (max-width: 1330px) {
   .dob-container,
   .age-container,
