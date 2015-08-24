@@ -479,7 +479,7 @@ button:focus {
 }
 .left-column-1,
 .right-column-1 {
-  height: 1940px;
+  height: 1960px;
   display: inline;
   background-color: $secondary-accent-color;
   border: solid 1px #ccc;
@@ -1074,7 +1074,9 @@ cursor: pointer;
 }
 
 
-
+.increase-height {
+  height: 2080px;
+}
 
 
 /*******************************************************************

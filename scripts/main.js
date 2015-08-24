@@ -176,7 +176,7 @@ $(".box-1").click(function() {
   $('.span-header').addClass('bigger-width');
   $('.initial-action-items').hide();
   $('.current-monthly-update').show();
-
+  $('.left-column-1').removeClass('increase-height');
 });
 
 /***********************
@@ -197,7 +197,7 @@ $(".box-2").click(function() {
   $('.date-time-log').css('visibility', 'visible');
   $('.span-header').removeClass('bigger-width');
   $('.one').css('visibility', 'hidden');
-
+  $('.left-column-1').removeClass('increase-height');
 });
 
 /********************************
@@ -220,6 +220,7 @@ $(".box-3").click(function() {
   $('.date-time-log').css('visibility', 'hidden');
   $('.span-header').addClass('bigger-width');
   $('.one').css('visibility', 'hidden');
+  $('.left-column-1').addClass('increase-height');
 });
 
 /********************************
@@ -241,7 +242,7 @@ $(".box-4").click(function() {
   $('.date-time-log').css('visibility', 'hidden');
   $('.span-header').addClass('bigger-width');
   $('.one').css('visibility', 'hidden');
-
+  $('.initial-patient-centered-care-plan').removeClass('increase-height');
 });
 
 /*****************************************

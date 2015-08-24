@@ -544,7 +544,7 @@ button:focus {
 
 .left-column-1,
 .right-column-1 {
-  height: 1940px;
+  height: 1960px;
   display: inline;
   background-color: #f2f2f2;
   border: solid 1px #ccc;
@@ -1189,6 +1189,9 @@ input.datetimepicker.modal-select {
   -moz-border-radius: 0px;
   background-image: none;
   cursor: pointer; }
+
+.increase-height {
+  height: 2080px; }
 
 /*******************************************************************
                        Responsive Adjustments
