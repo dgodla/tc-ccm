@@ -92,6 +92,7 @@ $(function() {
 });
 
 
+
 /*************************************
         ~~~  Autocomplete ~~~
 **************************************/
@@ -145,10 +146,22 @@ $(function() {
      });
  });
 
+
+$('.edit').prop("disabled", true);
+$('.fa-pencil').click(function(){
+  $('.edit').prop("disabled", false);
+  $('.edit').addClass('border-color-change');
+});
+$('.fa-check').click(function(){
+  $('.edit').prop("disabled", true);
+  $('.edit').removeClass('border-color-change');
+});
+
 /***********************
        On page Load
 ************************/
 $('.one').css('visibility', 'visible');
+$('.box-1').addClass('change-color-state');
 $('.two').css('visibility', 'hidden');
 $('.three').css('visibility', 'hidden');
 $('.four').css('visibility', 'hidden');
@@ -158,6 +171,7 @@ $('.date-time-log').hide();
 $('.doctor-time-log').css('visibility', 'hidden');
 $('.date-time-log').css('visibility', 'hidden');
 $('.span-header').addClass('bigger-width');
+
 
 /***********************
  Monthly Progress Update
@@ -177,6 +191,9 @@ $(".box-1").click(function() {
   $('.initial-action-items').hide();
   $('.current-monthly-update').show();
   $('.left-column-1').removeClass('increase-height');
+  $('.datepicker-lower-paragraph').removeClass('shorterwidth');
+  $('.box-1').addClass('change-color-state');
+  $('.box-2, .box-3, .box-4').removeClass('change-color-state');
 });
 
 /***********************
@@ -198,6 +215,9 @@ $(".box-2").click(function() {
   $('.span-header').removeClass('bigger-width');
   $('.one').css('visibility', 'hidden');
   $('.left-column-1').removeClass('increase-height');
+  $('.datepicker-lower-paragraph').addClass('shorterwidth');
+  $('.box-1, .box-3, .box-4').removeClass('change-color-state');
+  $('.box-2').addClass('change-color-state');
 });
 
 /********************************
@@ -221,6 +241,9 @@ $(".box-3").click(function() {
   $('.span-header').addClass('bigger-width');
   $('.one').css('visibility', 'hidden');
   $('.left-column-1').addClass('increase-height');
+  $('.datepicker-lower-paragraph').removeClass('shorterwidth');
+  $('.box-3').addClass('change-color-state');
+  $('.box-2, .box-1, .box-4').removeClass('change-color-state');
 });
 
 /********************************
@@ -243,6 +266,9 @@ $(".box-4").click(function() {
   $('.span-header').addClass('bigger-width');
   $('.one').css('visibility', 'hidden');
   $('.initial-patient-centered-care-plan').removeClass('increase-height');
+  $('.datepicker-lower-paragraph').removeClass('shorterwidth');
+  $('.box-4').addClass('change-color-state');
+  $('.box-2, .box-3, .box-1').removeClass('change-color-state');
 });
 
 /*****************************************

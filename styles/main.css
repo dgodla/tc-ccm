@@ -53,6 +53,18 @@ button,
 .fa {
   cursor: pointer; }
 
+.box-1:hover,
+.box-2:hover,
+.box-3:hover,
+.box-4:hover,
+.log-time-button:hover,
+#reset:hover,
+#start_pause_resume:hover,
+.save-button:hover {
+  background-color: white;
+  color: #50a4a4;
+  border: 2px solid #80c5c5; }
+
 input,
 textarea {
   font-family: "Open Sans", serif;
@@ -140,7 +152,7 @@ textarea {
   width: 31.76157%;
   display: inline-block;
   text-align: center;
-  padding: 3px;
+  padding: 0;
   float: right; }
   .icons:last-child {
     margin-right: 0; }
@@ -149,7 +161,8 @@ textarea {
   color: #50a4a4;
   font-size: 2.5em;
   display: inline-block;
-  padding: 10px; }
+  padding: 13px;
+  height: 66px; }
 
 .fa-angle-double-left {
   padding: 0; }
@@ -183,7 +196,7 @@ i.fa.fa-share-square-o {
   margin-right: 2.35765%;
   width: 40.29137%;
   height: 274px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   margin-top: 48px; }
   .chronic-box::after {
     clear: both;
@@ -197,7 +210,7 @@ i.fa.fa-share-square-o {
     clear: left; }
 
 .title-box {
-  border-bottom: solid 1px #ccc;
+  border-bottom: solid 2px #ccc;
   height: 42px;
   background-color: #f1f9fb;
   padding: -11px;
@@ -323,7 +336,7 @@ i.fa.fa-share-square-o {
   margin-right: 2.35765%;
   width: 55.21853%;
   height: 274px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   margin-top: 48px;
   margin-right: 0;
   float: right; }
@@ -335,7 +348,7 @@ i.fa.fa-share-square-o {
   display: block;
   margin-right: 2.35765%;
   width: 14.70196%;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   width: 141px;
   height: 53px; }
   #time:last-child {
@@ -383,7 +396,7 @@ div#time {
 #reset {
   height: 70px;
   width: 70px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 100%;
   color: #50a4a4;
   background-color: white;
@@ -436,6 +449,9 @@ textarea {
   outline: none;
   cursor: pointer; }
 
+textarea {
+  cursor: text; }
+
 input {
   font-size: 1em;
   color: #50a4a4;
@@ -454,7 +470,6 @@ input {
   white-space: nowrap;
   padding: 6px 12px;
   line-height: 1.42857143;
-  border-radius: 4px;
   -webkit-user-select: none; }
 
 /************************
@@ -501,7 +516,7 @@ button:focus {
 .box-3,
 .box-4 {
   white-space: nowrap;
-  border: solid 1px #ccc;
+  border: solid 2px #ccc;
   background-color: #f1f9fb;
   text-align: center;
   font-size: 0.96em;
@@ -547,7 +562,7 @@ button:focus {
   height: 1960px;
   display: inline;
   background-color: #f2f2f2;
-  border: solid 1px #ccc;
+  border: solid 2px #ccc;
   margin-right: 0;
   float: left;
   display: block;
@@ -647,7 +662,7 @@ p.lower-titles {
 .tab-2,
 .tab-3 {
   display: inline-block;
-  height: 43px;
+  height: 44px;
   text-align: center;
   padding: 14px;
   position: relative;
@@ -748,8 +763,7 @@ p.lower-titles {
   position: relative;
   background-color: white;
   width: auto;
-  float: left;
-  border-radius: 2px; }
+  float: left; }
   .select-dropdown:last-child {
     margin-right: 0; }
   .select-dropdown select {
@@ -827,6 +841,9 @@ textarea {
 textarea:focus {
   border: #80c5c5 2px solid; }
 
+.border-color-change {
+  border: gray 1px solid; }
+
 .updates textarea {
   height: 154%; }
 
@@ -872,7 +889,6 @@ textarea:focus {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  border-radius: 4px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -952,7 +968,7 @@ ul {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 23.23176%; }
+  width: 40.29137%; }
   .schedule-datepicker:last-child {
     margin-right: 0; }
 
@@ -1100,12 +1116,16 @@ input.datetimepicker.modal-select {
 
 .first-timepicker,
 .second-timepicker,
-.lower-datepicker {
+.lower-datepicker,
+.schedule-datepicker {
   background-image: url("http://i59.tinypic.com/213jk3r.png");
   background-size: 25px 25px;
   background-repeat: no-repeat;
   background-position-x: 18px;
   background-position-y: 3px; }
+
+.schedule-datepicker {
+  background-position-y: 7px; }
 
 .caret {
   display: inline-block;
@@ -1118,7 +1138,7 @@ input.datetimepicker.modal-select {
   content: ""; }
 
 .are-you-sure-header {
-  border-bottom: 0px; }
+  border-bottom: 0; }
 
 .are-you-sure-body {
   text-align: center; }
@@ -1128,8 +1148,7 @@ input.datetimepicker.modal-select {
 
 .appointment-select {
   width: 93.7% !important;
-  margin: 20px;
-  margin-top: 3px; }
+  margin: 3px 20px 20px; }
 
 .first-timepicker:last-child {
   margin-right: 0;
@@ -1146,7 +1165,7 @@ input.datetimepicker.modal-select {
   padding: 4px 0;
   margin: 0 0 10px 25px;
   list-style: none;
-  background-color: #ffffff;
+  background-color: #fff;
   border-color: #ccc;
   border-color: rgba(0, 0, 0, 0.2);
   border-style: solid;
@@ -1169,7 +1188,7 @@ input.datetimepicker.modal-select {
   clear: both;
   font-weight: normal;
   line-height: 18px;
-  color: #555555;
+  color: #555;
   white-space: nowrap;
   text-decoration: none; }
 
@@ -1180,22 +1199,80 @@ input.datetimepicker.modal-select {
   cursor: pointer;
   background-color: #ccc; }
 
-.ui-state-hover, .ui-state-active {
-  color: #ffffff;
+.ui-state-hover,
+.ui-state-active {
+  color: #fff;
   text-decoration: none;
   background-color: #80c5c5;
-  border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   background-image: none;
   cursor: pointer; }
 
 .increase-height {
   height: 2080px; }
 
-/*******************************************************************
-                       Responsive Adjustments
-********************************************************************/
+.icons > i:hover {
+  color: white; }
+
+.hoverthis {
+  color: #50a4a4;
+  font-size: 2.5em;
+  display: inline-block;
+  padding: 2px; }
+
+.icons > .hoverthis:hover {
+  color: white; }
+
+.fa-share-square-o {
+  height: 68px;
+  font-size: 3em !important;
+  position: relative;
+  bottom: -6px; }
+
+.chosen-container.chosen-container-multi {
+  width: 470px !important; }
+
+.shorterwidth {
+  width: 55%; }
+
+p.datepicker-paragraph {
+  display: inline; }
+
+#reset:hover,
+#start_pause_resume:hover {
+  background-color: #80c5c5;
+  color: white; }
+
+span.icons {
+  margin-top: -7px; }
+
+.log-time-button,
+#start_pause_resume,
+#reset,
+.save-button,
+.fa-angle-double-left,
+.fa-align-justify,
+.fa-print,
+.fa-share-square-o {
+  -moz-transition: all 0.3s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -o-transition: all 0.3s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -webkit-transition: all 0.3s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  transition: all 0.3s cubic-bezier(0.53, 0.01, 0.35, 1.5); }
+
+.change-color-state {
+  background-color: white;
+  color: #50a4a4;
+  border-color: #80c5c5; }
+
+.fa-check:hover,
+.fa-pencil:hover {
+  color: #50a4a4; }
+
+/****************************************************************************************
+                                 Responsive Adjustments
+*****************************************************************************************/
 @media only screen and (max-width: 1330px) {
   .dob-container,
   .age-container,
@@ -1398,7 +1475,8 @@ input.datetimepicker.modal-select {
     font-size: 21px;
     /* border: 1px #ccc solid; */ }
 
-  .column-1, .column-3 {
+  .column-1,
+  .column-3 {
     float: left;
     display: block;
     /* margin-right: 12.35765%; */

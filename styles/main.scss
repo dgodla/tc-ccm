@@ -56,8 +56,17 @@ button,
 .fa {
   cursor: pointer;
 }
-button:hover {
-
+.box-1:hover,
+.box-2:hover,
+.box-3:hover,
+.box-4:hover,
+.log-time-button:hover,
+#reset:hover,
+#start_pause_resume:hover,
+.save-button:hover {
+  background-color: white;
+  color: #50a4a4;
+  border: 2px solid $primary-color;
 }
 input,
 textarea {
@@ -118,14 +127,15 @@ textarea {
   @include span-columns(4);
   display: inline-block;
   text-align: center;
-  padding: 3px;
+  padding: 0;
   float: right;
 }
 .icons>.fa {
   color: $primary-accent-color;
   font-size: 2.5em;
   display: inline-block;
-  padding: 10px;
+  padding: 13px;
+  height: 66px;
 }
 .fa-angle-double-left {
   padding: 0;
@@ -155,11 +165,11 @@ i.fa.fa-share-square-o {
   @include span-columns(5);
   @include omega(1n);
   height: 274px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   margin-top: 48px;
 }
 .title-box {
-  border-bottom: solid 1px #ccc;
+  border-bottom: solid 2px #ccc;
   height: 42px;
   background-color: $secondary-color;
   padding: -11px;
@@ -293,7 +303,7 @@ i.fa.fa-share-square-o {
 
   // @include shift(5.25);
   height: 274px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   margin-top: 48px;
   margin-right: 0;
   float: right;
@@ -302,7 +312,7 @@ i.fa.fa-share-square-o {
 }
 #time {
   @include span-columns(2);
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   width: 141px;
   height: 53px;
 }
@@ -337,7 +347,7 @@ div#time {
 #reset {
   height: 70px;
   width: 70px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 100%;
   color: $primary-accent-color;
   background-color: white;
@@ -397,6 +407,9 @@ textarea {
   outline: none;
   cursor: pointer;
 }
+textarea {
+  cursor: text;
+}
 input {
   font-size: 1em;
   color: $primary-accent-color;
@@ -415,7 +428,8 @@ input {
   white-space: nowrap;
   padding: 6px 12px;
   line-height: 1.42857143;
-  border-radius: 4px;
+
+  // border-radius: 4px;
   -webkit-user-select: none;
 }
 
@@ -453,7 +467,7 @@ button:focus {
 .box-3,
 .box-4 {
   white-space: nowrap;
-  border: solid 1px #ccc;
+  border: solid 2px #ccc;
   background-color: $secondary-color;
   text-align: center;
   font-size: 0.96em;
@@ -482,7 +496,7 @@ button:focus {
   height: 1960px;
   display: inline;
   background-color: $secondary-accent-color;
-  border: solid 1px #ccc;
+  border: solid 2px #ccc;
   @include omega();
   @include span-columns(5.9);
   @include margin(0px 0px 10px 0px);
@@ -568,7 +582,7 @@ p.lower-titles {
 .tab-2,
 .tab-3 {
   display: inline-block;
-  height: 43px;
+  height: 44px;
   text-align: center;
   padding: 14px;
   position: relative;
@@ -645,6 +659,7 @@ p.lower-titles {
   z-index: 2;
   fill-opacity: 1;
 }
+
 // .box-3 {
 //   height: 67px;
 // }
@@ -665,7 +680,8 @@ p.lower-titles {
   background-color: white;
   width: auto;
   float: left;
-  border-radius: 2px;
+
+  // border-radius: 2px;
   select {
     padding: 8px 24px 8px 10px;
     border: none;
@@ -731,8 +747,6 @@ i {
 .editable {
   height: 96px;
   position: relative;
-
-  // bottom: 16px;
 }
 textarea {
   white-space: nowrap;
@@ -747,6 +761,9 @@ textarea {
 }
 textarea:focus {
   border: $primary-color 2px solid;
+}
+.border-color-change {
+  border: gray 1px solid;
 }
 .updates textarea {
   height: 154%;
@@ -788,7 +805,8 @@ textarea:focus {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  border-radius: 4px;
+
+  // border-radius: 4px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -805,12 +823,10 @@ textarea:focus {
 .modal-select {
   position: relative;
   right: -13px;
-
 }
-
 .btn-group.bootstrap-select.modal-select,
 .modal-titles {
-    width: 276px !important;
+  width: 276px !important;
 }
 .modal-title {
   font-size: 1.5em;
@@ -861,7 +877,7 @@ ul {
   @include span-columns(6 of 12);
 }
 .schedule-datepicker {
-  @include span-columns(3 of 12);
+  @include span-columns(5 of 12);
 }
 .schedule-button {
   background-color: $primary-accent-color;
@@ -955,44 +971,42 @@ i.fa.fa-times-circle {
 .chronic-and-timer-div {
   @include span-columns(12);
 }
-
 .datetimepicker {
-    background-image: url("http://i59.tinypic.com/213jk3r.png");
-    background-size: 25px 25px;
-    background-repeat: no-repeat;
-    background-position-x: 20px;
-    background-position-y: 7px;
+  background-image: url("http://i59.tinypic.com/213jk3r.png");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position-x: 20px;
+  background-position-y: 7px;
 }
 input.datetimepicker.modal-select {
-    width: 276px;
+  width: 276px;
 }
-
 .first-timepicker,
 .second-timepicker,
-.lower-datepicker {
-    background-image: url("http://i59.tinypic.com/213jk3r.png");
-    background-size: 25px 25px;
-    background-repeat: no-repeat;
-    background-position-x: 18px;
-    background-position-y: 3px;
+.lower-datepicker,
+.schedule-datepicker {
+  background-image: url("http://i59.tinypic.com/213jk3r.png");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position-x: 18px;
+  background-position-y: 3px;
 }
-
-
-
+.schedule-datepicker {
+  background-position-y: 7px;
+}
 
 .caret {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    vertical-align: top;
-    border-top: 8px solid #ccc;
-    border-right: 6px solid transparent;
-    border-left: 6px solid transparent;
-    content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top: 8px solid #ccc;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  content: "";
 }
-
 .are-you-sure-header {
-  border-bottom: 0px;
+  border-bottom: 0;
 }
 .are-you-sure-body {
   text-align: center;
@@ -1000,60 +1014,52 @@ input.datetimepicker.modal-select {
 .are-you-sure-titles {
   margin-bottom: 29px;
 }
-
 .appointment-select {
   width: 93.7% !important;
-  margin: 20px;
-  margin-top: 3px;
+  margin: 3px 20px 20px;
 }
-
 .first-timepicker:last-child {
-    margin-right: 0;
-    margin-left: 19px;
+  margin-right: 0;
+  margin-left: 19px;
 }
-
-
-
 .ui-autocomplete {
-position: absolute;
-top: 100%;
-left: 0;
-z-index: 1000;
-float: left;
-display: none;
-min-width: 160px;
-padding: 4px 0;
-margin: 0 0 10px 25px;
-list-style: none;
-background-color: #ffffff;
-border-color: #ccc;
-border-color: rgba(0, 0, 0, 0.2);
-border-style: solid;
-border-width: 1px;
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
--webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
--moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
--webkit-background-clip: padding-box;
--moz-background-clip: padding;
-background-clip: padding-box;
-*border-right-width: 2px;
-*border-bottom-width: 2px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  display: none;
+  min-width: 160px;
+  padding: 4px 0;
+  margin: 0 0 10px 25px;
+  list-style: none;
+  background-color: #fff;
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
 }
-
 .ui-menu-item > a.ui-corner-all {
-display: block;
-padding: 3px 15px;
-clear: both;
-font-weight: normal;
-line-height: 18px;
-color: #555555;
-white-space: nowrap;
-text-decoration: none;
+  display: block;
+  padding: 3px 15px;
+  clear: both;
+  font-weight: normal;
+  line-height: 18px;
+  color: #555;
+  white-space: nowrap;
+  text-decoration: none;
 }
-
 .ui-menu-item {
   margin: 5px;
 }
@@ -1061,27 +1067,85 @@ text-decoration: none;
   cursor: pointer;
   background-color: #ccc;
 }
-
-.ui-state-hover, .ui-state-active {
-color: #ffffff;
-text-decoration: none;
-background-color: $primary-color;
-border-radius: 0px;
--webkit-border-radius: 0px;
--moz-border-radius: 0px;
-background-image: none;
-cursor: pointer;
+.ui-state-hover,
+.ui-state-active {
+  color: #fff;
+  text-decoration: none;
+  background-color: $primary-color;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  background-image: none;
+  cursor: pointer;
 }
-
-
 .increase-height {
   height: 2080px;
 }
+.icons>i:hover {
+  color: white;
+}
+.hoverthis {
+  color: $primary-accent-color;
+  font-size: 2.5em;
+  display: inline-block;
+  padding: 2px;
+}
+.icons>.hoverthis:hover {
+  color: white;
+}
+.fa-share-square-o {
+  height: 68px;
+  font-size: 3em !important;
+  position: relative;
+  bottom: -6px;
+}
+.chosen-container.chosen-container-multi {
+  width: 470px !important;
+}
+.shorterwidth {
+  width: 55%;
+}
+p.datepicker-paragraph {
+  display: inline;
+}
+#reset:hover,
+#start_pause_resume:hover {
+  background-color: $primary-color;
+  color: white;
+}
+span.icons {
+  margin-top: -7px;
+}
+
+.log-time-button,
+#start_pause_resume,
+#reset,
+.save-button,
+.fa-angle-double-left,
+.fa-align-justify,
+.fa-print,
+.fa-share-square-o {
+  -moz-transition: all 0.30s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -o-transition: all 0.30s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -webkit-transition: all 0.30s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  transition: all 0.30s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+}
+.change-color-state {
+  background-color: white;
+  color: #50a4a4;
+  border-color: $primary-color;
+}
+
+.fa-check:hover,
+.fa-pencil:hover {
+  color: $primary-accent-color;
+}
 
 
-/*******************************************************************
-                       Responsive Adjustments
-********************************************************************/
+
+/****************************************************************************************
+                                 Responsive Adjustments
+*****************************************************************************************/
 @media only screen and (max-width: 1330px) {
   .dob-container,
   .age-container,
@@ -1212,14 +1276,15 @@ cursor: pointer;
     text-align: center;
     position: relative;
     right: -45px;
-}
-.total-time-amount {
+  }
+  .total-time-amount {
     text-align: center;
     margin-top: 39px;
     font-size: 21px;
     /* border: 1px #ccc solid; */
-}
-.column-1, .column-3 {
+  }
+  .column-1,
+  .column-3 {
     float: left;
     display: block;
     /* margin-right: 12.35765%; */
@@ -1227,25 +1292,24 @@ cursor: pointer;
     /* margin-right: 50px; */
     text-align: center;
     margin-left: 64px;
-}
-
-.status-enrollment-container {
-  font-size: 14px;
-}
-.nav-boxes {
-  font-size: 13px;
-  height: 55px;
-  @include outer-container;
-  @include span-columns(12, block-collapse);
-  margin-top: 35px;
-  margin-bottom: 35px;
-  max-width: 200em;
-}
-#time {
-  @include span-columns(10);
-  width: 67%;
-}
-.tabs {
-  font-size: 12.5px;
-}
+  }
+  .status-enrollment-container {
+    font-size: 14px;
+  }
+  .nav-boxes {
+    font-size: 13px;
+    height: 55px;
+    @include outer-container;
+    @include span-columns(12, block-collapse);
+    margin-top: 35px;
+    margin-bottom: 35px;
+    max-width: 200em;
+  }
+  #time {
+    @include span-columns(10);
+    width: 67%;
+  }
+  .tabs {
+    font-size: 12.5px;
+  }
 }
