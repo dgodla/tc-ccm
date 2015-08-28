@@ -266,6 +266,7 @@ $(".box-4").click(function() {
   $('.span-header').addClass('bigger-width');
   $('.one').css('visibility', 'hidden');
   $('.initial-patient-centered-care-plan').removeClass('increase-height');
+  $('.initial-action-items').addClass('increase-height');
   $('.datepicker-lower-paragraph').removeClass('shorterwidth');
   $('.box-4').addClass('change-color-state');
   $('.box-2, .box-3, .box-1').removeClass('change-color-state');
