@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +19,8 @@
 <body class="logger-style" ng-app="ccm">
     <div class="logger-style">
     <div class="header-bar">
-  <img class="logo" src="/assets/thoroughcare-b0a5e9fe53a54b134121968e26649b79.png" alt="Thoroughcare" />
+  <!-- ruby replace logo with <%= image_tag 'thoroughcare.png', class: 'logo' %> -->
+  <img class="logo" src="/assets/thoroughcare.png" alt="Thoroughcare" />
   <span class="patient-name">Mary Q. Smith</span>
   <span class="dob-container">DOB:
     <span class="dob-date">03/11/1940</span>
@@ -120,7 +120,7 @@
         </div>
       </div>
     </div>
-
+<!-- begin rails partial 'logger_timer_box' -->
   <div class="timer-box">
   <div class="title-box">
     <p>Timer</p>
@@ -179,6 +179,7 @@
     </div>
   </div>
 </div>
+ <!-- end rails partial'logger_timer_box' -->
 
   <div class="nav-boxes">
     <button class="box-1">Monthly Progress Update<i class="fa fa-check-circle one"></i></button>
