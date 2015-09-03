@@ -1,3 +1,8 @@
+var screenState = 1;
+var setScreenState = function(n){
+  screenState = n;
+}
+
 $(document).ready(function() {
 
   /***********************
@@ -87,9 +92,9 @@ $(document).ready(function() {
       Datepicker
 ************************/
 
-$(function() {
-  $("#datepicker").datepicker();
-});
+// $(function() {
+//   $("#datepicker").datepicker();
+// });
 
 
 
@@ -194,6 +199,7 @@ $(".box-1").click(function() {
   $('.datepicker-lower-paragraph').removeClass('shorterwidth');
   $('.box-1').addClass('change-color-state');
   $('.box-2, .box-3, .box-4').removeClass('change-color-state');
+  setScreenState(1);
 });
 
 /***********************
@@ -218,6 +224,7 @@ $(".box-2").click(function() {
   $('.datepicker-lower-paragraph').addClass('shorterwidth');
   $('.box-1, .box-3, .box-4').removeClass('change-color-state');
   $('.box-2').addClass('change-color-state');
+  setScreenState(2);
 });
 
 /********************************
@@ -244,6 +251,7 @@ $(".box-3").click(function() {
   $('.datepicker-lower-paragraph').removeClass('shorterwidth');
   $('.box-3').addClass('change-color-state');
   $('.box-2, .box-1, .box-4').removeClass('change-color-state');
+  setScreenState(3);
 });
 
 /********************************
@@ -270,6 +278,7 @@ $(".box-4").click(function() {
   $('.datepicker-lower-paragraph').removeClass('shorterwidth');
   $('.box-4').addClass('change-color-state');
   $('.box-2, .box-3, .box-1').removeClass('change-color-state');
+  setScreenState(4);
 });
 
 /*****************************************
@@ -314,13 +323,31 @@ $('.fa-times-circle').click(function() {
 });
 
 // If YES on Are You Sure? then animates and removes item
-var myFunction = function() {
+var destroyTimeLog = function(id) {
+  console.log(id);
   $('.yes-button').click(function() {
-    $('.to-delete').hide('slow', function() {
-      $(this).remove();
-    });
+    timeLogModelDelete($(this), id);
   });
 };
+
+var timeLogModelDelete = function(elm, id){
+  $('.to-delete').hide('slow', function() {
+    console.log(id +" doDelete");
+    $.ajax({
+      url: ('/time_logs/' + id),
+      type: 'DELETE',
+      dataType: 'json',
+      success: function() {
+        console.log('item deleted');
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        status =  "Status: " + textStatus + " Error: " + errorThrown;
+        console.log(status);
+      }
+    });
+  });
+}
+
 
 // changes the bootstrap select to the custom selectpicker
 $(".chosen-select").chosen({

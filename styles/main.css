@@ -812,8 +812,17 @@ p.lower-titles {
   float: right;
   margin-right: 37px; }
 
+.month-selector-item {
+  text-align: center;
+  font-family: Courier, "Courier New", monospace !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
 i.fa.fa-arrow-left {
   padding-right: 16px;
+  width: 40px;
   color: #ccc; }
 
 i.fa.fa-arrow-right {
