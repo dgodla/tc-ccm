@@ -1,0 +1,804 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Thorough Care</title>
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" media="all" href="/assets/logger-51787ee7d417185314b80a3a0d19d175.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/application-1ca2a551e76a643230a9bb28626d1e44.css?body=1" data-turbolinks-track="true" />
+  <script src="/assets/modernizr.custom-ba02ee1630ca3f96086e95d2501a2160.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/jquery-0ae4f05ec94cccc44103c78fa4beda85.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/jquery_ujs-6a09a55fdf92091fb9237b43f478195b.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/angular/angular-b61b1d013b650c8c6daeece734bf6a7e.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/angular-route/angular-route-3f78b23e85a826eeb23046da76e60f98.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/angular-resource/angular-resource-bf58943310a58a40b7e6bc92ddbf8cd8.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/angular-rails-templates-67f3f4ed592e6fc17606cff58c1e3de5.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/turbolinks-a70b0978a014de2188969f7afc16d330.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/app-c3d277d3c7eb8ea1c0cf74d4e07efba8.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap-49c5c465681ada7f91bee3bbff0d273e.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/home/mainCtrl-5653854101f1e3bee532c5f838dc6bce.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/js.cookie-28afaa75a8ca1ad90f81ced3192b9d7b.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/months/monthsCtrl-60052358fcc6ce4bd39f52a2c305a564.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/months/oldmonthsCtrl-a7bc117004f3df4ee4743100417ea68e.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/select_picker-db21666feb944e284b6dc22d842c8e88.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/time_categories/timeCategoriesCtrl-9b9baed2ae3aeb2be0b28a74f2d6d31c.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/time_categories/timeCategoryCtrl-b49c2670a4f32ccd0596c2c5e0861c09.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/time_logs/initial_action_item-7068f2cd2c8e1749ac3f325ebf879611.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/time_logs/timeLogsCtrl-6bd56096837865c15f7e75dd509f42f0.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/time_logs/time_logger-f7cae3fe56bf2784b0fa268afadfeea5.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/application-959cf42580f7544e36953dd28ce443a7.js?body=1" data-turbolinks-track="true"></script>
+  <link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/chosen/chosen.min.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/datetimepicker-master/jquery.datetimepicker.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/ProgressButtonStyles/css/normalize.css">
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="/JlRZJD2U8sIkF1Vm6Q9SV2gn2rKrlntGVrJPTlLvoOhljkCpRJRvAxzDUC+BMTnPnBjQnjZdEEhQJOZRlXojw==" />
+</head>
+<body class="" ng-app="ccm">
+<div class="patient hidden" data-patient-id="1" id="patient-id"></div>
+
+  <div class="row">
+    <div ng-controller="TimeLogCtrl">
+
+  <div class="header-bar">
+    <img class="logo" src="/assets/thoroughcare-b0a5e9fe53a54b134121968e26649b79.png" alt="Thoroughcare" />
+    <span class="patient-name">Mary Q. Smith</span>
+    <span class="dob-container">DOB:
+      <span class="dob-date">03/11/1940</span>
+    </span>
+    <span class="age-container">Age:
+      <span class="age-number">74</span>
+    </span>
+    <span class="gender">Female</span>
+    <span class="icons">
+      <span class="hoverthis">
+        <i class="fa fa-angle-double-left"></i>
+        <i class="fa fa-align-justify"></i>
+      </span>
+      <i class="fa fa-print"></i>
+      <i class="fa fa-share-square-o"></i>
+    </span>
+  </div>
+
+  <div class="container">
+    <div class="chronic-and-timer-div">
+      <div class="chronic-box">
+        <div class="title-box">
+          <p>Chronic Care Management</p>
+        </div>
+        <div class="conditions-box">
+          <div class="title-words">Conditions
+          </div>
+          <div class="conditions-list">
+            <select class="chosen-select" multiple>
+              <option value="Diabetes">Diabetes</option>
+              <option value="Heart Failure">Heart Failure</option>
+              <option value="Heart Disease">Heart Disease</option>
+              <option value="Asthma">Asthma</option>
+              <option value="COPD">COPD</option>
+            </select>
+          </div>
+          <div class="status-enrollment-container">
+            <div class="status-container">
+              <div class="status-title">Status:
+                <div class="modExample">
+                  <a href="#myModal1" role="button" data-target="#myModal1" class="status" data-toggle="modal">  ACTIVE</a>
+                  <div id="myModal1" class="modal fade" data-easein="fadeIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                          <h4 class="modal-title" id="myModalLabel">Enrollment</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-titles">Change enrollment status to:</div>
+                          <select class="selectpicker modal-select">
+                            <optgroup label="Active">
+                              <option>Active</option>
+                            </optgroup>
+                            <optgroup label="Inactive">
+                              <option>Patient-Revoked CCM</option>
+                              <option>On Hold</option>
+                              <option>Patient No Longer Eligible</option>
+                              <option>Patient Deceased</option>
+                            </optgroup>
+                          </select>
+                          <p class="datepicker-paragraph">
+                            <div class="modal-titles">Effective:</div>
+                            <input type="text" class="datetimepicker modal-select" readonly="readonly" placeholder="  /      /  ">
+                          </p>
+                          <p class="reason">
+                            <div class="modal-titles">Reason for change: (optional)</div>
+                            <input class="modal-titles" type="text">
+                          </p>
+                          <div class="modal-buttons-center">
+                            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                            <button class="btn btn-primary" data-dismiss="modal">Change Status</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="enrollment-title">Enrollment:
+                <span class="enrollment">
+                  07/13/15
+                </span>
+              </div>
+            </div>
+            <div>
+              <div class="months-title">Months of CCM:
+                <span class="CCM">
+                  3
+                </span>
+              </div>
+              <div class="follow-up-title">Next Follow-up:
+                <span class="follow-up">
+                  08/15/15
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- begin logger_time_box Partial -->
+    <div class="timer-box">
+  <div class="title-box">
+    <p>Timer</p>
+  </div>
+  <div class="column-1">
+    <div id="time">
+      <span ng-model="minutes" id="minutes">00</span>
+      <p class="timer-colon">:</p>
+      <span ng-model="seconds" id="seconds">00</span>
+    </div>
+    <p class="timer-name">Task Timer</p>
+    <div id="controls">
+      <button id="start_pause_resume">Start</button>
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+
+  <div class="column-2" ng-controller="TimeCategoryCtrl">
+    <div class="select-divs">
+      <span class="short-words">As:</span>
+      <select class="top-select" id="time-categories">
+          <option ng-repeat="timeCategory in timeCategories" id="{{timeCategory.id}}">
+            {{timeCategory.name}}
+          </option>
+      </select>
+    </div>
+    <div class="select-divs">
+      <span class="short-words">By:</span>
+      <select class="selectpicker bottom-select">
+        <optgroup label="Physicians">
+          <option>Dr. Jones</option>
+          <option>Dr. Johnson</option>
+        </optgroup>
+        <optgroup label="Care Managers">
+          <option>Nancy Smith</option>
+          <option>Patti Russ</option>
+          <option>Judy Jones</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <p class="datepicker-paragraph">
+      <input type="text" id="timer-date" class="first-timepicker datetimepicker"  placeholder="  /      /  ">
+    </p>
+    <button class="log-time-button progress-button" id="log-time-button" data-style="fill" data-horizontal>Log Time</button>
+  </div>
+
+  <div class="column-3">
+    <div class="total-time-amount">
+      <span id="total-minutes">00:17</span>
+    </div>
+    <div>
+      <p class="total-time-title">Total Time</p>
+    </div>
+  </div>
+</div>
+
+    <!-- end logger_time_box Partial -->
+    <div class="nav-boxes">
+      <button class="box-1">Monthly Progress Update<i class="fa fa-check-circle one"></i></button>
+      <button class="box-2">Monthly Call Review<i class="fa fa-check-circle two"></i></button>
+      <button class="box-3">Monthly Recommendations Review<i class="fa fa-check-circle three"></i></button>
+      <button class="box-4">Initial Recommendations Review<i class="fa fa-check-circle four"></i></button>
+    </div>
+
+    <!--/////////// PAGE 1 ////////////-->
+
+    <!-- <div class="monthly-progress"> -->
+    <div class="left-column-1 initial-patient-centered-care-plan">
+      <div class="title-box lower-title-boxes">
+        <p class="lower-titles">
+          Initial Patient Centered Care Plan
+          <i class="fa fa-check"></i>
+          <i class="fa fa-pencil"></i>
+        </p>
+      </div>
+      <div class="initial-date" id="initial-date">
+        August 15, 2015
+      </div>
+      <div class="blue-box">
+        <div class="blue-box-title">
+          Goals Important to Patient
+        </div>
+        <div class="editable">
+          <textarea class="edit">
+            Lose Weight Control Blood Sugar Levels
+          </textarea>
+        </div>
+      </div>
+      <div class="blue-box">
+        <div class="blue-box-title">
+          Specific Goals/Targets Agreed Upon
+        </div>
+        <div class="editable">
+          <textarea class="edit">
+            Lose 5lbs per month Lower blood sugar to xxx
+          </textarea>
+        </div>
+      </div>
+      <div class="blue-box">
+        <div class="blue-box-title">
+          Potential Barriers
+        </div>
+        <div class="editable">
+          <textarea class="edit">
+            Lack of motivation Lack of support system
+          </textarea>
+        </div>
+      </div>
+      <div class="blue-box">
+        <div class="blue-box-title">
+          Problems and Symptoms
+        </div>
+        <div class="editable">
+          <textarea class="edit">
+            Lose Weight Control Blood Sugar Levels
+          </textarea>
+        </div>
+      </div>
+      <div class="blue-box">
+        <div class="blue-box-title">
+          Expected Outcomes
+        </div>
+        <div class="editable">
+          <textarea class="edit">
+            Will feel much better Will sleep without any pain
+          </textarea>
+        </div>
+      </div>
+      <div class="blue-box">
+        <div class="blue-box-title">
+          Other Providers
+        </div>
+        <div class="editable">
+          <textarea class="edit">
+            Dr. Johnson - Cardiologist Dr. Smithton - Therapist
+          </textarea>
+        </div>
+      </div>
+      <div class="blue-box">
+        <div class="blue-box-title">
+          Resources/Support System
+        </div>
+        <div class="editable">
+          <textarea class="edit">
+            Mary Johnson - Neighbor Fr. Joe at St. Mary’s - Priest
+          </textarea>
+        </div>
+      </div>
+      <div class="blue-box">
+        <div class="blue-box-title">
+          Patient numbers to track monthly
+        </div>
+        <div class="editable">
+          <textarea class="edit">
+            Baseline weight: 187 Baseline blood pressure: xxx
+          </textarea>
+        </div>
+      </div>
+      <div class="blue-box">
+        <div class="blue-box-title">
+          Medications
+        </div>
+        <div class="editable">
+          <textarea class="edit">
+            Lisinopril: 10MG Clonazapam: 20MG Daily
+          </textarea>
+        </div>
+      </div>
+      <div class="blue-box">
+        <div class="blue-box-title">
+          Allergies
+        </div>
+        <div class="editable">
+          <textarea class="edit">
+            Peanuts Cefzil
+          </textarea>
+        </div>
+      </div>
+      <div class="blue-box">
+        <div class="blue-box-title">
+          All Conditions
+        </div>
+        <div class="editable">
+          <textarea class="edit">
+            Diabetes Back Pain COPD
+          </textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-column-1 current-monthly-update">
+      <div class="title-box lower-title-boxes">
+        <p class="lower-titles">
+          Current Monthly Update
+          <!-- render month Partial here -->
+            <span class="month-selector", id="month-selector">
+
+  <i class="fa fa-arrow-left" id="monthDown"></i>
+      <span class="month-selector-item hide" id="month_1" data-month-id="1">JAN 2015</span>
+      <span class="month-selector-item hide" id="month_2" data-month-id="2">FEB 2015</span>
+      <span class="month-selector-item hide" id="month_3" data-month-id="3">MAR 2015</span>
+      <span class="month-selector-item hide" id="month_4" data-month-id="4">APR 2015</span>
+      <span class="month-selector-item hide" id="month_5" data-month-id="5">MAY 2015</span>
+      <span class="month-selector-item hide" id="month_6" data-month-id="6">JUN 2015</span>
+      <span class="month-selector-item hide" id="month_7" data-month-id="7">JUL 2015</span>
+      <span class="month-selector-item hide" id="month_8" data-month-id="8">AUG 2015</span>
+      <span class="month-selector-item month-selected" id="month_9" data-month-id="9">SEP 2015</span>
+  <i class="fa fa-arrow-right" id="monthUp"></i>
+
+</span>
+
+          <!--  end month Partial -->
+        </p>
+      </div>
+
+      <ul class="tabs">
+        <li class="tab-1 tab-link" data-tab="tab-1">
+          Monthly Care Plan Review
+        </li>
+        <li class="tab-2 tab-link" data-tab="tab-2">
+          Monthly Call Time Log
+        </li>
+        <li class="tab-3 tab-link" data-tab="tab-3">
+          Time log
+        </li>
+      </ul>
+
+      <div class="white-container">
+        <div class="monthly-care-review-plan tab-content current" id="tab-1">
+          <select class="selectpicker white-selector">
+            <optgroup label="Physicians">
+              <option>Dr. Jones</option>
+              <option>Dr. Johnson</option>
+            </optgroup>
+            <optgroup label="Care Managers">
+              <option>Nancy Smith</option>
+              <option>Patti Russ</option>
+              <option>Judy Jones</option>
+            </optgroup>
+          </select>
+
+          <p class="datepicker-lower-paragraph">
+            <input type="text" class="second-timepicker datetimepicker" readonly="readonly" placeholder="  /      /  ">
+          </p>
+          <button class="save-button">
+            Save
+          </button>
+          <div class="blue-box updates">
+            <div class="blue-box-title">
+              Updates about achieving these goals
+            </div>
+            <div class="editable">
+              <textarea>
+                Lose Weight Control Blood Sugar Levels
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Progress towards reducing barriers
+            </div>
+            <div class="editable">
+              <textarea>
+                Lose Weight Control Blood Sugar Levels
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Updates about problems/symptoms
+            </div>
+            <div class="editable">
+              <textarea>
+                Lose Weight Control Blood Sugar Levels
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Progress toward expected outcomes
+            </div>
+            <div class="editable">
+              <textarea>
+                Lose Weight Control Blood Sugar Levels
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Any changes in other providers?
+            </div>
+            <div class="editable">
+              <textarea>
+                Lose Weight Control Blood Sugar Levels
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Any changes in resources/support?
+            </div>
+            <div class="editable">
+              <textarea>
+                Lose Weight Control Blood Sugar Levels
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Patient numbers to track monthly
+            </div>
+            <div class="editable">
+              <textarea>
+                Lose Weight Control Blood Sugar Levels
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Medications
+            </div>
+            <div class="editable">
+              <textarea>
+                Lose Weight Control Blood Sugar Levels
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Allergies
+            </div>
+            <div class="editable">
+              <textarea>
+                Lose Weight Control Blood Sugar Levels
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box all-conditions-blue-box">
+            <div class="blue-box-title">
+              All Conditions
+            </div>
+            <div class="editable  all-conditions-box">
+              <textarea>
+                Lose Weight Control Blood Sugar Levels
+              </textarea>
+            </div>
+          </div>
+        </div>
+        <div class="monthly-call-time-log tab-content" id="tab-2">
+          <select class="selectpicker white-selector">
+            <optgroup label="Physicians">
+              <option>Dr. Jones</option>
+              <option>Dr. Johnson</option>
+            </optgroup>
+            <optgroup label="Care Managers">
+              <option>Nancy Smith</option>
+              <option>Patti Russ</option>
+              <option>Judy Jones</option>
+            </optgroup>
+          </select>
+
+          <p class="datepicker-lower-paragraph">
+            <input type="text" class="second-timepicker datetimepicker" readonly="readonly" placeholder="  /      /  ">
+          </p>
+          <button class="save-button">
+            Save
+          </button>
+          <div class="blue-box updates">
+            <div class="blue-box-title">
+              New Concerns identified by patients
+            </div>
+            <div class="editable">
+              <textarea>
+
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Interventions to patient concerns
+            </div>
+            <div class="editable">
+              <textarea>
+
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Patient Goals / to-do list for next 30 days
+            </div>
+            <div class="editable">
+              <textarea>
+
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Care Team / to-do list for next 30 days
+            </div>
+            <div class="editable">
+              <textarea>
+
+              </textarea>
+            </div>
+          </div>
+          <div class="blue-box">
+            <div class="blue-box-title">
+              Other notes about this month's engagement
+            </div>
+            <div class="editable">
+              <textarea>
+              </textarea>
+            </div>
+          </div>
+          <div class="Schedule-follow">
+            <div class="schedule-title">Schedule next follow-up</div>
+            <input class="datetimepicker schedule-datepicker" type="text" placeholder="  /      /  " readonly="readonly">
+          </div>
+          <button class="schedule-button">Schedule</button>
+        </div>
+        <div class="are-you-sure-container">
+          <div class="status-container">
+            <div class="status-title">
+              <div class="modExample">
+                <a href="#myModal2" role="button" data-target="#myModal2" class="status" data-toggle="modal"></a>
+                <div id="myModal2" class="modal fade" data-easein="fadeIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header are-you-sure-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      </div>
+                      <div class="modal-body are-you-sure-body">
+                        <div class="are-you-sure-titles">Are you sure you want to delete this task?</div>
+                        <div class="modal-buttons-center">
+                          <button class="btn btn-primary yes-button" data-dismiss="modal" aria-hidden="true">Yes</button>
+                          <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">No</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="time-log tab-content" id="tab-3">
+        <!-- render refresh_time_log_content partial here -->
+          <div class="time-log-entry">
+    <div class="time-log-header">
+      <span class="time-log-month">SEP 2015</span>
+      <span class="time-log-month-total-1">00:17</span>
+    </div>
+      <span>
+        <div class="entry-row time-log-entry">
+          <span class="span-header">Physician review of care plan</span>
+          <span class="doctor-time-log">Mr. DOOOD</span>
+          <span class="date-time-log">2015-09-03</span>
+          <span>00:02<i onclick="destroyTimeLog(116)" class="fa fa-times-circle" href="#myModal2" role="button" data-target="#myModal2" data-toggle="modal"></i></span>
+        </div>
+      </span>
+      <span>
+        <div class="entry-row time-log-entry">
+          <span class="span-header">Initial Action Items</span>
+          <span class="doctor-time-log">Mr. DOOOD</span>
+          <span class="date-time-log">2015-09-03</span>
+          <span>00:06<i onclick="destroyTimeLog(117)" class="fa fa-times-circle" href="#myModal2" role="button" data-target="#myModal2" data-toggle="modal"></i></span>
+        </div>
+      </span>
+      <span>
+        <div class="entry-row time-log-entry">
+          <span class="span-header">Telephone call with patient</span>
+          <span class="doctor-time-log">Mr. DOOOD</span>
+          <span class="date-time-log">2015-09-03</span>
+          <span>00:06<i onclick="destroyTimeLog(124)" class="fa fa-times-circle" href="#myModal2" role="button" data-target="#myModal2" data-toggle="modal"></i></span>
+        </div>
+      </span>
+      <span>
+        <div class="entry-row time-log-entry">
+          <span class="span-header">Monthly Clinical Review</span>
+          <span class="doctor-time-log">Mr. DOOOD</span>
+          <span class="date-time-log">2015-09-03</span>
+          <span>00:03<i onclick="destroyTimeLog(131)" class="fa fa-times-circle" href="#myModal2" role="button" data-target="#myModal2" data-toggle="modal"></i></span>
+        </div>
+      </span>
+  </div>
+
+        <!-- end refresh_time_log_content partial -->
+      </div>
+
+      </div>
+    </div>
+    <!-- begin initial_action_items partial -->
+    <div class="left-column-1 initial-action-items" id="initial-action-items" data-initial-action-items="1">
+  <div class="title-box lower-title-boxes">
+    <p class="lower-titles">
+      Initial Action Items
+    </p>
+  </div>
+  <div class="initial-items-header">
+    <select class="selectpicker ">
+      <optgroup label="Physicians">
+        <option>Dr. Jones</option>
+        <option>Dr. Johnson</option>
+      </optgroup>
+      <optgroup label="Care Managers">
+        <option>Nancy Smith</option>
+        <option>Patti Russ</option>
+        <option>Judy Jones</option>
+      </optgroup>
+    </select>
+    <input class="lower-datepicker datetimepicker" type="text" readonly="readonly" id="initial-action-date">
+    <button class="save-button" id="save-initial-action-items">
+      Save
+    </button>
+    <p class="based-paragraph">
+      Based upon the patient’s initial assessment, the following orders are recommended. This list can be reviewed with the patient during a monthly CCM call.
+    </p>
+  </div>
+  <div class="blue-box">
+    <div class="blue-box-title">
+      Treatments or Tests
+    </div>
+    <div class="editable ui-widget">
+      <textarea class="tags" id="treatment_or_tests">some shit happened</textarea>
+    </div>
+  </div>
+
+  <div class="blue-box">
+    <div class="blue-box-title">
+      Referrals
+    </div>
+    <div class="editable ui-widget">
+      <textarea class="tags" id="referrals">Chiropractor - Dr. Nick Riviera</textarea>
+    </div>
+  </div>
+  <div class="blue-box">
+    <div class="blue-box-title">
+      Community Resources
+    </div>
+    <div class="editable ui-widget">
+      <textarea class="tags" id="community_resources">Toolie</textarea>
+    </div>
+  </div>
+  <div class="blue-box">
+    <div class="blue-box-title">
+      Medication Changes
+    </div>
+    <div class="editable ui-widget">
+      <textarea class="tags" id="med_changes">Continue on current meds.  If Back continues to hurt, may prescribe 
+Percocet.  Follow-up next month.</textarea>
+    </div>
+  </div>
+  <div class="blue-box">
+    <div class="blue-box-title">
+      Health Education Needed
+    </div>
+    <div class="editable ui-widget">
+      <textarea class="tags" id="health_education">Suggest the Diabetes Education Class at the YMCA</textarea>
+    </div>
+  </div>
+  <div class="blue-box">
+    <div class="blue-box-title">
+      Diet Changes
+    </div>
+    <div class="editable ui-widget">
+      <textarea class="tags" id="diet">Encourage patient to limit Carbohydrate Intake and continue following 
+Diabetes approved Meal Plan</textarea>
+    </div>
+  </div>
+  <div class="blue-box">
+    <div class="blue-box-title">
+      Exercise Changes
+    </div>
+    <div class="editable ui-widget">
+      <textarea class="tags" id="exercise">Try to Exercise 2-3 times per week</textarea>
+    </div>
+  </div>
+  <div class="blue-box">
+    <div class="blue-box-title">
+      Stress Management Assistance
+    </div>
+    <div class="editable ui-widget">
+      <textarea class="tags" id="stress_management">The Chiropractor should help with this.</textarea>
+    </div>
+  </div>
+  <div class="blue-box">
+    <div class="blue-box-title">
+      Safety Recommendations
+    </div>
+    <div class="editable ui-widget">
+      <textarea class="tags" id="safety">While back hurts, may want to use a Cane.</textarea>
+    </div>
+  </div>
+  <div class="blue-box">
+    <div class="blue-box-title">
+      Other Habits to Change
+    </div>
+    <div class="editable ui-widget">
+      <textarea class="tags" id="other_habbits">Reduce Smoking. Or not.</textarea>
+    </div>
+  </div>
+  <div class="blue-box">
+    <div class="blue-box-title">
+      Other Notes
+    </div>
+    <div class="editable ui-widget">
+      <textarea class="tags" id="notes_comments">Patient needs to carry insulin with her in case of emergency.  Call the office if a new prescription 
+is needed.</textarea>
+    </div>
+  </div>
+  <select class="selectpicker appointment-select">
+    <option value="" disabled selected>Number of Appointments each year</option>
+    <option value="1">Patient should have 1 office visit each year</option>
+    <option value="2">Patient should have 2 office visits each year</option>
+    <option value="3">Patient should have 4 office visits each year</option>
+    <option value="4">Patient should have an office visit every month</option>
+    <option value="5">Patients should have an office visit every 2 weeks</option>
+    <option value="6">Patients should have an office visit every week</option>
+  </select>
+  <!-- end iterate -->
+</div>
+
+    <!-- end initial_action_items partial -->
+    </div>
+
+  </div>
+
+</div>
+
+  </div>
+
+<script src="bower_components/ProgressButtonStyles/js/modernizr.custom.js"></script>
+<script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="bower_components/jqueryui/jquery-ui.js" type="text/javascript"></script>
+<script src="bower_components/bootstrap/js/bootstrap.js"></script>
+<script src="bower_components/bootstrap-select/js/bootstrap-select.js"></script>
+<!-- <script type="text/javascript">
+  $(document).ready(function(e) {
+    $('.selectpicker').selectpicker();
+  });
+</script> -->
+<script src="bower_components/chosen/chosen.jquery.min.js"></script>
+<script src="bower_components/velocity/velocity.min.js"></script>
+<script src="bower_components/velocity/velocity.ui.min.js"></script>
+<script src="bower_components/datetimepicker-master/jquery.datetimepicker.js"></script>
+<script src="scripts/main.js" type="text/javascript"></script>
+<script src="bower_components/ProgressButtonStyles/js/classie.js"></script>
+</body>
+</html>
+
+
